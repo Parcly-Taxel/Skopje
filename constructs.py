@@ -114,11 +114,11 @@ pd0_2 = lt.pattern("""5bo2b2o4b2o2bo$4bo3b3o2b3o3bo$3bo4b2o4b2o2bo$2bo$bo3bo$b5o
 
 pd15_1 = lt.pattern("""24b2o$24b2o$bo2bob2obo2bo24bo2bob2obo2bo$2o2bo4bo2b2o22b2o2bo4bo2b2o$b
 o2bob2obo2bo9b2o2b2o9bo2bob2obo2bo$21bobo2bobo$23bo2bo8$24b2o$24b2o""")(-25,0)
-pd15_2 = lt.pattern("11bo6bo$10b2o6b2o$9b3o6b3o$10b2o6b2o$11bo6bo2$bo$3o3$3o2$obo$obo2$3o3$3o$bo")(4,11)
+pd15_2 = lt.pattern("11bo6bo$10b2o6b2o$9b3o6b3o$10b2o6b2o$11bo6bo2$bo$3o3$3o2$obo$obo2$3o3$3o$bo")(-11,-4)
 
 pd30_1 = lt.pattern("""20bo$19bobo2$bo$obo16b3o$19b3o$11bo8bo$3o9bo$3o7b3o$bo18bo$9b3o7b3o$9b
 o9b3o$bo8bo$3o$3o16bobo$20bo2$obo$bo""")
-pd30_2 = lt.pattern("2b2o6b2o$o4bo2bo4bo$o4bo2bo4bo$o4bo2bo4bo$2b2o6b2o")(29,25)
+pd30_2 = lt.pattern("2b2o6b2o$o4bo2bo4bo$o4bo2bo4bo$o4bo2bo4bo$2b2o6b2o")
 
 pd45_1 = lt.pattern("""16b3o2$15bo3bo$15bo3bo2$16b3o3$16b3o2$15bo3bo$15bo3bo2$16b3o3$2o3bo2bo
 3b2o$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
@@ -149,7 +149,7 @@ def pd_shuttle(p):
         s = pd15_2(exts,exts)
         return (pd15_1 + s + s("flip_x",-1,0), 106)
     elif r == 2:
-        return (pd30_1 + pd30_2(exts,exts) + pd30_2(-50-exts,-36-exts), 70)
+        return (pd30_1 + pd30_2(exts+14,exts+10) + pd30_2(-exts-6,-exts+4), 70)
     elif r == 3:
         return (pd45_1 + pd45_2(exts,exts), 77)
     elif r == 4:
@@ -171,54 +171,32 @@ def p6thumb_shuttle(p):
         return None
     return (p6ts1 + p6ts2((p-90)//8, (p-90)//8), 92)
 
-p3b1 = lt.pattern("""22bo$20b3o$9b3o7bo$7bo11b2o$5bobo2bo$15bo$4bob4o4bobo$3bo2b3o4bo2bo$5b
-o8b2o$2bo2bo$2bo$3bo$3o$o""")
-p3b2 = p3b1("rot90",-6,36)[2]
-p3b3 = p3b1("rot180",30,42)[1]
-p3b4 = p3b1("rot270",36,6)
-gp3b = lt.pattern("2o$obo$o")(16,10)
-
-def p3_bumper_loop(p):
-    if p%3 or not p%8 or p < 36:
-        return None
-    elif p%2:
-        n_gliders = 4 if p >= 57 else 12
-        i = (p-54) // 4 if p >= 57 else (15,20,24)[(p-39)//6]
-    elif p%4:
-        n_gliders = 2 if p >= 114 else 6
-        i = (p-58) // 4 if 66 <= p <= 102 else 0
-    else:
-        n_gliders = 1 if p >= 228 else 3 if p >= 84 else 5 if p >= 60 else 7
-        i = (0,2,0,0,2,5,8,11,0)[(p-36)//24] if p <= 228 else 2
-    slack = (p*n_gliders - 220) // 8
-    pat = p3b1 + p3b2(-i,i)[2*i] + p3b3(slack-2*i,slack)[2*slack] + p3b4(slack-i,slack-i)[2*slack-i]
-    for _ in range(n_gliders):
-        pat = (pat+gp3b)[p]
-    return (pat, None)
-
-tbs0_1 = lt.pattern("""x = 13, y = 35, rule = B3/S23
-2b2o5b2o$2b2o5b2o6$2b3o3b3o$bo2bo3bo2bo$bo3bobo3bo$2obobobobob2o$2ob2o
+tbs0_1 = lt.pattern("""2b2o5b2o$2b2o5b2o6$2b3o3b3o$bo2bo3bo2bo$bo3bobo3bo$2obobobobob2o$2ob2o
 3b2ob2o$b3o5b3o6$3bo$2bobo$bo3bo$b5o$obobobo$bo3bo2$bo3bo$obobobo$b5o
-3b2o$bo3bo3b2o$2bobo$3bo2$2b3o$2bo$3bo!""")
-tbs0_2 = lt.pattern("""x = 31, y = 13, rule = B3/S23
-19b2o$18b5o$2b2o14bo4bo5b2o$2b2o14b3o2bo5b2o$19bo2b2o$20b2o$4bo3bo$2b
+3b2o$bo3bo3b2o$2bobo$3bo2$2b3o$2bo$3bo""")
+tbs0_2 = lt.pattern("""19b2o$18b5o$2b2o14bo4bo5b2o$2b2o14b3o2bo5b2o$19bo2b2o$20b2o$4bo3bo$2b
 2obobob2o9b2o$bob2o3b2obo7bo2b2o$o2bo5bo2bo5b3o2bo5b2o$bob2o3b2obo6bo
-4bo5b2o$2b2obobob2o7b5o$4bo3bo10b2o!""")(-8,10)
+4bo5b2o$2b2obobob2o7b5o$4bo3bo10b2o""")(-8,10)
+tbs92_2 = lt.pattern("""9bo$8bobo$2b2o3bo3bo$2b2o3b5o$6bobobobo$7bo3bo2$7bo3bo$6bobobobo$7b5o$
+7bo3bo$8bobo$9bo6$b3o5b3o$2ob2o3b2ob2o$2obobobobob2o$bo3bobo3bo$bo2bo
+3bo2bo$2b3o3b3o6$2b2o$2b2o""")(-8,33)
 
-tbs138_1 = lt.pattern("""x = 35, y = 16, rule = B3/S23
-b2o15bo3bo$b2o3b2o9bo5bo9b2o$6b2o9bo15b2o$17b2o3bo$19b3o2$b2o16b3o$o2b
-o13b2o3bo$o2bo13bo15b2o$b2o14bo5bo9b2o$18bo3bo3$9b2o6bo$9bobo6b2o$9bo
-7b2o!""")
-tbs138_2 = lt.pattern("""x = 34, y = 11, rule = B3/S23
-12bo3bo5bob2o$2o9bo5bo4bobobo$2o9bo9bo4bo$11b2o3bo5bobobo$13b3o6bob2o
-2$13b3o$11b2o3bo$2o9bo15b2o$2o9bo5bo9b2o3b2o$12bo3bo15b2o!""")(-1,24)
+tbs138_1 = lt.pattern("""b2o15bo3bo$b2o3b2o9bo5bo9b2o$6b2o9bo15b2o$17b2o3bo$19b3o2$b2o16b3o$o2b
+o13b2o3bo$o2bo13bo15b2o$b2o14bo5bo9b2o$18bo3bo3$9b2o6bo$9bobo6b2o$9bo7b2o""")
+tbs138_2 = lt.pattern("""12bo3bo5bob2o$2o9bo5bo4bobobo$2o9bo9bo4bo$11b2o3bo5bobobo$13b3o6bob2o
+2$13b3o$11b2o3bo$2o9bo15b2o$2o9bo5bo9b2o3b2o$12bo3bo15b2o""")(-1,24)
 
-def construct_tbs0_shuttle(p):
-    if p%184 != 0 or p <= 0:
+def twinbees_shuttle(p):
+    if p%46 or p < 138:
         return None
-    return tbs0_1 + tbs0_2(p//184*23, p//184*23)
-
-def construct_tbs138_shuttle(p):
-    if p%184 != 138:
+    q = p//46
+    exts, r = divmod(q, 4)
+    exts *= 23
+    if r == 0:
+        return (tbs0_1 + tbs0_2(exts,exts), 60)
+    elif r == 2:
+        return (tbs0_1 + tbs92_2(exts,exts), 77)
+    elif r == 3:
+        return (tbs138_1 + tbs138_2(exts,exts), 86)
+    else:
         return None
-    return tbs138_1 + tbs138_2(p//184*23, p//184*23)

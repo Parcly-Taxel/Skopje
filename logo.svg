@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240">
+  <path fill="#230f38" d="M0 0h240v240H0z"/>
+  <path d="M190 90V30h-20v60zm20-20h-60V50h60z" fill="#fff"/>
+  <path d="M30 30v60h20V70h40V50h20V30H70v20H50V30z" fill="#5a318e"/>
+  <path d="M50 90v60h20v-20h40V70h20V50H90v60H70V90z" fill="#576ab7"/>
+  <path d="M70 170h20v40h40v-40h20v-20h-40v40H70z" fill="#54a2e1"/>
+</svg>

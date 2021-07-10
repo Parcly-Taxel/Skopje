@@ -18,11 +18,8 @@ def skop(p):
     cands.append(p6_bumper_loop(p))
     cands.append(pd_shuttle(p))
     cands.append(p6thumb_shuttle(p))
-    # cands = [p3_bumper_loop(p)]
-    """
-    cands = [construct_p3_bumper_loop(p),
-             construct_tbs0_shuttle(p),
-             construct_tbs138_shuttle(p)]"""
+    cands.append(twinbees_shuttle(p))
+
     cands = list(filter(bool, cands))
     if not cands:
         return []
