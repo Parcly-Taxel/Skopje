@@ -28,62 +28,63 @@ def rectifier_loop(p):
         pat = (pat+grect)[p]
     return (pat, mpop)
 
-p4b1 = lt.pattern("8b2o$o7bo9bo$3o3bobo7b3o$3bob3o7bo$2bob2o9b2o$2bo2bo$11bo$10bobo$3bo2bo2bo2bo$4b2o4b2o")
-p4b2 = lt.pattern("b2o$2bo$2bobo$3b2o3$7b2o$6bo2bo$7bobo$o7bo$3o$3bo$2bo$2bo2bo2b2o$5bo2b2o$3bobo$2bobo$2bo$b2o")(-6,10)
-p4b3 = lt.pattern("7b2o4b2o$6bo2bo3b2o$6bobo$7bo6bo$14b2o$2b2o12bo$3bo7b2o2bo$3o7bobo3b3o$o9bo7bo$9b2o")(4,25)
-p4b4 = lt.pattern("7b2o$7bo$5bobo$3b2obo$6o$3o$6b2o$6bo$7b3o$bo7bo$obo$o2bo$b2o3$5b2o$5bobo$7bo$7b2o")(19,6)
-gp4b = lt.pattern("2o$obo$o")(12,11)
+p4b1 = lt.pattern("""14b2o$6bo7bo9bo$6b3o3bobo7b3o$9bob3o7bo$8bob2o9b2o$8bo2bo$17bo$16bobo$
+9bo2bo2bo2bo$10b2o4b2o$b2o$2bo15b2o$2bobo13bobo$3b2o13bo3$7b2o$6bo2bo$
+7bobo$o7bo$3o$3bo$2bo$2bo2bo2b2o$5bo2b2o$3bobo$2bobo$2bo$b2o""")
+p4b2 = lt.pattern("""22b2o$22bo$20bobo$18b2obo$15b6o$15b3o$21b2o$21bo$22b3o$16bo7bo$15bobo$
+15bo2bo$16b2o3$20b2o$20bobo$22bo$22b2o$7b2o4b2o$6bo2bo3b2o$6bobo$7bo6b
+o$14b2o$2b2o12bo$3bo7b2o2bo$3o7bobo3b3o$o9bo7bo$9b2o""")(10,6)
 
-def construct_p4_bumper_loop(p):
-    if p%8 != 4 or p < 52:
+# works down to p36 but fixed oscillators beat it (and it requires more gliders) below p140
+def p4_bumper_loop(p):
+    if p%8 != 4 or p < 140:
         return None
-    n_gliders = 1 if p >= 140 else 3
-    slack = (p*n_gliders - 140) // 8
-    i = 0 if p >= 140 else (p-68) // 8 if p >= 68 else (p-52) // 8
-    pat = p4b1 + p4b2(-i,i) + p4b3(slack-2*i,slack) + p4b4(slack-i,slack-i)
-    for _ in range(n_gliders):
-        pat = (pat+gp4b)[p]
-    return pat
+    exts = (p-140) // 8
+    return (p4b1 + p4b2(exts,exts), 141)
 
-p8b1 = lt.pattern("""x = 26, y = 27, rule = B3/S23
-10b2o$10b2o$25bo$23b3o$9b3o10bo$9b2o11b2o$12b2o$11b3o4bo$10bobo4bobo$
+p8b1 = lt.pattern("""10b2o$10b2o$25bo$23b3o$9b3o10bo$9b2o11b2o$12b2o$11b3o4bo$10bobo4bobo$
 10b2o4bo2bo$17b2o2$3b2o5b2o$4bo5b2o$4bobo$5b2o7bo$9b2ob2o$8bobo2b2o$9b
-o$5bo$4b3o$3bob3o$2bo3bo$bo3bo$3obo$b3o$2bo!""")
-p8b2 = lt.pattern("""x = 22, y = 28, rule = B3/S23
-13bo2b2o$12bo3b2o2b2o$12bo7b2o$13b4o4$12bo$11bobo$11bo2bo$12b2o3$16b2o
+o$5bo$4b3o$3bob3o$2bo3bo$bo3bo$3obo$b3o$2bo""")
+p8b2 = lt.pattern("""13bo2b2o$12bo3b2o2b2o$12bo7b2o$13b4o4$12bo$11bobo$11bo2bo$12b2o3$16b2o
 $16bobo$18bo$2o16b2o$2o2b2o$4bobo$5bo$8b3o$2b2o3bo$3bo3bo3bo$3o4bo2bob
-o$o8bobo2bo$10bo3bo$14bo$11b3o!""")(14,8)
+o$o8bobo2bo$10bo3bo$14bo$11b3o""")(14,8)
 
-def construct_p8_loop(p):
+# works down to p40 but fixed oscillators beat it (and it requires more gliders) below p104
+def p8_loop(p):
     if p%8 or p < 104:
         return None
     exts = p//8 - 13
-    return p8b1 + p8b2(exts,exts)[exts%2*4]
+    par = exts%2
+    return (p8b1 + p8b2(exts,exts)[4*par], 120+par)
 
-snark1 = lt.pattern("9b2o$8bobo$2b2o4bo$o2bo2b2ob4o$2obobobobo2bo$3bobobobo$3bobob2o$4bo2$17b2o$8b2o7bo$8b2o5bobo$15b2o7$5b2o$6bo$3b3o$3bo")
+snark1 = lt.pattern("""9b2o$8bobo$2b2o4bo$o2bo2b2ob4o$2obobobobo2bo$3bobobobo$3bobob2o$4bo2$
+17b2o$8b2o7bo$8b2o5bobo$15b2o7$5b2o$6bo$3b3o$3bo""")
 snark2 = snark1("rot90",-20,30)
 snark3 = snark1("rot180",10,50)
 snark4 = snark1("rot270",30,20)
 gsnark = lt.pattern("bo$2o$obo")(7,13)
 
-def construct_snark_loop(p):
-    if not (43 <= p < 106) or p%4 == 0:
+# only potentially SKOP from p43 to p105 inclusive;
+# at periods divisible by 4 is beaten by fixed oscillators
+def snark_loop(p):
+    mpop = None
+    if not (43 <= p < 106 and p%4):
         return None
     elif p%2:
-        n_gliders = 8
+        n_gliders, mpop = (8, 228)
         i = (p-37) // 4 if p%4 == 1 else (p-29) // 2 if p <= 75 else (p-79) // 4
     else:
-        if p <= 54:
-            n_gliders = 8
-            i = (2,3,0)[(p-46)//4]
-        else:
-            n_gliders = 4
+        if p >= 58:
+            n_gliders, mpop = (4, 208)
             i = (p-58) // 4
+        else:
+            n_gliders, mpop = (8, 230)
+            i = (2,3,0)[(p-46)//4]
     slack = p*n_gliders//8 - 29
     pat = snark1 + snark2(-i,i) + snark3(slack-2*i,slack) + snark4(slack-i,slack-i)
     for _ in range(n_gliders):
         pat = (pat+gsnark)[p]
-    return pat
+    return (pat, mpop)
 
 p3b1 = lt.pattern("22bo$20b3o$9b3o7bo$7bo11b2o$5bobo2bo$15bo$4bob4o4bobo$3bo2b3o4bo2bo$5bo8b2o$2bo2bo$2bo$3bo$3o$o")
 p3b2 = p3b1("rot90",-6,36)[2]
