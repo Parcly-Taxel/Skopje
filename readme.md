@@ -4,11 +4,11 @@ In May and June 2021 David Raucci (hotdogPi) on the ConwayLife forums discovered
 
 This repository started out as an independent script in my glider synthesis database [Shinjuku](https://gitlab.com/parclytaxel/Shinjuku) as an automatic generator of the aforementioned glider loops and collector of other **s**mallest **k**nown **o**scillators of **p**eriods _n_ – hence the name Skopje, North Macedonia's capital. It still requires [lifelib](https://gitlab.com/apgoucher/lifelib) however.
 
-To get the smallest known oscillator of period 109 together with its minimum population:
+To get the smallest known oscillator of period 109 together with its minimum population, a rectifier loop:
 
 ```python
 from skopje import skop
-skop109, minpop109 = skop(107)[0]
+skop109, minpop109 = skop(109)[0]
 ```
 
 `skop()` returns a _list_ of pairs (lifelib Pattern, minimum population) to allow ties as in the p4 and p7 cases; to get the pattern's apgcode and RLE use `skop109.apgcode` and `skop109.rle_string()` respectively. The function compares several different constructions as well as elementary (non-loop) and LCM oscillators to arrive at its final result.
