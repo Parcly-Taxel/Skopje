@@ -15,17 +15,12 @@ def skop(p):
     cands.append(p4_bumper_loop(p))
     cands.append(p8_loop(p))
     cands.append(snark_loop(p))
+    cands.append(p6_bumper_loop(p))
+    cands.append(pd_shuttle(p))
+    cands.append(p6thumb_shuttle(p))
+    # cands = [p3_bumper_loop(p)]
     """
     cands = [construct_p3_bumper_loop(p),
-             construct_p6_bumper_loop(p),
-             construct_p6thumb_shuttle(p),
-             construct_pd0_shuttle(p),
-             construct_pd15_shuttle(p),
-             construct_pd30_shuttle(p),
-             construct_pd45_shuttle(p),
-             construct_pd60_shuttle(p),
-             construct_pd75_shuttle(p),
-             construct_pd90_shuttle(p),
              construct_tbs0_shuttle(p),
              construct_tbs138_shuttle(p)]"""
     cands = list(filter(bool, cands))

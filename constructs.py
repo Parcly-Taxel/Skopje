@@ -86,16 +86,102 @@ def snark_loop(p):
         pat = (pat+gsnark)[p]
     return (pat, mpop)
 
-p3b1 = lt.pattern("22bo$20b3o$9b3o7bo$7bo11b2o$5bobo2bo$15bo$4bob4o4bobo$3bo2b3o4bo2bo$5bo8b2o$2bo2bo$2bo$3bo$3o$o")
+p6b1 = lt.pattern("4b2o14bo$2o2b2o12b3o$2o2bob2o9bo$5b3o9b2o2$13bo$5b2o5bobo$5b2o4bo2bo$12b2o")
+p6b2 = p6b1("rot90",-2,28)[5]
+p6b3 = p6b1("rot180",26,30)[4]
+p6b4 = p6b1("rot270",28,2)[3]
+gp6b = lt.pattern("2o$obo$o")(14,10)
+
+def p6_bumper_loop(p):
+    if p%6 or not p%8 or p < 36:
+        return None
+    elif p%4:
+        n_gliders, mpop = (2, 122) if p >= 66 else (6, 130)
+        i = (p-30) // 4 if p <= 54 else 0
+    else:
+        n_gliders, mpop = (1, 123) if p >= 132 else (3, 127) if p >= 60 else (5, 140)
+        i = (1,0,3,6)[(p-36)//24] if p <= 108 else 0
+    slack = (p*n_gliders - 124) // 8
+    pat = p6b1 + p6b2(-i,i)[2*i] + p6b3(slack-2*i,slack)[2*slack] + p6b4(slack-i,slack-i)[2*(slack+i)]
+    for _ in range(n_gliders):
+        pat = (pat+gp6b)[p]
+    return (pat, mpop)
+
+pd0_1 = lt.pattern("""15b2o$15b2o9$16bo$15b3o$14b5o$13b2o3b2o$14b5o$14bo3bo$17bo$bo2b2o4b2o
+4bo$o3b3o2b3o3bo2b3o$bo2b2o4b2o2bo3bo$19bo""")
+pd0_2 = lt.pattern("""5bo2b2o4b2o2bo$4bo3b3o2b3o3bo$3bo4b2o4b2o2bo$2bo$bo3bo$b5o$2o3b2o$b5o$
+2b3o$3bo9$3b2o$3b2o""")(18,16)
+
+pd15_1 = lt.pattern("""24b2o$24b2o$bo2bob2obo2bo24bo2bob2obo2bo$2o2bo4bo2b2o22b2o2bo4bo2b2o$b
+o2bob2obo2bo9b2o2b2o9bo2bob2obo2bo$21bobo2bobo$23bo2bo8$24b2o$24b2o""")(-25,0)
+pd15_2 = lt.pattern("11bo6bo$10b2o6b2o$9b3o6b3o$10b2o6b2o$11bo6bo2$bo$3o3$3o2$obo$obo2$3o3$3o$bo")(4,11)
+
+pd30_1 = lt.pattern("""20bo$19bobo2$bo$obo16b3o$19b3o$11bo8bo$3o9bo$3o7b3o$bo18bo$9b3o7b3o$9b
+o9b3o$bo8bo$3o$3o16bobo$20bo2$obo$bo""")
+pd30_2 = lt.pattern("2b2o6b2o$o4bo2bo4bo$o4bo2bo4bo$o4bo2bo4bo$2b2o6b2o")(29,25)
+
+pd45_1 = lt.pattern("""16b3o2$15bo3bo$15bo3bo2$16b3o3$16b3o2$15bo3bo$15bo3bo2$16b3o3$2o3bo2bo
+3b2o$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
+pd45_2 = lt.pattern("8bo6bo$7b2o6b2o$6b3o6b3o$7b2o6b2o$8bo6bo4$bo$bo$obo$bo$bo$bo$bo$obo$bo$bo")(18,18)
+
+pd60_1 = lt.pattern("17b3o$2bo2bo4bo2bo3bo$3o2b6o2b3o2bo$2bo2bo4bo2bo")
+pd60_2 = lt.pattern("2bo2bo4bo2bo$3o2b6o2b3o$2bo2bo4bo2bo")(25,5)
+
+pd75_1 = lt.pattern("""20bo$19bobo3$19b3o$19b3o$20bo3$20bo$19b3o$19b3o3$19bobo$20bo$2b2o6b2o$
+bo2bo4bo2bo4b3o$6o2b6o3bo$bo2bo4bo2bo5bo$2b2o6b2o""")
+pd75_2 = lt.pattern("bo2b2o4b2o2bo$o3b3o2b3o3bo$bo2b2o4b2o2bo")(26,23)
+
+pd90_1 = lt.pattern("""20bo$19bobo3$19b3o$19b3o$20bo3$20bo$19b3o$19b3o3$19bobo$20bo$2b2o6b2o$
+bo2bo4bo2bo4b3o$6o2b6o3bo$bo2bo4bo2bo5bo$2b2o6b2o""")
+pd90_2 = lt.pattern("""10b2o6b2o$9bo2bo4bo2bo$8b6o2b6o$9bo2bo4bo2bo$10b2o6b2o$bo$obo3$3o$3o$b
+o3$bo$3o$3o3$obo$bo""")(21,24)
+
+# all types of this construction use pentadecathlons and optionally queen bees
+def pd_shuttle(p):
+    if p%15 or p < 45:
+        return None
+    q = p//15
+    exts, r = divmod(q, 8)
+    exts *= 15
+    if r == 0:
+        return (pd0_1 + pd0_2(exts,exts), 68)
+    elif r == 1:
+        s = pd15_2(exts,exts)
+        return (pd15_1 + s + s("flip_x",-1,0), 106)
+    elif r == 2:
+        return (pd30_1 + pd30_2(exts,exts) + pd30_2(-50-exts,-36-exts), 70)
+    elif r == 3:
+        return (pd45_1 + pd45_2(exts,exts), 77)
+    elif r == 4:
+        return (pd60_1 + pd60_2(exts,exts), 29)
+    elif r == 5:
+        return (pd75_1 + pd75_2(exts,exts), 49)
+    elif r == 6:
+        return (pd90_1 + pd90_2(exts,exts), 69)
+    else:
+        return None
+
+p6ts1 = lt.pattern("""7b2o4bo$7b2o3bobo$13bo3$2o2b2o2b2o$2o2b2ob2o$9bo3$3b2o$2bo2b2o$2bo4b2o
+$2o3bob2o$bobo$bob6o$2bo5bo$3b3o$5bo""")
+p6ts2 = lt.pattern("""9bo$9b3o$6bo5bo$6b6obo$11bobo$6b2o2bo2b2o$6bobo2b2o$10bobo$11bo4$9b2o
+2b2o$9b2o2b2o3$bo$obo3b2o$bo4b2o""")(13,3)
+
+def p6thumb_shuttle(p):
+    if p%24 != 18 or p < 90:
+        return None
+    return (p6ts1 + p6ts2((p-90)//8, (p-90)//8), 92)
+
+p3b1 = lt.pattern("""22bo$20b3o$9b3o7bo$7bo11b2o$5bobo2bo$15bo$4bob4o4bobo$3bo2b3o4bo2bo$5b
+o8b2o$2bo2bo$2bo$3bo$3o$o""")
 p3b2 = p3b1("rot90",-6,36)[2]
 p3b3 = p3b1("rot180",30,42)[1]
 p3b4 = p3b1("rot270",36,6)
 gp3b = lt.pattern("2o$obo$o")(16,10)
 
-def construct_p3_bumper_loop(p):
-    if p%3 or p%8 == 0 or p < 36:
+def p3_bumper_loop(p):
+    if p%3 or not p%8 or p < 36:
         return None
-    if p%2:
+    elif p%2:
         n_gliders = 4 if p >= 57 else 12
         i = (p-54) // 4 if p >= 57 else (15,20,24)[(p-39)//6]
     elif p%4:
@@ -108,117 +194,7 @@ def construct_p3_bumper_loop(p):
     pat = p3b1 + p3b2(-i,i)[2*i] + p3b3(slack-2*i,slack)[2*slack] + p3b4(slack-i,slack-i)[2*slack-i]
     for _ in range(n_gliders):
         pat = (pat+gp3b)[p]
-    return pat
-
-p6b1 = lt.pattern("4b2o14bo$2o2b2o12b3o$2o2bob2o9bo$5b3o9b2o2$13bo$5b2o5bobo$5b2o4bo2bo$12b2o")
-p6b2 = p6b1("rot90",-2,28)[5]
-p6b3 = p6b1("rot180",26,30)[4]
-p6b4 = p6b1("rot270",28,2)[3]
-gp6b = lt.pattern("2o$obo$o")(14,10)
-
-def construct_p6_bumper_loop(p):
-    if p%6 or p%8 == 0 or p < 36:
-        return None
-    if p%4:
-        n_gliders = 2 if p >= 66 else 6
-        i = (p-30) // 4 if p <= 54 else 0
-    else:
-        n_gliders = 1 if p >= 132 else 3 if p >= 60 else 5
-        i = (1,0,3,6)[(p-36)//24] if p <= 108 else 0
-    slack = (p*n_gliders - 124) // 8
-    pat = p6b1 + p6b2(-i,i)[2*i] + p6b3(slack-2*i,slack)[2*slack] + p6b4(slack-i,slack-i)[2*(slack+i)]
-    for _ in range(n_gliders):
-        pat = (pat+gp6b)[p]
-    return pat
-
-pd0_1 = lt.pattern("""x = 21, y = 21, rule = B3/S23
-15b2o$15b2o9$16bo$15b3o$14b5o$13b2o3b2o$14b5o$14bo3bo$17bo$bo2b2o4b2o
-4bo$o3b3o2b3o3bo2b3o$bo2b2o4b2o2bo3bo$19bo!""")
-pd0_2 = lt.pattern("""x = 20, y = 20, rule = B3/S23
-5bo2b2o4b2o2bo$4bo3b3o2b3o3bo$3bo4b2o4b2o2bo$2bo$bo3bo$b5o$2o3b2o$b5o$
-2b3o$3bo9$3b2o$3b2o!""")(18,16)
-
-pd15_1 = lt.pattern("""x = 50, y = 16, rule = B3/S23
-24b2o$24b2o$bo2bob2obo2bo24bo2bob2obo2bo$2o2bo4bo2b2o22b2o2bo4bo2b2o$b
-o2bob2obo2bo9b2o2b2o9bo2bob2obo2bo$21bobo2bobo$23bo2bo8$24b2o$24b2o!""")(-25,0)
-pd15_2 = lt.pattern("""x = 21, y = 20, rule = B3/S23
-11bo6bo$10b2o6b2o$9b3o6b3o$10b2o6b2o$11bo6bo2$bo$3o3$3o2$obo$obo2$3o3$
-3o$bo!""")(4,11)
-
-pd30_1 = lt.pattern("""x = 22, y = 19, rule = B3/S23
-20bo$19bobo2$bo$obo16b3o$19b3o$11bo8bo$3o9bo$3o7b3o$bo18bo$9b3o7b3o$9b
-o9b3o$bo8bo$3o$3o16bobo$20bo2$obo$bo!""")
-pd30_2 = lt.pattern("2b2o6b2o$o4bo2bo4bo$o4bo2bo4bo$o4bo2bo4bo$2b2o6b2o")(29,25)
-
-pd45_1 = lt.pattern("""x = 20, y = 21, rule = B3/S23
-16b3o2$15bo3bo$15bo3bo2$16b3o3$16b3o2$15bo3bo$15bo3bo2$16b3o3$2o3bo2bo
-3b2o$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo!""")
-pd45_2 = lt.pattern("""x = 18, y = 18, rule = B3/S23
-8bo6bo$7b2o6b2o$6b3o6b3o$7b2o6b2o$8bo6bo4$bo$bo$obo$bo$bo$bo$bo$obo$bo
-$bo!""")(18,18)
-
-pd60_1 = lt.pattern("17b3o$2bo2bo4bo2bo3bo$3o2b6o2b3o2bo$2bo2bo4bo2bo")
-pd60_2 = lt.pattern("2bo2bo4bo2bo$3o2b6o2b3o$2bo2bo4bo2bo")(25,5)
-
-pd75_1 = lt.pattern("""x = 22, y = 21, rule = B3/S23
-20bo$19bobo3$19b3o$19b3o$20bo3$20bo$19b3o$19b3o3$19bobo$20bo$2b2o6b2o$
-bo2bo4bo2bo4b3o$6o2b6o3bo$bo2bo4bo2bo5bo$2b2o6b2o!""")
-pd75_2 = lt.pattern("bo2b2o4b2o2bo$o3b3o2b3o3bo$bo2b2o4b2o2bo")(26,23)
-
-pd90_1 = lt.pattern("""x = 22, y = 21, rule = B3/S23
-20bo$19bobo3$19b3o$19b3o$20bo3$20bo$19b3o$19b3o3$19bobo$20bo$2b2o6b2o$
-bo2bo4bo2bo4b3o$6o2b6o3bo$bo2bo4bo2bo5bo$2b2o6b2o!""")
-pd90_2 = lt.pattern("""x = 22, y = 21, rule = B3/S23
-10b2o6b2o$9bo2bo4bo2bo$8b6o2b6o$9bo2bo4bo2bo$10b2o6b2o$bo$obo3$3o$3o$b
-o3$bo$3o$3o3$obo$bo!""")(21,24)
-
-p6ts1 = lt.pattern("""x = 15, y = 19, rule = B3/S23
-7b2o4bo$7b2o3bobo$13bo3$2o2b2o2b2o$2o2b2ob2o$9bo3$3b2o$2bo2b2o$2bo4b2o
-$2o3bob2o$bobo$bob6o$2bo5bo$3b3o$5bo!""")
-p6ts2 = lt.pattern("""x = 15, y = 19, rule = B3/S23
-9bo$9b3o$6bo5bo$6b6obo$11bobo$6b2o2bo2b2o$6bobo2b2o$10bobo$11bo4$9b2o
-2b2o$9b2o2b2o3$bo$obo3b2o$bo4b2o!""")(13,3)
-
-def construct_pd0_shuttle(p):
-    if p%120 != 0 or p <= 0:
-        return None
-    return pd0_1 + pd0_2(p//120*15, p//120*15)
-
-def construct_pd15_shuttle(p):
-    if p%120 != 15 or p <= 15:
-        return None
-    q = pd15_2(p//120*15, p//120*15)
-    return pd15_1 + q + q("flip_x",-1,0)
-
-def construct_pd30_shuttle(p):
-    if p%120 != 30 or p <= 30:
-        return None
-    return pd30_1 + pd30_2(p//120*15, p//120*15) + pd30_2(-50-p//120*15, -36-p//120*15)
-
-def construct_pd45_shuttle(p):
-    if p%120 != 45:
-        return None
-    return pd45_1 + pd45_2(p//120*15, p//120*15)
-
-def construct_pd60_shuttle(p):
-    if p%120 != 60:
-        return None
-    return pd60_1 + pd60_2(p//120*15, p//120*15)
-
-def construct_pd75_shuttle(p):
-    if p%120 != 75:
-        return None
-    return pd75_1 + pd75_2(p//120*15, p//120*15)
-
-def construct_pd90_shuttle(p):
-    if p%120 != 90:
-        return None
-    return pd90_1 + pd90_2(p//120*15, p//120*15)
-
-def construct_p6thumb_shuttle(p):
-    if p%24 != 18 or p < 90:
-        return None
-    return p6ts1 + p6ts2((p-90)//8, (p-90)//8)
+    return (pat, None)
 
 tbs0_1 = lt.pattern("""x = 13, y = 35, rule = B3/S23
 2b2o5b2o$2b2o5b2o6$2b3o3b3o$bo2bo3bo2bo$bo3bobo3bo$2obobobobob2o$2ob2o
