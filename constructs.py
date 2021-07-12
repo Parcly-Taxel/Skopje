@@ -116,9 +116,9 @@ pd15_1 = lt.pattern("""24b2o$24b2o$bo2bob2obo2bo24bo2bob2obo2bo$2o2bo4bo2b2o22b2
 o2bob2obo2bo9b2o2b2o9bo2bob2obo2bo$21bobo2bobo$23bo2bo8$24b2o$24b2o""")(-25,0)
 pd15_2 = lt.pattern("11bo6bo$10b2o6b2o$9b3o6b3o$10b2o6b2o$11bo6bo2$bo$3o3$3o2$obo$obo2$3o3$3o$bo")(-11,-4)
 
-pd30_1 = lt.pattern("""20bo$19bobo2$bo$obo16b3o$19b3o$11bo8bo$3o9bo$3o7b3o$bo18bo$9b3o7b3o$9b
-o9b3o$bo8bo$3o$3o16bobo$20bo2$obo$bo""")
-pd30_2 = lt.pattern("2b2o6b2o$o4bo2bo4bo$o4bo2bo4bo$o4bo2bo4bo$2b2o6b2o")
+pd30_1 = lt.pattern("""o$3o$3bo$2b2o$9b2o$5bo2b2o$4bobo3bo$3bo3bo$3b5o$2b2o3b2o$3b5o$4b3o$5bo
+9$4b2o$4b2o""")
+pd30_2 = lt.pattern("3b2o$3b2o3$3bo$2bobo$bo3bo$b5o$2o3b2o$b5o$2b3o$3bo8$5b2o$5bo$6b3o$8bo")(13,-11)
 
 pd45_1 = lt.pattern("""16b3o2$15bo3bo$15bo3bo2$16b3o3$16b3o2$15bo3bo$15bo3bo2$16b3o3$2o3bo2bo
 3b2o$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
@@ -136,9 +136,9 @@ bo2bo4bo2bo4b3o$6o2b6o3bo$bo2bo4bo2bo5bo$2b2o6b2o""")
 pd90_2 = lt.pattern("""10b2o6b2o$9bo2bo4bo2bo$8b6o2b6o$9bo2bo4bo2bo$10b2o6b2o$bo$obo3$3o$3o$b
 o3$bo$3o$3o3$obo$bo""")(21,24)
 
-# all types of this construction use pentadecathlons and optionally queen bees
+# all types of this construction use pentadecathlons or queen bees
 def pd_shuttle(p):
-    if p%15 or p < 45:
+    if p%15 or p < 30:
         return None
     q = p//15
     exts, r = divmod(q, 8)
@@ -149,7 +149,7 @@ def pd_shuttle(p):
         s = pd15_2(exts,exts)
         return (pd15_1 + s + s("flip_x",-1,0), 106)
     elif r == 2:
-        return (pd30_1 + pd30_2(exts+14,exts+10) + pd30_2(-exts-6,-exts+4), 70)
+        return (pd30_1 + pd30_2(exts,exts), 51)
     elif r == 3:
         return (pd45_1 + pd45_2(exts,exts), 77)
     elif r == 4:
