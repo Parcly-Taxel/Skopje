@@ -12,6 +12,7 @@ def skop(p):
                 fixed[period] = fixed.get(period, tuple()) + ((lt.pattern(apgcode), int(mpop)),)
     cands = list(fixed.get(p, []))
     cands.append(rectifier_loop(p))
+    cands.append(mold_rectifier_loop(p))
     cands.append(p4_bumper_loop(p))
     cands.append(p8_loop(p))
     cands.append(snark_loop(p))

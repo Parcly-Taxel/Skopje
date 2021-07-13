@@ -42,6 +42,14 @@ def p4_bumper_loop(p):
     exts = (p-140) // 8
     return (p4b1 + p4b2(exts,exts), 141)
 
+mold = lt.pattern("3b3o$bob3o$obobo$o2bo$b2o")(-1,15)
+
+def mold_rectifier_loop(p):
+    if p%8 != 4 or p < 212:
+        return None
+    pat, mpop = rectifier_loop(p//2)
+    return (pat+mold, mpop+12 if mpop != None else None)
+
 p8b1 = lt.pattern("""10b2o$10b2o$25bo$23b3o$9b3o10bo$9b2o11b2o$12b2o$11b3o4bo$10bobo4bobo$
 10b2o4bo2bo$17b2o2$3b2o5b2o$4bo5b2o$4bobo$5b2o7bo$9b2ob2o$8bobo2b2o$9b
 o$5bo$4b3o$3bob3o$2bo3bo$bo3bo$3obo$b3o$2bo""")
