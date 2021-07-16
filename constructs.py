@@ -115,22 +115,24 @@ def p6_bumper_loop(p):
         pat = (pat+gp6b)[p]
     return (pat, mpop)
 
-pd0_1 = lt.pattern("""15b2o$15b2o9$16bo$15b3o$14b5o$13b2o3b2o$14b5o$14bo3bo$17bo$bo2b2o4b2o
-4bo$o3b3o2b3o3bo2b3o$bo2b2o4b2o2bo3bo$19bo""")
-pd0_2 = lt.pattern("""5bo2b2o4b2o2bo$4bo3b3o2b3o3bo$3bo4b2o4b2o2bo$2bo$bo3bo$b5o$2o3b2o$b5o$
-2b3o$3bo9$3b2o$3b2o""")(18,16)
+pd0_1 = lt.pattern("""16b3o$15bo3bo$15bo3bo$16b3o5$16b3o$15bo3bo$15bo3bo$16b3o4$2o3bo2bo3b2o
+$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
+pd0_2 = lt.pattern("""6b2o3bo2bo3b2o$6b5o4b5o$6b2o3bo2bo3b2o4$b3o$o3bo$o3bo$b3o5$b3o$o3bo$o
+3bo$b3o""")(11,12)
 
-pd15_1 = lt.pattern("""24b2o$24b2o$bo2bob2obo2bo24bo2bob2obo2bo$2o2bo4bo2b2o22b2o2bo4bo2b2o$b
-o2bob2obo2bo9b2o2b2o9bo2bob2obo2bo$21bobo2bobo$23bo2bo8$24b2o$24b2o""")(-25,0)
-pd15_2 = lt.pattern("11bo6bo$10b2o6b2o$9b3o6b3o$10b2o6b2o$11bo6bo2$bo$3o3$3o2$obo$obo2$3o3$3o$bo")(-11,-4)
+pd15_1 = lt.pattern("""16b3o$15bo3bo$15bo3bo$16b3o5$16b3o$15bo3bo$15bo3bo$16b3o4$2o3bo2bo3b2o
+$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
+pd15_2 = lt.pattern("""11b2o$9bo4bo$8bo6bo$7bo8bo$7bo8bo$7bo8bo$8bo6bo$bo7bo4bo$bo9b2o2$bo$ob
+o2$3o3$3o2$obo$bo2$bo$bo""")(14,11)
 
 pd30_1 = lt.pattern("""o$3o$3bo$2b2o$9b2o$5bo2b2o$4bobo3bo$3bo3bo$3b5o$2b2o3b2o$3b5o$4b3o$5bo
 9$4b2o$4b2o""")
 pd30_2 = lt.pattern("3b2o$3b2o3$3bo$2bobo$bo3bo$b5o$2o3b2o$b5o$2b3o$3bo8$5b2o$5bo$6b3o$8bo")(13,-11)
 
-pd45_1 = lt.pattern("""16b3o2$15bo3bo$15bo3bo2$16b3o3$16b3o2$15bo3bo$15bo3bo2$16b3o3$2o3bo2bo
-3b2o$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
-pd45_2 = lt.pattern("8bo6bo$7b2o6b2o$6b3o6b3o$7b2o6b2o$8bo6bo4$bo$bo$obo$bo$bo$bo$bo$obo$bo$bo")(18,18)
+pd45_1 = lt.pattern("""17bo$17bo$16b3o3$16b3o$17bo$17bo$17bo$17bo$16b3o3$16b3o$17bo$17bo2$2o
+3bo2bo3b2o$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
+pd45_2 = lt.pattern("""7b2o6b2o$6bo2bo4bo2bo$6bo2bo4bo2bo$6bo2bo4bo2bo$7b2o6b2o4$bo$bo$obo$bo
+$bo$bo$bo$obo$bo$bo""")(18,19)
 
 pd60_1 = lt.pattern("17b3o$2bo2bo4bo2bo3bo$3o2b6o2b3o2bo$2bo2bo4bo2bo")
 pd60_2 = lt.pattern("2bo2bo4bo2bo$3o2b6o2b3o$2bo2bo4bo2bo")(25,5)
@@ -152,14 +154,13 @@ def pd_shuttle(p):
     exts, r = divmod(q, 8)
     exts *= 15
     if r == 0:
-        return (pd0_1 + pd0_2(exts,exts), 68)
+        return (pd0_1 + pd0_2(exts,exts), 67)
     elif r == 1:
-        s = pd15_2(exts,exts)
-        return (pd15_1 + s + s("flip_x",-1,0), 106)
+        return (pd15_1 + pd15_2(exts,exts), 75)
     elif r == 2:
         return (pd30_1 + pd30_2(exts,exts), 51)
     elif r == 3:
-        return (pd45_1 + pd45_2(exts,exts), 77)
+        return (pd45_1 + pd45_2(exts,exts), 75)
     elif r == 4:
         return (pd60_1 + pd60_2(exts,exts), 29)
     elif r == 5:
