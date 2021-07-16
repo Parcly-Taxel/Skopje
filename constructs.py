@@ -179,6 +179,17 @@ def p6thumb_shuttle(p):
         return None
     return (p6ts1 + p6ts2((p-90)//8, (p-90)//8), 92)
 
+p14_1 = lt.pattern("""12b2o4bo$12b2o3bobo$18bo3$5b2o2b2o2b2o$5b2o2b2ob2o$14bo3$9bo$8b3o$2o4b
+2o3bob2o$2o4bo2b2o2b2o$6bob2o4$6bob2o$2o4bo2b2o2b2o$2o4b2o3bob2o$8b3o$9bo""")
+p14_2 = lt.pattern("""14bo$13b3o$5b2o4b2o3bob2o$5b2o4bo2b2o2b2o$11bob2o4$11bob2o$5b2o4bo2b2o
+2b2o$5b2o4b2o3bob2o$13b3o$14bo4$9b2o2b2o$9b2o2b2o3$bo$obo3b2o$bo4b2o""")(19,0)
+
+# uses 34P14 shuttles
+def p14_shuttle(p):
+    if p%56 != 42 or p < 98:
+        return None
+    return (p14_1 + p14_2((p-98)//8, (p-98)//8), 105)
+
 tbs0_1 = lt.pattern("""2b2o5b2o$2b2o5b2o6$2b3o3b3o$bo2bo3bo2bo$bo3bobo3bo$2obobobobob2o$2ob2o
 3b2ob2o$b3o5b3o6$3bo$2bobo$bo3bo$b5o$obobobo$bo3bo2$bo3bo$obobobo$b5o
 3b2o$bo3bo3b2o$2bobo$3bo2$2b3o$2bo$3bo""")
