@@ -139,10 +139,10 @@ pd75_1 = lt.pattern("""20bo$19bobo3$19b3o$19b3o$20bo3$20bo$19b3o$19b3o3$19bobo$2
 bo2bo4bo2bo4b3o$6o2b6o3bo$bo2bo4bo2bo5bo$2b2o6b2o""")
 pd75_2 = lt.pattern("bo2b2o4b2o2bo$o3b3o2b3o3bo$bo2b2o4b2o2bo")(26,23)
 
-pd90_1 = lt.pattern("""20bo$19bobo3$19b3o$19b3o$20bo3$20bo$19b3o$19b3o3$19bobo$20bo$2b2o6b2o$
-bo2bo4bo2bo4b3o$6o2b6o3bo$bo2bo4bo2bo5bo$2b2o6b2o""")
-pd90_2 = lt.pattern("""10b2o6b2o$9bo2bo4bo2bo$8b6o2b6o$9bo2bo4bo2bo$10b2o6b2o$bo$obo3$3o$3o$b
-o3$bo$3o$3o3$obo$bo""")(21,24)
+pd90_1 = lt.pattern("""7b2o4bo$7b2o3bobo$13bo3$2o2b2o2b2o$2o2b2ob2o$9bo3$3b3o$3b3o$4bo$4bo$4b
+o$3bobo3$3bobo$4bo$4bo$4bo$3b3o$3b3o""")
+pd90_2 = lt.pattern("""9b3o$9b3o$10bo$10bo$10bo$9bobo3$9bobo$10bo$10bo$10bo$9b3o$9b3o4$9b2o2b
+2o$9b2o2b2o3$bo$obo3b2o$bo4b2o""")(13,-2)
 
 # all types of this construction use pentadecathlons or queen bees
 def pd_shuttle(p):
@@ -165,7 +165,7 @@ def pd_shuttle(p):
     elif r == 5:
         return (pd75_1 + pd75_2(exts,exts), 49)
     elif r == 6:
-        return (pd90_1 + pd90_2(exts,exts), 69)
+        return (pd90_1 + pd90_2(exts,exts), 61)
     else:
         return None
 
