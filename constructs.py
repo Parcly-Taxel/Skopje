@@ -124,7 +124,7 @@ pd15_1 = lt.pattern("""16b3o$15bo3bo$15bo3bo$16b3o5$16b3o$15bo3bo$15bo3bo$16b3o4
 $5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
 pd15_2 = lt.pattern("""11b2o$9bo4bo$8bo6bo$7bo8bo$7bo8bo$7bo8bo$8bo6bo$bo7bo4bo$bo9b2o2$bo$ob
 o2$3o3$3o2$obo$bo2$bo$bo""")(14,11)
-
+# 30+120n: buckaroo shuttle
 pd30_1 = lt.pattern("""o$3o$3bo$2b2o$9b2o$5bo2b2o$4bobo3bo$3bo3bo$3b5o$2b2o3b2o$3b5o$4b3o$5bo
 9$4b2o$4b2o""")
 pd30_2 = lt.pattern("3b2o$3b2o3$3bo$2bobo$bo3bo$b5o$2o3b2o$b5o$2b3o$3bo8$5b2o$5bo$6b3o$8bo")(13,-11)
@@ -133,20 +133,19 @@ pd45_1 = lt.pattern("""17bo$17bo$16b3o3$16b3o$17bo$17bo$17bo$17bo$16b3o3$16b3o$1
 3bo2bo3b2o$5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
 pd45_2 = lt.pattern("""7b2o6b2o$6bo2bo4bo2bo$6bo2bo4bo2bo$6bo2bo4bo2bo$7b2o6b2o4$bo$bo$obo$bo
 $bo$bo$bo$obo$bo$bo""")(18,19)
-
+# 60+120n: p60 glider shuttle extensions
 pd60_1 = lt.pattern("17b3o$2bo2bo4bo2bo3bo$3o2b6o2b3o2bo$2bo2bo4bo2bo")
 pd60_2 = lt.pattern("2bo2bo4bo2bo$3o2b6o2b3o$2bo2bo4bo2bo")(25,5)
-
+# 75+120n: 6 bits extensions
 pd75_1 = lt.pattern("""20bo$19bobo3$19b3o$19b3o$20bo3$20bo$19b3o$19b3o3$19bobo$20bo$2b2o6b2o$
 bo2bo4bo2bo4b3o$6o2b6o3bo$bo2bo4bo2bo5bo$2b2o6b2o""")
 pd75_2 = lt.pattern("bo2b2o4b2o2bo$o3b3o2b3o3bo$bo2b2o4b2o2bo")(26,23)
-
+# 90+120n: Elkies–Simkin 1hd reflector with pentadecathlons (p90 version is Silverstream)
 pd90_1 = lt.pattern("""7b2o4bo$7b2o3bobo$13bo3$2o2b2o2b2o$2o2b2ob2o$9bo3$3b3o$3b3o$4bo$4bo$4b
 o$3bobo3$3bobo$4bo$4bo$4bo$3b3o$3b3o""")
 pd90_2 = lt.pattern("""9b3o$9b3o$10bo$10bo$10bo$9bobo3$9bobo$10bo$10bo$10bo$9b3o$9b3o4$9b2o2b
 2o$9b2o2b2o3$bo$obo3b2o$bo4b2o""")(13,-2)
 
-# all types of this construction use pentadecathlons or queen bees
 def pd_shuttle(p):
     if p%15 or p < 30:
         return None
@@ -170,6 +169,7 @@ def pd_shuttle(p):
     else:
         return None
 
+# 90+24n: Elkies–Simkin 1hd reflector with p6 thumbs (p114 version is Ocellus)
 p6ts1 = lt.pattern("""7b2o4bo$7b2o3bobo$13bo3$2o2b2o2b2o$2o2b2ob2o$9bo3$3b2o$2bo2b2o$2bo4b2o
 $2o3bob2o$bobo$bob6o$2bo5bo$3b3o$5bo""")
 p6ts2 = lt.pattern("""9bo$9b3o$6bo5bo$6b6obo$11bobo$6b2o2bo2b2o$6bobo2b2o$10bobo$11bo4$9b2o
@@ -180,17 +180,18 @@ def p6thumb_shuttle(p):
         return None
     return (p6ts1 + p6ts2((p-90)//8, (p-90)//8), 92)
 
+# 98+56n: Elkies–Simkin 1hd reflector with 34P14 shuttles (p98 version is Gallus)
 p14_1 = lt.pattern("""12b2o4bo$12b2o3bobo$18bo3$5b2o2b2o2b2o$5b2o2b2ob2o$14bo3$9bo$8b3o$2o4b
 2o3bob2o$2o4bo2b2o2b2o$6bob2o4$6bob2o$2o4bo2b2o2b2o$2o4b2o3bob2o$8b3o$9bo""")
 p14_2 = lt.pattern("""14bo$13b3o$5b2o4b2o3bob2o$5b2o4bo2b2o2b2o$11bob2o4$11bob2o$5b2o4bo2b2o
 2b2o$5b2o4b2o3bob2o$13b3o$14bo4$9b2o2b2o$9b2o2b2o3$bo$obo3b2o$bo4b2o""")(19,0)
 
-# uses 34P14 shuttles
 def p14_shuttle(p):
     if p%56 != 42 or p < 98:
         return None
     return (p14_1 + p14_2((p-98)//8, (p-98)//8), 105)
 
+# 184+92n: Hickerson's stop-and-go reaction
 tbs0_1 = lt.pattern("""2b2o5b2o$2b2o5b2o6$2b3o3b3o$bo2bo3bo2bo$bo3bobo3bo$2obobobobob2o$2ob2o
 3b2ob2o$b3o5b3o6$3bo$2bobo$bo3bo$b5o$obobobo$bo3bo2$bo3bo$obobobo$b5o
 3b2o$bo3bo3b2o$2bobo$3bo2$2b3o$2bo$3bo""")
@@ -201,10 +202,12 @@ tbs92_2 = lt.pattern("""9bo$8bobo$2b2o3bo3bo$2b2o3b5o$6bobobobo$7bo3bo2$7bo3bo$6
 7bo3bo$8bobo$9bo6$b3o5b3o$2ob2o3b2ob2o$2obobobobob2o$bo3bobo3bo$bo2bo
 3bo2bo$2b3o3b3o6$2b2o$2b2o""")(-8,33)
 
-tbs138_1 = lt.pattern("""b2o15bo3bo$b2o3b2o9bo5bo9b2o$6b2o9bo15b2o$17b2o3bo$19b3o2$b2o16b3o$o2b
-o13b2o3bo$o2bo13bo15b2o$b2o14bo5bo9b2o$18bo3bo3$9b2o6bo$9bobo6b2o$9bo7b2o""")
-tbs138_2 = lt.pattern("""12bo3bo5bob2o$2o9bo5bo4bobobo$2o9bo9bo4bo$11b2o3bo5bobobo$13b3o6bob2o
-2$13b3o$11b2o3bo$2o9bo15b2o$2o9bo5bo9b2o3b2o$12bo3bo15b2o""")(-1,24)
+# 138+184n: jslife reflectors-180.lif, 5hd class 1
+tbs138_1 = lt.pattern("""b2o5b2o$b2o5b2o13$bo7bo$obo5bobo$3bo3bo$o2bo3bo2bo$bobo3bobo$3b2ob2o$
+2ob2ob2ob2o$2o2bobo2b2o$b3o3b3o2b3o$2bo5bo3bo$13bo3$b2o$b2o""")
+tbs138_2 = lt.pattern("""3bo$2bobo2$o5bo2b2o$3bo5b2o$2o3b2o4$2o3b2o$3bo$o5bo2$2bobo$3bo3$2bo7bo
+$bobo5bobo$4bo3bo$bo2bo3bo2bo$2bobo3bobo$4b2ob2o$b2ob2ob2ob2o$b2o2bobo
+2b2o$2b3o3b3o$3bo5bo4$2b2o5b2o$2b2o5b2o""")(21,25)
 
 def twinbees_shuttle(p):
     if p%46 or p < 138:
@@ -217,6 +220,6 @@ def twinbees_shuttle(p):
     elif r == 2:
         return (tbs0_1 + tbs92_2(exts,exts), 77)
     elif r == 3:
-        return (tbs138_1 + tbs138_2(exts,exts), 86)
+        return (tbs138_1 + tbs138_2(exts,exts), 72)
     else:
         return None
