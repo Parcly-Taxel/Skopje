@@ -11,6 +11,6 @@ from skopje import skop
 skop109, minpop109 = skop(109)[0]
 ```
 
-`skop()` returns a _list_ of pairs (lifelib Pattern, minimum population) to allow ties as in the p4 and p7 cases; to get the pattern's apgcode and RLE use `skop109.apgcode` and `skop109.rle_string()` respectively. The function compares several different constructions as well as elementary (non-loop) and LCM oscillators to arrive at its final result.
+`skop()` returns a _list_ of pairs (lifelib Pattern, minimum population) to allow ties as in the p4 and p7 cases; to get the pattern's apgcode and RLE use `skop109.apgcode` and `skop109.rle_string()` respectively. By default the function compares several different constructions as well as all kinds of fixed oscillators, LCM or otherwise, to arrive at its final result; passing `unique=True` or using the function `skuop()` excludes LCM oscillators (including billiard table-like constructions like [87P26](https://conwaylife.com/wiki/87P26) and [72P68](https://conwaylife.com/wiki/72P68)) and adjustable glider loops/shuttles, leaving only "interesting" oscillators.
 
 Each function producing oscillators of a certain type for an infinite number of periods should accept the desired period as its argument and return `None` if the construction is not applicable to that period or (Pattern, minimum population) otherwise. The latter element can itself be `None` to indicate that the period is in a range where the population cannot easily be calculated.

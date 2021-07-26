@@ -15,7 +15,7 @@ def read_oscfiles(*fns):
 def skop(p, unique=False):
     """Return a list of pairs (Pattern, minimum population) representing
     the smallest known oscillators of the specified period. Setting unique=True
-    excludes LCM and adjustable (to infinitely many periods trivially) oscillators."""
+    excludes LCM oscillators and adjustable glider loops/shuttles."""
     if not unique:
         fixed = read_oscfiles("fixedoscs", "lcm")
         cands = list(fixed.get(p, []))
