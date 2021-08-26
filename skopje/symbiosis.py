@@ -84,7 +84,7 @@ fixeds = """1 xs2_1_2 2
 80 xp80_g0588cz0kgf7_0g2zkxgz1 21
 81 xp81_02y0648gzy2gg843z01y01_2y21248zy5g81z1y221 25
 82 xp82_08026z040gox1_401z8y21zw1 14
-83 xp83_0o4226z0f8_g2w1z2 16
+83 xp83_02344s4_1408g 13
 84 xp84_ohgzb0iz01_160gz0k 16
 85 xp85_18ogs2ux1_2hy1gx1 15
 86 xp86_08zy06d132_8y633zy1gx2 14
@@ -289,9 +289,6 @@ m0_2 = lt.pattern("12.A$12.A$12.2A2$13.A$2.2A10.B$B.2A9.2B$2B")(1,8)
 
 m1_1 = lt.pattern("12.A$12.B$8.A$7.B2A2$AB$7.A$7.A.A$2.2A3.2A$2.2A$3.B")
 m1_2 = lt.pattern("9.2A$9.2AB3$8.A$8.B$3.2AB$3.2A$B$A")(5,8)
-
-m2small_1 = lt.pattern("5.B$A4.2A$B5.A2$A3.A$2A4.A$B5.A$3.A.2A")
-m2small_2 = lt.pattern("6.B$5.2A$5.2A2$2A4.B$2A4.A$.B")(6,6)
 
 m2_1 = lt.pattern("2.2B$2.B$3.2A$B3.A$.3A2$.B$2.AB")
 m2_2 = lt.pattern("BA$2.B2$2.A$2A.B$A$.B$2B")(16,1)
