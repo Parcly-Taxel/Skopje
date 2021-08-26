@@ -4,7 +4,7 @@ In May and June 2021 David Raucci (hotdogPi) on the ConwayLife forums discovered
 
 This repository started out as an independent script in my glider synthesis database [Shinjuku](https://gitlab.com/parclytaxel/Shinjuku) as an automatic generator of the aforementioned glider loops and collector of other **s**mallest **k**nown **o**scillators of **p**eriods _n_ – hence the name Skopje, North Macedonia's capital. It still requires [lifelib](https://gitlab.com/apgoucher/lifelib) however.
 
-To get the smallest known oscillator of period 109 together with its minimum population:
+To get the smallest known oscillator of period 109 in Conway's Life together with its minimum population:
 
 ```python
 from skopje import skop
@@ -13,4 +13,8 @@ skop109, minpop109 = skop(109)[0]
 
 `skop()` returns a _list_ of pairs (lifelib Pattern, minimum population) to allow ties as in the p4, p7 and p92 cases; to get the pattern's apgcode and RLE use `skop109.apgcode` and `skop109.rle_string()` respectively. The function compares several different constructions as well as a list of fixed oscillators, LCM or otherwise, to arrive at its final result.
 
-Each function producing oscillators of a certain type for an infinite number of periods should accept the desired period as its argument and return `None` if the construction is not applicable to that period or (Pattern, minimum population) otherwise. The latter element can itself be `None` to indicate that the period is in a range where the population cannot easily be calculated.
+SKOPs in other rules can be found by passing the `rule=` argument; the supplied string gets run through lifelib's `sanirule()` function before being mapped to a filename. The file itself should contain three objects:
+
+* `lt`, the lifetree under which computations are performed.
+* `fixeds`, a multiline string where each line gives the period of a fixed oscillator, its apgcode and its minimum population, all separated by spaces.
+* `cfuncs`, a sequence of functions each accepting a period and returning `None` if its corresponding construction is not applicable to that period or (Pattern, minimum population) otherwise. The latter element can itself be `None` to indicate that the period is in a range where the population does not follow a defined formula.
