@@ -1,7 +1,8 @@
 from importlib import import_module
 from lifelib.genera import sanirule
 
-aliases = {"b3s23": "life"}
+aliases = {"b3s23": "life",
+           "b2-as12": "justfriends"}
 
 def minpop(pat):
     """Compute the minimum population of the given pattern.
