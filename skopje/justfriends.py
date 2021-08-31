@@ -49,4 +49,20 @@ fixeds = """1 xs2_3 2
 97 xp97_22o7x868y7868x7o22 22
 236 xp236_22xb1b 7"""
 
-cfuncs = tuple()
+p26s1 = lt.pattern("5o4$bobo$2bo$2bo4$bo$o$o")
+p26s2_0 = lt.pattern("2bo$2bo$bobo4$5o")(-6,13)
+p26s2_3 = lt.pattern("4bo$b2obo$o3bo$b2obo$4bo")(11,11)
+
+def p26_shuttle(p):
+    if p%26 or p < 78:
+        return None
+    q = p//26
+    exts, r = divmod(q, 6)
+    exts *= 13
+    if r == 0:
+        return (p26s1 + p26s2_0(exts,exts), 21)
+    elif r == 3:
+        return (p26s1 + p26s2_3(exts,exts), 22)
+    return None
+
+cfuncs = (p26_shuttle,)

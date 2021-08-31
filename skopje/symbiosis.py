@@ -466,3 +466,23 @@ def universal_reflector_loop(p):
         return (m7_1 + m7_2(n-15,n-15), 29)
 
 cfuncs = (universal_reflector_loop,)
+
+# pat = lt.pattern("A.A$A.A$A2.B$.AB")
+# print(pat.period, pat.apgcode, minpop(pat))
+# qat = skop(pat.period, "symbiosis")[0][0]
+# print(qat.apgcode, minpop(qat))
+"""
+newfixed = {}
+f1 = fixeds.split("\n")
+with open("nosc", 'r') as f2:
+    for (priority, f) in enumerate((f2, f1)): # f2 over f1
+        for l in f:
+            p, apg, mp = l.split()
+            p = int(p)
+            tentative = (int(mp), priority, apg)
+            existing = newfixed.get(p, (9999, 9999, 9999))
+            if tentative < existing:
+                newfixed[p] = tentative
+for (p, (mp, _, apg)) in sorted(newfixed.items()):
+    print(p, apg, mp)
+"""
