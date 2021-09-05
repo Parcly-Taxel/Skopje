@@ -194,20 +194,21 @@ def mold_rectifier_loop(p):
     pat, mpop = rectifier_loop(p//2)
     return (pat+mold, mpop+12 if mpop != None else None)
 
-p8b1 = lt.pattern("""10b2o$10b2o$25bo$23b3o$9b3o10bo$9b2o11b2o$12b2o$11b3o4bo$10bobo4bobo$
-10b2o4bo2bo$17b2o2$3b2o5b2o$4bo5b2o$4bobo$5b2o7bo$9b2ob2o$8bobo2b2o$9b
-o$5bo$4b3o$3bob3o$2bo3bo$bo3bo$3obo$b3o$2bo""")
-p8b2 = lt.pattern("""13bo2b2o$12bo3b2o2b2o$12bo7b2o$13b4o4$12bo$11bobo$11bo2bo$12b2o3$16b2o
-$16bobo$18bo$2o16b2o$2o2b2o$4bobo$5bo$8b3o$2b2o3bo$3bo3bo3bo$3o4bo2bob
-o$o8bobo2bo$10bo3bo$14bo$11b3o""")(14,8)
+p8s1 = lt.pattern("""2bo10bo2bo$b3o13bo$3obo13b2o$bo3bo6bob2o6bo$2bo3bo5bo2bo3bo$3bob3o3bo
+3bob3o$4b3o3bo11bo$5bo7b3obo3bo$13bo3bo2bo$10bo6b2obo$8bo4b2o$7b2o6bo$
+7bobo6bo2bo3$2b2o$bobo$bo$2o""")
+p8s2 = lt.pattern("""18bo2bo$17bo$15b2o$12bo6b2obo$b2o4b2o6bo3bo2bo$b2o4b2o6b3obo3bo$12bo
+11bo$13bo3bob3o$ob2o3b2o5bo2bo3bo$obo4b2o5bob2o6bo$bo18b2o$b2o16bo$b2o
+12bo2bo$b2o""")(9,20)
 
-# works down to p40 but fixed oscillators beat it (and it requires more gliders) below p104
-def p8_loop(p):
+# the upper reflector is from Louis-François Handfield and Aidan F. Pierce,
+# see https://conwaylife.com/forums/viewtopic.php?f=2&t=1437&p=135551#p135546
+def p8_shuttle(p):
     if p%8 or p < 104:
         return None
     exts = p//8 - 13
     par = exts%2
-    return (p8b1 + p8b2(exts,exts)[4*par], 120+par)
+    return (p8s1 + p8s2(exts,exts)[4*par], 109+11*par)
 
 snark1 = lt.pattern("""9b2o$8bobo$2b2o4bo$o2bo2b2ob4o$2obobobobo2bo$3bobobobo$3bobob2o$4bo2$
 17b2o$8b2o7bo$8b2o5bobo$15b2o7$5b2o$6bo$3b3o$3bo""")
@@ -368,5 +369,5 @@ def twinbees_shuttle(p):
     else:
         return None
 
-cfuncs = (rectifier_loop, mold_rectifier_loop, p4_bumper_loop, p8_loop, snark_loop,
+cfuncs = (rectifier_loop, mold_rectifier_loop, p4_bumper_loop, p8_shuttle, snark_loop,
           p6_bumper_loop, pd_shuttle, p6thumb_shuttle, p14_shuttle, twinbees_shuttle)
