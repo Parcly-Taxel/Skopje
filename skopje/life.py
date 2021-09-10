@@ -38,7 +38,7 @@ fixeds = """1 xs4_33 4
 29 xp29_y8ca23z252y24eexcczg8gy28ssy366xg0s4z01y76e6x6e6w11zzy8252y1252 54
 30 xp30_w33z8kqrqk8zzzw33 20
 31 xp31_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066 48
-32 xp32_wg4cx178kc0c4gozwdl8y0kksy1ggoz311y82lmzw31460652sgx641 66
+32 xp32_y2gk2gb3zy211y0g0s4zy2kbkx11zoozxooozeee111 48
 33 xp33_8ehe8oy1o8a6zw12ll64x88c04c6ezy056y313 46
 35 xp35_y4ok46y3253zooxgcgy47r4xcczxgw33y0ggkczw321y31 44
 36 xp36_32aczy08c8y0131zya354c 22
@@ -201,7 +201,7 @@ p8s2 = lt.pattern("""18bo2bo$17bo$15b2o$12bo6b2obo$b2o4b2o6bo3bo2bo$b2o4b2o6b3ob
 11bo$13bo3bob3o$ob2o3b2o5bo2bo3bo$obo4b2o5bob2o6bo$bo18b2o$b2o16bo$b2o
 12bo2bo$b2o""")(9,20)
 
-# the upper reflector is from Louis-François Handfield and Aidan F. Pierce,
+# 104+8n: Elkies delaying + Handfield–Pierce reflectors; for the latter
 # see https://conwaylife.com/forums/viewtopic.php?f=2&t=1437&p=135551#p135546
 def p8_shuttle(p):
     if p%8 or p < 104:
