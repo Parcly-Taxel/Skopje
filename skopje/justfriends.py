@@ -54,7 +54,7 @@ p26s2_0 = lt.pattern("2bo$2bo$bobo4$5o")(-6,13)
 p26s2_3 = lt.pattern("4bo$b2obo$o3bo$b2obo$4bo")(11,11)
 
 def p26_shuttle(p):
-    if p%26 or p < 78:
+    if p%78 or p < 78:
         return None
     q = p//26
     exts, r = divmod(q, 6)
@@ -63,6 +63,28 @@ def p26_shuttle(p):
         return (p26s1 + p26s2_0(exts,exts), 21)
     elif r == 3:
         return (p26s1 + p26s2_3(exts,exts), 22)
-    return None
 
-cfuncs = (p26_shuttle,)
+p26l1 = lt.pattern("5o2$bobo$bobo$2bo")
+p26l2 = lt.pattern("o$o2b3o$o2bo$o2b3o$o")(-6,10)
+p26l3 = lt.pattern("2bo$bobo$bobo2$5o")(4,16)
+p26l4 = lt.pattern("5bo$3o2bo$2bo2bo$3o2bo$5bo")(9,6)
+gp26l = lt.pattern("o$b2o")(3,8)
+
+def p26_loop(p):
+    if p%26 or not p%78 or p < 52:
+        return None
+    r = p//26%6
+    if r == 4:
+        n_gliders, i, mpop = (1, 0, 39)
+    elif r == 2 or r == 5:
+        n_gliders = 2
+        i, mpop = (2, 46) if p == 52 else (4, 42)
+    elif r == 1:
+        n_gliders, i, mpop = (4, 4, 48)
+    slack = (p*n_gliders - 44) // 12
+    pat = p26l1 + p26l2(-i,i)[-6*i] + p26l3(slack-2*i,slack) + p26l4(slack-i,slack-i)[-6*i]
+    for _ in range(n_gliders):
+        pat = (pat+gp26l)[p]
+    return (pat, mpop)
+
+cfuncs = (p26_shuttle, p26_loop)
