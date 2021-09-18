@@ -87,4 +87,29 @@ def p26_loop(p):
         pat = (pat+gp26l)[p]
     return (pat, mpop)
 
-cfuncs = (p26_shuttle, p26_loop)
+psl1 = lt.pattern("12b7o2$15bo2$13bo3bo2$14bobo$o$o4bo$o$ob2o3bo$o$o4bo$o")
+psl2 = lt.pattern("18bo$13bo4bo$12b4o2bo$13bo2bobo$12b4o2bo$13bo4bo$3bo14bo$3bo$b2ob2o$2bobo2$3bo2$7o")(7,12)
+gpsl = lt.pattern("obo$o")(13,9)
+
+def phase_shifting_loop(p):
+    # Determine if the period can be represented by the loop;
+    # p must be of the form 26x + 37y with x, y >= 1
+    # Furthermore we take y (the number of glider-containing segments)
+    # to be as small as possible
+    # All periods at least 26*37+1 = 963 can be represented this way
+    # TODO handle different loop shapes and different glider positions in a repetition
+    y = 1
+    while (p-37*y) % 26:
+        y += 1
+    if (x := (p-37*y) // 26) < 1:
+        return None
+    n_reps = [1, 12, 6, 4, 3, 12, 2, 12, 3, 4, 6, 12][p%12]
+    slack = p*n_reps//12 - 8
+    pat = psl1 + psl2(slack,slack)[-6*slack]
+    for _ in range(n_reps):
+        for _ in range(y):
+            pat = (pat+gpsl)[37]
+        pat = pat[26*x]
+    return (pat, None)
+
+cfuncs = (p26_shuttle, p26_loop, phase_shifting_loop)
