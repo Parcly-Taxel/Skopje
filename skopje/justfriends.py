@@ -41,14 +41,14 @@ fixeds = """1 xs2_3 2
 44 xp44_8b8444448b8zy0cgczz1d1222221d1 31
 46 xp46_y1qx8wvzowg4wo1z7y22 20
 53 xp53_y72q28f82q2zy2gw2245y15422wgz0e0k4416yb6144k0ez1t1b880oybo088b1t1zy23wgg88y188ggw3zy7gng4s4gngzyb1 100
-54 xp54_y6gg888888a20vzy2s08aaa0e0c0l5l0r4118822q2gzy1o1060c0l5k0gf098jkk1t0c0b8b03sz2q2i2o0o0aa21c3w3x442k44kk1t0s0f0ozxv01glk1h1p1a99gg0m80e1c2i2xo22222zx160e0u01gl411u0c0f0g1l5ghgj0szy32222w441u05llghgjgaa2w1zyc7022 284
+54 xp54_y6gg888888a20vzy2s08aaa0e0s0l5l0r4118822q2gzy1o1060c0k5l7gf098jkk1t0o0b8b03sz2q2i2o0o0aa21c3w3x442k55ll1t0s0f0ozxv01glk5t5t1a99gg0m80e1c2i2xo22222zx160e0uwgl411u0c0f0v5l1ghgj0szy32222w441u05llghgjgaa2w1zyc7022 276
 56 xp56_gg4881lh88hl1884ggzx307y2703 34
 60 xp60_o8888b8888ozwe11d11e 18
 63 xp63_22o3y0kwk88kwky03o22 22
 76 xp76_2r02222222220r2z0vxa0e0axvz8r08888888880r8 55
 83 xp83_y311111zggybggzy4r0rz11yb11zy3ggggg 26
 97 xp97_22o7x868y7868x7o22 22
-108 xp108_y6gg888888a20vzy2s08aaa0e0c0l5l0r4118822q2gzy1o1060c0l5k0gf098jkk1t0c0b8b03sz2q2i2q2p2aa21c3w3x442k44kk1t0s0f0ozxv01glk1h1p1a99gg0m80e1c2i2xo22222zx160e0u01gl411u0c0f0g1l5ghgj0szy32222w441u05llghgjgaa2w1zyc7022 288
+108 xp108_y6gg888888a20vzy2s08aaa0e0s0l5l0r4118822q2gzy1o1060c0k5l7gf098jkk1t0o0b8b03sz2q2i2q2p2aa21c3w3x442k55ll1t0s0f0ozxv01glk5t5t1a99gg0m80e1c2i2xo22222zx160e0uwgl411u0c0f0v5l1ghgj0szy32222w441u05llghgjgaa2w1zyc7022 276
 236 xp236_22xb1b 7"""
 
 p26s1 = lt.pattern("5o4$bobo$2bo$2bo4$bo$o$o")
@@ -174,11 +174,11 @@ def drifter_loop(p):
         pat += dl2(cx,cy)
         cx -= 29
         cy += 29
-    pat += dl3(cx, cy)
+    pat += dl3(cx,cy)
     cx += 15
     cy += 20
     for _ in range(y):
-        pat += dl4(cx, cy)
+        pat += dl4(cx,cy)
         cx += 24
     pat += pat("rot180", cx, cy)
     for _ in range(looplen // p):
