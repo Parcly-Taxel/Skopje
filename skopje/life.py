@@ -249,27 +249,6 @@ def snark_loop(p):
         pat = (pat+gsnark)[p]
     return (pat, mpop)
 
-p6b1 = lt.pattern("4b2o14bo$2o2b2o12b3o$2o2bob2o9bo$5b3o9b2o2$13bo$5b2o5bobo$5b2o4bo2bo$12b2o")
-p6b2 = p6b1("rot90",-2,28)[5]
-p6b3 = p6b1("rot180",26,30)[4]
-p6b4 = p6b1("rot270",28,2)[3]
-gp6b = lt.pattern("2o$obo$o")(14,10)
-
-def p6_bumper_loop(p):
-    if p%6 or not p%8 or p < 36:
-        return None
-    elif p%4:
-        n_gliders, mpop = (2, 122) if p >= 66 else (6, 130)
-        i = (p-30) // 4 if p <= 54 else 0
-    else:
-        n_gliders, mpop = (1, 123) if p >= 132 else (3, 127) if p >= 60 else (5, 140)
-        i = (1,0,3,6)[(p-36)//24] if p <= 108 else 0
-    slack = (p*n_gliders - 124) // 8
-    pat = p6b1 + p6b2(-i,i)[2*i] + p6b3(slack-2*i,slack)[2*slack] + p6b4(slack-i,slack-i)[2*(slack+i)]
-    for _ in range(n_gliders):
-        pat = (pat+gp6b)[p]
-    return (pat, mpop)
-
 pd0_1 = lt.pattern("""16b3o$15bo3bo$15bo3bo$16b3o5$16b3o$15bo3bo$15bo3bo$16b3o4$2o3bo2bo3b2o
 $5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
 pd0_2 = lt.pattern("""6b2o3bo2bo3b2o$6b5o4b5o$6b2o3bo2bo3b2o4$b3o$o3bo$o3bo$b3o5$b3o$o3bo$o
@@ -335,6 +314,31 @@ def p6thumb_shuttle(p):
         return None
     return (p6ts1 + p6ts2((p-90)//8, (p-90)//8), 92)
 
+# 66+6n: 22hd reflector with unices
+# see https://conwaylife.com/forums/viewtopic.php?p=139947#p139947
+p6u1 = lt.pattern("""x = 20, y = 25, rule = B3/S23
+9bo$4b2o3b3o$2obo8bo$2o2bo2bo3b2o$5bobo$6bo7b2o$14b2o$5b2o$5b2o9$12bo$
+11bobo$11bobo$12bo$16b2o$16bobo$18bo$18b2o!""")
+p6u2 = lt.pattern("""x = 20, y = 25, rule = B3/S23
+2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo9$13b2o$13b2o$4b2o$4b2o7bo$12bobo$
+7b2o3bo2bo2b2o$7bo8bob2o$8b3o3b2o$10bo!""")(20,28)
+gp6u = lt.pattern("bo$2o$obo!")(13,8)
+
+def p6unix_shuttle(p):
+    if p%6 or p < 66:
+        return None
+    elif p%12 or p < 132:
+        n_gliders, mpop = (4, 96)
+    elif p%24 or p < 264:
+        n_gliders, mpop = (2, 86)
+    else:
+        n_gliders, mpop = (1, 83)
+    exts = (p*n_gliders - 264) // 8
+    pat = p6u1 + p6u2(exts,exts)
+    for _ in range(n_gliders):
+        pat = (pat+gp6u)[p]
+    return (pat, mpop)
+
 # 98+56n: Elkies–Simkin 1hd reflector with 34P14 shuttles (p98 version is Gallus)
 p14_1 = lt.pattern("""12b2o4bo$12b2o3bobo$18bo3$5b2o2b2o2b2o$5b2o2b2ob2o$14bo3$9bo$8b3o$2o4b
 2o3bob2o$2o4bo2b2o2b2o$6bob2o4$6bob2o$2o4bo2b2o2b2o$2o4b2o3bob2o$8b3o$9bo""")
@@ -380,4 +384,4 @@ def twinbees_shuttle(p):
         return None
 
 cfuncs = (rectifier_loop, mold_rectifier_loop, p4_bumper_loop, p8_shuttle, snark_loop,
-          p6_bumper_loop, pd_shuttle, p6thumb_shuttle, p14_shuttle, twinbees_shuttle)
+          pd_shuttle, p6thumb_shuttle, p6unix_shuttle, p14_shuttle, twinbees_shuttle)
