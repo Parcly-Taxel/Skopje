@@ -131,7 +131,6 @@ fixeds = """1 xs4_33 4 block
 240 xp240_4r4y11h94c0ccz4r4y2fcw43 33 LCM(15,16)
 246 xp246_ya32acydg8k8ooozyu1utzzzybcirrd6y4cc4zy1ggy61zggwg9g89z14w61ye354c 68 capgun
 250 xp250_y1ooy2o4a9jwggzy1ccy0elh4wrwhhz33x6a2y134aipw11z252zzzzykggy94a4zygoowp452sgy6cczygoowtw2oa7y0jjzykc9521y211 119 p5 shuttle
-256 xp256_yr33y166z0ggy033y4178cyb33y0ccz011w66z66yyg88czy4699voyn11zy38ox61zy1311yz66zyzx66woozy133y0ccyb31e8y4cczy566y1cc 104 capgun
 266 xp266_yeey0c871zya111cczyd4cgozgjjy1jjgz34daxad43z0ooy1ooy5ggzyd2301zya88833zye7y031e8 78 LCM(14,38)
 276 xp276_02hqzw37133zy9ei204oy766zy9sig086y7oozz6517x7156zzz0ooy1oo 62 LCM(3,92)
 280 xp280_x352y364koz0ccx4r7y4gcgxoozy5ckggy033wgzgk2gb3y21y3123z11 56 LCM(8,35)
@@ -209,21 +208,21 @@ def mold_rectifier_loop(p):
     pat, mpop, source = rectifier_loop(p//2)
     return (pat+mold, mpop+12 if mpop != None else None, source + " + mold")
 
-p8s1 = lt.pattern("""2bo10bo2bo$b3o13bo$3obo13b2o$bo3bo6bob2o6bo$2bo3bo5bo2bo3bo$3bob3o3bo
-3bob3o$4b3o3bo11bo$5bo7b3obo3bo$13bo3bo2bo$10bo6b2obo$8bo4b2o$7b2o6bo$
-7bobo6bo2bo3$2b2o$bobo$bo$2o""")
-p8s2 = lt.pattern("""18bo2bo$17bo$15b2o$12bo6b2obo$b2o4b2o6bo3bo2bo$b2o4b2o6b3obo3bo$12bo
-11bo$13bo3bob3o$ob2o3b2o5bo2bo3bo$obo4b2o5bob2o6bo$bo18b2o$b2o16bo$b2o
-12bo2bo$b2o""")(9,20)
-
-# 104+8n: Elkies delaying + Handfield–Pierce reflectors; for the latter
-# see https://conwaylife.com/forums/viewtopic.php?f=2&t=1437&p=135551#p135546
-def p8_shuttle(p):
-    if p%8 or p < 104:
+# 128+8n: p8 glider duplicator reflector with Coe's p8 and blocker
+p8l1 = lt.pattern("""11b2o$11b2o3$11bo$9bobo$7bo2b2o$b2o5b2o$b2o5bo2$bo5b2o$obo4b2o$o2bo$bo
+2bo5b2o$10b2o$bo2bo$b2o9$8bo$7bobo$7bobo$8bo$12b2o$12bobo$14bo$14b2o!""")
+p8l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo9$13b2o$13b2o$4b2o$4b2o7bo$12bobo$
+7b2o3bo2bo$7b2o4bo2bo2$13bo2bo$7bo5b2o$5bobo$3bo2b2o$4b2o$4bo2$3b2o$3b2o!""")(14,34)
+gp8l = lt.pattern("bo$2o$obo!")(9,16)
+def p8_loop(p):
+    if p%8 or p < 128:
         return None
-    exts = p//8 - 13
-    par = exts%2
-    return (p8s1 + p8s2(exts,exts)[4*par], 109+11*par, "p8 shuttle")
+    n_gliders, mpop = (2, 108) if p < 248 else (1, 103)
+    exts = (p*n_gliders - 248) // 8
+    pat = p8l1 + p8l2(exts,exts)[4*exts]
+    for _ in range(n_gliders):
+        pat = (pat+gp8l)[p]
+    return (pat, mpop, f"{n_gliders}G p8 loop")
 
 snark1 = lt.pattern("""9b2o$8bobo$2b2o4bo$o2bo2b2ob4o$2obobobobo2bo$3bobobobo$3bobob2o$4bo2$
 17b2o$8b2o7bo$8b2o5bobo$15b2o7$5b2o$6bo$3b3o$3bo""")
@@ -322,15 +321,13 @@ def p6thumb_shuttle(p):
 
 # 66+6n: 22hd reflector with unices
 # see https://conwaylife.com/forums/viewtopic.php?p=139947#p139947
-p6u1 = lt.pattern("""x = 20, y = 25, rule = B3/S23
-9bo$4b2o3b3o$2obo8bo$2o2bo2bo3b2o$5bobo$6bo7b2o$14b2o$5b2o$5b2o9$12bo$
+p6l1 = lt.pattern("""9bo$4b2o3b3o$2obo8bo$2o2bo2bo3b2o$5bobo$6bo7b2o$14b2o$5b2o$5b2o9$12bo$
 11bobo$11bobo$12bo$16b2o$16bobo$18bo$18b2o!""")
-p6u2 = lt.pattern("""x = 20, y = 25, rule = B3/S23
-2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo9$13b2o$13b2o$4b2o$4b2o7bo$12bobo$
+p6l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo9$13b2o$13b2o$4b2o$4b2o7bo$12bobo$
 7b2o3bo2bo2b2o$7bo8bob2o$8b3o3b2o$10bo!""")(20,28)
-gp6u = lt.pattern("bo$2o$obo!")(13,8)
+gp6l = lt.pattern("bo$2o$obo!")(13,8)
 
-def p6unix_shuttle(p):
+def p6_loop(p):
     if p%6 or p < 66:
         return None
     elif p%12 or p < 132:
@@ -340,9 +337,9 @@ def p6unix_shuttle(p):
     else:
         n_gliders, mpop = (1, 83)
     exts = (p*n_gliders - 264) // 8
-    pat = p6u1 + p6u2(exts,exts)
+    pat = p6l1 + p6l2(exts,exts)
     for _ in range(n_gliders):
-        pat = (pat+gp6u)[p]
+        pat = (pat+gp6l)[p]
     return (pat, mpop, f"{n_gliders}G unix loop")
 
 # 98+56n: Elkies–Simkin 1hd reflector with 34P14 shuttles (p98 version is Gallus)
@@ -390,5 +387,5 @@ def twinbees_shuttle(p):
         return None
     return res + (f"type-{r} twin bees shuttle",)
 
-cfuncs = (rectifier_loop, mold_rectifier_loop, p4_bumper_loop, p8_shuttle, snark_loop,
-          pd_shuttle, p6thumb_shuttle, p6unix_shuttle, p14_shuttle, twinbees_shuttle)
+cfuncs = (rectifier_loop, mold_rectifier_loop, p4_bumper_loop, p8_loop, snark_loop,
+          pd_shuttle, p6thumb_shuttle, p6_loop, p14_shuttle, twinbees_shuttle)
