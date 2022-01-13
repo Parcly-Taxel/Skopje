@@ -18,14 +18,16 @@ def skop(p, rule="b3s23"):
     rmod = import_module(f"..{aliases.get(rule, rule)}", __name__)
     cands = []
     for line in rmod.fixeds.split("\n"):
-        lp, apg, mp = line.split()
+        words = line.split(maxsplit=3)
+        lp, apg, mp = words[:3]
         if int(lp) == p:
-            cands.append((rmod.lt.pattern(apg), int(mp)))
+            source = words[3] if len(words) > 3 else None
+            cands.append((rmod.lt.pattern(apg), int(mp), source))
     for cfunc in rmod.cfuncs:
-        cands.append(cfunc(p))
-    cands = list(filter(bool, cands))
+        if (out := cfunc(p)):
+            cands.append(out + (() if len(out) > 2 else (None,)))
     if not cands:
         return []
-    cands = [pair if pair[1] else (pair[0], minpop(pair[0])) for (i, pair) in enumerate(cands)]
-    mp = min(pair[1] for pair in cands)
-    return list(filter(lambda pair: pair[1] == mp, cands))
+    cands = [trip if trip[1] else (trip[0], minpop(trip[0]), trip[2]) for trip in cands]
+    mp = min(trip[1] for trip in cands)
+    return list(filter(lambda trip: trip[1] == mp, cands))

@@ -8,10 +8,10 @@ To get the smallest known oscillator of period 109 in Conway's Life together wit
 
 ```python
 from skopje import skop
-skop109, minpop109 = skop(109)[0]
+skop109, minpop109, source109 = skop(109)[0]
 ```
 
-`skop()` returns a _list_ of pairs (lifelib Pattern, minimum population) to allow ties as in the p4, p7 and p92 cases; to get the pattern's apgcode and RLE use `skop109.apgcode` and `skop109.rle_string()` respectively. The function compares several different constructions as well as a list of fixed oscillators, LCM or otherwise, to arrive at its final result.
+`skop()` returns a list of triples (lifelib Pattern, minimum population, description) to allow ties as in the p4, p7 and p92 cases; to get the pattern's apgcode and RLE use `skop109.apgcode` and `skop109.rle_string()` respectively. The function compares several different constructions as well as a list of fixed oscillators, LCM or otherwise, to arrive at its final result.
 
 SKOPs in other rules can be found by passing the `rule=` argument; the supplied string gets run through lifelib's `sanirule()` function before being mapped to a filename. The file itself should contain three objects:
 
