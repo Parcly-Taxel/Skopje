@@ -43,7 +43,7 @@ fixeds = """1 xs4_33 4 block
 35 xp35_y4ok46y3253zooxgcgy47r4xcczxgw33y0ggkczw321y31 44 H(HF)
 36 xp36_32aczy08c8y0131zya354c 22 22P36
 37 xp37_y2gy033y733y0gzy02543y130aic0cia03y13452z66x88yj88x66zy23kl2yd2lk3zggx8b021yd120b8xggz11xggy484o0o48y4ggx11zy01243y13011x1103y13421zy733y733 124 Beluchenko
-38 xp38_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7 44 strontium
+38 xp38_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7 44 roc
 39 xp39_xqh2z33173xccz4sk0emicy2oozy469dezy4327 46 LCM(3,13)
 40 xp40_33zxs48g69gvzx3021zy833 26 Beluchenko
 42 xp42_033y133zo4maxam4oz1ppy1pp1xgfnzyb1252333 50 LCM(6,14)
@@ -83,8 +83,7 @@ fixeds = """1 xs4_33 4 block
 88 xp88_3bg2kgzy011y1o4oz3213xgonl9611zy5qm 45 LCM(8,11)
 90 xp90_w33z8kqrqk8zy6cczy43llhhla8ozw33y1pie0346 56 LCM(9,30)
 91 xp91_gy1gr3zd5a64210g8c4066wckzy2kr6ogy0f5lc3c4ozybogno311zyb32qm 78 LCM(7,13)
-92 xp92_yi33y133zzzyhckgsxsgkczz33y7c20197zccy734089e 50 50P92.1
-92 xp92_66ybb9ey366zooybk4sya3920skzyd11y9494721023 50 LCM(4,46)
+92 xp92_66yb7pe4y266xoozooybo6s8y99ecsgzyd11y9oib3 49 LCM(4,46)
 93 xp93_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy44hh186zy57 60 LCM(3,31)
 94 xp94_x696o8b9czy065x33xc871xggzooyd643zwgg04ahhha4y5c871z4701yfoozw8e13xggzy34701xmmggo5jzya146w343 110 capgun
 96 xp96_0178cy766zy44koy6m640ooe4a4z0gs26x11xoy1oo022440ezo8go 59 capgun + boat-bit
