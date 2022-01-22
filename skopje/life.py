@@ -59,7 +59,7 @@ fixeds = """1 xs4_33 4 block
 54 xp54_32acy5ca23zy1ooxoozx4ossxsso4zzzc453y5354c 48 p54 shuttle
 55 xp55_y0dby06a8gzggci5ld3xogg150cgz0343y523y0346 49 LCM(5,11)
 56 xp56_66625dw66zyb66zzy0oow8s26zy61ooo8kkwoozyc1 45 p56 B-heptomino shuttle
-57 xp57_y8o08868y3ca23zy6cb2807x6msy44s0ggzggy0c453yi1044pq0kgz0346ysh3040ezy3r96yk69dzw7gi0soys62sgzy020592ig8gy5ggy6ca23zy832y4366xe01kd3zybc453y3161101 152 p3 bumper loop
+57 xp57_yzylg2tugzyzykof0cs7zyzyb8e96y21130186y0ggzyzyc117y8gg0643zyzw654y4o8a6y184sy211zzzyn361yd86czzy9gy6gzy1ooy2321y16511y42a6zgs26ybe88zy2618gc88gy16971zy4ujj0v1zy57b4 146 p3 loop
 58 xp58_wj9ary9ra9jzwdl4cy9c4ldz311yf113z32qkgow262x262wogkq23zw6a8cy9c8a6zw3213y93123 104 PPS
 60 xp60_vtvy037bkicz757 24 LCM(4,15)
 62 xp62_ccy069c536635c96y0cczz66y0ci6koccok6icy066zzy4ojd11djo 66 PS(5*12+2,31)
@@ -68,7 +68,7 @@ fixeds = """1 xs4_33 4 block
 65 xp65_3pmwmp3zxh1gx21h2zx3c7a5301gk2w96zy5admlk 52 LCM(5,13)
 66 xp66_y2ca23zws21q4zx11zxgc22szw8o121z311y0681hh4zy77 48 LCM(3,22)
 68 xp68_w32acy1ca23zy2sr7zo8a6y1mm0mp2c82u08ozy51qaic0d5521 72 LCM(4,17)
-69 xp69_yco08868y3ca23zyacb2807x6msy6ggzy6c453yj346co8oggz8oyz04t0vqgz0123ywog488w1zwgw22413ywo8gzw1bv0n4yz032zy0113236c4oyjok46zy811y67dcxs028q6zydo8a6y32c2203 152 p3 bumper loop
+69 xp69_y4gut2gzy47sc0fozggy06810311z0346xgg8ooy14aa4y3562zy51y76a8ozzykgoyfgkozyk101zzzyzw6a2ye163zzyzyl64kozyzyfgo8y38kk8y166522xo8gzyzyh1ydgw4oy032zyzyw6t1depzyzyx3geu3zyzyz1 146 p3 loop
 70 xp70_033y133y1o62453zo4maxam4oy132156z1ppy1pp1 52 LCM(5,14)
 72 xp72_3bg2kgzy011y7ok46zy268ga4w8k24ozxo8a6 36 LCM(8,36)
 74 xp74_y532acy5ca23zggyrggz0346y5636404636y5643zz0o4cy5coc404cocy5c4oz11yr11zy5o8a6y56a8o 84 Raucci
@@ -76,7 +76,7 @@ fixeds = """1 xs4_33 4 block
 77 xp77_wo8gwog4cgcip688gzxgbao8y2nk5o7ioz4s3s57y1642sj43zw1 77 LCM(7,11)
 78 xp78_y45rc31zwmkac48g012640cczw1wgw1rozmkgino3s4z1w6221 61 LCM(6,13)
 80 xp80_35426ox22i8o0ooz65123y1vow86 39 LCM(5,16)
-81 xp81_yh32acy386880ozyosm6x7082bczy8o8ym354czy080ki89121zws19073yzy1c871zy3ricywcimz0o4cyzy1ho040ez11yzxg044jb051zy8c88gym47011zya11ckg40oxoqezyd16045o4y3ckggzyu1 152 p3 bumper loop
+81 xp81_yzyzwca23zyzyy33y2eu80gswsg0gzyzyw2a6y4178ewew121zyzyz0o4ozyzyugs26x1zyzyzxco4zyzyca64zzzyzyisg8zyu42ezzzyz08okzya86czyhoge2zyc696z0gxsws4oy5okgz1212ewe205vsy2ggzyaggkc011zya1 146 p3 loop
 84 xp84_yf8ka52666zy5c66mkg8y077zzxgy1215dcc6z4ql21333z033 52 52P84
 85 xp85_w32acy1ca23zy2sr7zo8a6y1mm0mp3c48cggzy5122m031fhd221zy811 74 LCM(5,17)
 87 xp87_ya32aczyfg8gw33y466zxg8gy81221zggw1oogyesscz11y2deeyd1266x33zycggy9252z0ooy4ggw3421zy711y2ckggzyi1 84 84P87
@@ -102,7 +102,7 @@ fixeds = """1 xs4_33 4 block
 124 xp124_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy337bkic 60 LCM(4,31)
 126 xp126_0ccy1ccx32acxca23zcmkgxgkmcy24r4zy0202y64r4z033y133xo8a6x6a8o 74 LCM(9,14)
 128 xp128_y3ca73oswcczyqg88gzy1ggyh6bbcxca4z8ko010onmcy04eewuscy26dt30g0352z4a6x6qqcyh11zy01221zyh66w73osa6 108 H(wing)
-129 xp129_yro08868y3ca23zypcb2807x6mszylc453zzyzynggzyzyo346co8oggz8oyzyr4t0vqgz0123yzynog488w1zwgw22413yzyno8gzw1bv0n4yzyr32zy0113236c4ozy811zzyzy8ok46zyz7dcxs028q6zyso8a6y32c2203 152 p3 bumper loop
+129 xp129_yzyzyzy7ca23zyzyzyzy4jjy2eu80gswsg0gzyzyzyzy3103y3178ewew121zyzyzyzy6o4ozyzyzyzy0gs26x1zzzzyzyzya86cyg265zzzzzzyzyhgggygokgzyzyi21zzzzzzyoa64yg361zzzyjggzycg8gw643zyc121z8k8gg70gn1eoy3sg8zy03w3w177y2cczyac453 146 p3 loop
 130 xp130_og8o0u1eozy0mlgrzx1qa2my2meiz62460v0t60gg037fa60ggzy21x11y236fe5267zyc33 89 LCM(10,13)
 132 xp132_252w253zy0gxggg0ooozy13w3488a61oml1hiswcgzw695qsoy3111zyica4w4a4 72 LCM(4,33)
 135 xp135_y9330gzyb1789azy08q987yfooz33yfs2ib2zy6ai2sgzy910ooy2uquzyjfbf 68 LCM(15,27)
@@ -346,6 +346,24 @@ def p6_loop(p):
     for _ in range(n_gliders):
         pat = (pat+gp6l)[p]
     return (pat, mpop, f"{n_gliders}G unix loop")
+
+'''# 128+8n: p3 glider duplicator reflector
+p3l1 = lt.pattern("""14bo$14b3o$17bo$16b2o2$19b2o$11b2o6b2o$4bo2bo3b2o$4bo2bo2b3o$bob2o2b2o
+2bo$obo7b2o$bo3bo2bobo$5bo2bobo$5bo2b2o4$17bo$16bobo$16bobo$17bo$21b2o
+$21bobo$23bo$23b2o!""")
+p3l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo4$15b2o2bo$14bobo2bo$14bobo2bo3bo$
+13b2o7bobo$13bo2b2o2b2obo$12b3o2bo2bo$12b2o3bo2bo$4b2o6b2o$4b2o2$7b2o$
+7bo$8b3o$10bo!""")(43,46)
+gp3l = lt.pattern("bo$2o$obo!")(18,8)
+def p3_loop(p):
+    if p%3 or not p%6 or p < 51:
+        return None
+    n_gliders, mpop = (8, None)
+    exts = (p*n_gliders - 408) // 8
+    pat = p3l1 + p3l2(exts,exts)
+    for _ in range(8):
+        pat = (pat+gp3l)[p]
+    return (pat, mpop, f"8G p3 loop")'''
 
 # 98+56n: Elkies–Simkin 1hd reflector with 34P14 shuttles (p98 version is Gallus)
 p14_1 = lt.pattern("""12b2o4bo$12b2o3bobo$18bo3$5b2o2b2o2b2o$5b2o2b2ob2o$14bo3$9bo$8b3o$2o4b
