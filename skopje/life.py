@@ -29,7 +29,7 @@ fixeds = """1 xs4_33 4 block
 20 xp20_35426ow37bkicz65123 30 LCM(4,5)
 21 xp21_g8gw3jz01xqpwsszy111wc2w8k8zy566 32 Ø
 22 xp22_178cwggg2y2oo4kozy235433y28111w62sg 36 Jason
-23 xp23_y1ggy3o8bdzc82u074wo84s8x31560u28czx11y0hi21y411zy5ddx696zgg0s4y1owsi1isx4s0ggz10230f9y3ogjn45303201zyc65 122 David Hilbert
+23 xp23_0ggw32acxca23wckzgg346xoo8ggy065loz1qa6y2111x62sgz023wc453x354c 76 H(HF)
 24 xp24_xsssx4hh186z777y37 24 LCM(3,8)
 25 xp25_w696o8b9cxc9b8o696zbt065x31x13x56z0123x8c8x8c8zxggkcy2oox31e8zx1 83 PPS
 26 xp26_0c4o796kcimkk8goz4aajkm0fomi87kggzca245l4870122c543zy111 87 LCM(2,13)
