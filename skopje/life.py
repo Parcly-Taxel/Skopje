@@ -78,7 +78,7 @@ fixeds = """1 xs4_33 4 block
 78 xp78_y45rc31zwmkac48g012640cczw1wgw1rozmkgino3s4z1w6221 61 LCM(6,13)
 80 xp80_35426ox22i8o0ooz65123y1vow86 39 LCM(5,16)
 81 xp81_yzyzwca23zyzyy33y2eu80gswsg0gzyzyw2a6y4178ewew121zyzyz0o4ozyzyugs26x1zyzyzxco4zyzyca64zzzyzyisg8zyu42ezzzyz08okzya86czyhoge2zyc696z0gxsws4oy5okgz1212ewe205vsy2ggzyaggkc011zya1 146 p3 22hd reflector loop
-84 xp84_yf8ka52666zy5c66mkg8y077zzxgy1215dcc6z4ql21333z033 52 52P84
+84 xp84_8oymca23z0123ya4995zy9kii4yao8gzxo8a6ym32 42 H(HF)
 85 xp85_w32acy1ca23zy2sr7zo8a6y1mm0mp3c48cggzy5122m031fhd221zy811 74 LCM(5,17)
 87 xp87_ya32aczyfg8gw33y466zxg8gy81221zggw1oogyesscz11y2deeyd1266x33zycggy9252z0ooy4ggw3421zy711y2ckggzyi1 84 84P87
 88 xp88_3bg2kgzy011y1o4oz3213xgonl9611zy5qm 45 LCM(8,11)
@@ -139,6 +139,7 @@ fixeds = """1 xs4_33 4 block
 240 xp240_4r4y11h94c0ccz4r4y2fcw43 33 LCM(15,16)
 246 xp246_ya32acydg8k8ooozyu1utzzzybcirrd6y4cc4zy1ggy61zggwg9g89z14w61ye354c 68 capgun
 250 xp250_y1ooy2o4a9jwggzy1ccy0elh4wrwhhz33x6a2y134aipw11z252zzzzykggy94a4zygoowp452sgy6cczygoowtw2oa7y0jjzykc9521y211 119 p5 shuttle
+252 xp252_8oymca23z0123ya4995zy9kii4yao8gzxo8a6ym32zyecc0v1e0u2c8a6zyh121e9156 78 LCM(9,84)
 266 xp266_yeey0c871zya111cczyd4cgozgjjy1jjgz34daxad43z0ooy1ooy5ggzyd2301zya88833zye7y031e8 78 LCM(14,38)
 275 xp275_y132aczy0ggxooj64z6246kh88y44cp33zcc0fip6sgnsy66a8ozy2346 71 LCM(11,25)
 276 xp276_02hqzw37133zy9ei204oy766zy9sig086y7oozz6517x7156zzz0ooy1oo 62 LCM(3,92)
@@ -148,12 +149,14 @@ fixeds = """1 xs4_33 4 block
 312 xp312_yg33zy1g8gy6ieyag8gzy1121ym121zy2ogg8z33yq844cy033zzy1696yao4y6696zyi11zyg33 60 capgun + boat-bit
 320 xp320_y13pmwmp3zy411y0cczcczx226wosr73wc88zyf66zy166 52 LCM(5,64)
 325 xp325_0gs2ibaa4y5o8zlm0mlluy2sse321y3ca23z25s16a98gy846joozx11311y233pc4zy6o8a6 96 LCM(13,25)
+336 xp336_x32acymo8zy979b4ya321z0g8oya4qisz23ym6a8ozx4ac0ca4z69ig4s0s4gi96zy01x1 76 LCM(16,84)
 342 xp342_s0111zwi3y031e8zw1246zzzwg84czw9oy0oge2xggz70gggy46653w33zy269cey033zy5ci22ak8gzy94887 87 LCM(18,38)
 360 xp360_xn7zw1bscy4os8zybgn2zoo0u240s4ogkcw33zx342sj2ac 62 LCM(9,40)
 368 xp368_y2gy432aczy12251zzggyp62sgz56yc65134w16zyn4o68zy8o8go 48 capgun + boat-bit
 380 xp380_ye3pmwmp3zcieg8oyb11z0suvy5sg2a4zg9jfgoz123zy7s0111zy9222x31e8 75 LCM(5,76)
 385 xp385_xgbb88g0tb0gzca2t597432wh98cy34a6zx12y311y168c8xoozy033x1316y18ozy2652y3311 85 LCM(11,35)
 392 xp392_y58cq7k8gzy8125sb62y5g8gzyf33y2qr0raa4zzyke2ex66zwccxe8ezz4aar0rby2oozx121 78 LCM(8,196)
+408 xp408_y33bg2kgy5ckggzgggg8gy111y81z11101qt2y3259142sszy111y7111y7ig1jzyu12dw93zyb32ac 79 LCM(8,102)
 418 xp418_y1ca23yi32aczsy48kie4y84eik8y4szx771yo177zygg88ggy24y1oge2zybo4cw332h1y1669b7zya11 82 LCM(22,38)
 440 xp440_32acy866zx4q12sy7ggy0oq186zy111y561851zws22cgyh66zx121o8zy3113 62 LCM(22,40)
 448 xp448_gjjy1jjgy266z34daxad43y9skh72w66z0ooy1ooy488ozy833w27411zym33 68 LCM(14,64)
