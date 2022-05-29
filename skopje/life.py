@@ -63,7 +63,7 @@ fixeds = """1 xs4_33 4 block
 58 xp58_wj9ary9ra9jzwdl4cy9c4ldz311yf113z32qkgow262x262wogkq23zw6a8cy9c8a6zw3213y93123 104 PPS
 60 xp60_vtvy037bkicz757 24 LCM(4,15)
 62 xp62_ccy069c536635c96y0cczz66y0ci6koccok6icy066zzy4ojd11djo 66 PS(5*12+2,31)
-63 xp63_32acxca23wgg8g0g8ggzy04r4y07fmoc707comf7zy04r4y2ccy1cczo8a6x6a8o 78 LCM(7,9)
+63 xp63_06e1044im4k8z04b8ri8810tozy4ghz354mgv2r0v066zw3204701 74 LCM(7,9)
 64 xp64_y1j3zy031d8ey633zggy6s4c0gz11y8hj1zya11 34 Merzenich
 65 xp65_3pmwmp3zxh1gx21h2zx3c7a5301gk2w96zy5admlk 52 LCM(5,13)
 66 xp66_y2ca23zws21q4zx11zxgc22szw8o121z311y0681hh4zy77 48 LCM(3,22)
@@ -74,7 +74,7 @@ fixeds = """1 xs4_33 4 block
 74 xp74_y532acy5ca23zggyrggz0346y5636404636y5643zz0o4cy5coc404cocy5c4oz11yr11zy5o8a6y56a8o 84 Raucci
 75 xp75_32aczy0ooj64zy74cp33zyc6a8ozy288k8888k88 46 LCM(15,25)
 76 xp76_o4an7y1ca23yi32acz0110888xooxoa6ya6aoxoox888zy47ys7 56 LCM(4,38)
-77 xp77_wo8gwog4cgcip688gzxgbao8y2nk5o7ioz4s3s57y1642sj43zw1 77 LCM(7,11)
+77 xp77_ok4miewm9azk4q11sjr8a6zg1ggy2gs2sgz1101xebaa43zy5db 71 LCM(7,11)
 78 xp78_y45rc31zwmkac48g012640cczw1wgw1rozmkgino3s4z1w6221 61 LCM(6,13)
 80 xp80_35426ox22i8o0ooz65123y1vow86 39 LCM(5,16)
 81 xp81_yzyzwca23zyzyy33y2eu80gswsg0gzyzyw2a6y4178ewew121zyzyz0o4ozyzyugs26x1zyzyzxco4zyzyca64zzzyzyisg8zyu42ezzzyz08okzya86czyhoge2zyc696z0gxsws4oy5okgz1212ewe205vsy2ggzyaggkc011zya1 146 p3 22hd reflector loop
@@ -83,7 +83,7 @@ fixeds = """1 xs4_33 4 block
 87 xp87_ya32aczyfg8gw33y466zxg8gy81221zggw1oogyesscz11y2deeyd1266x33zycggy9252z0ooy4ggw3421zy711y2ckggzyi1 84 84P87
 88 xp88_3bg2kgzy011y1o4oz3213xgonl9611zy5qm 45 LCM(8,11)
 90 xp90_w33z8kqrqk8zy6cczy43llhhla8ozw33y1pie0346 56 LCM(9,30)
-91 xp91_gy1gr3zd5a64210g8c4066wckzy2kr6ogy0f5lc3c4ozybogno311zyb32qm 78 LCM(7,13)
+91 xp91_g8e1qiga64oy0oggz78ok2im0s43xsd4pzy31w66x110ciqs0ae8zyccc 72 LCM(7,13)
 92 xp92_66yb7pe4y266xoozooybo6s8y99ecsgzyd11y9oib3 49 LCM(4,46)
 93 xp93_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy44hh186zy57 60 LCM(3,31)
 94 xp94_x696o8b9czy065x33xc871xggzooyd643zwgg04ahhha4y5c871z4701yfoozw8e13xggzy34701xmmggo5jzya146w343 110 capgun
@@ -119,7 +119,7 @@ fixeds = """1 xs4_33 4 block
 165 xp165_y0dbzggci5ld3xog8oz0343zy275777757 45 LCM(11,15)
 168 xp168_0g8gw3jzw1xqpwsszy211wc2w8k8zgggeeey066z333 44 LCM(8,21)
 170 xp170_y6438g0ia4zx66w66xac4zxggo4c4oggyh66x66zca16888188861acya358mhh181hhm853zy066x66yj12321zyv66w66zym252x66 119 p5 shuttle
-175 xp175_x178cxg8zy517gukzwdbgy35f1sgz4a9lkoko2c88g021x62sgzx122629d11 71 LCM(7,25)
+175 xp175_ycca23zy746joozy033pc4zo8a6zxok4miewm9azxk4q11sjr8a6zy01 68 LCM(7,25)
 177 xp177_y3343x6bacy6cab6x343zkk8yy8kkzgo8gywg8ogz0123yw321zzgo4syws4ogzgh1yy1hgz221yy122zy3c2cx6d53y635d6xc2c 104 Karel
 184 xp184_33y7cccd72ycssszccy7333be4y4ccy5777 40 LCM(8,46)
 186 xp186_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy0ccb7w66zy166 64 LCM(6,31)
@@ -131,6 +131,7 @@ fixeds = """1 xs4_33 4 block
 200 xp200_32aczy0ooj64zy74cp33zyc6a8ozy2gggeeezy2333 42 LCM(8,25)
 204 xp204_ybo8a6y1695qsozyigggy5g8k8ooozy1ggy7eehig421y31utzggwg9g89z14w61yfgzyi6511 79 LCM(4,102)
 216 xp216_sssybg033zx777y5a9871zy1ooyf789q8zy52bi2syf33zyggs2iazyeoo01 68 LCM(8,27)
+217 xp217_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy0a9mweim4kozy06a8rjs11q4kzy91 86 LCM(7,31)
 225 xp225_y432aczy8ooj64zy5ggy44cp33z4s0gy0grqjy86a8ozwhhweh040hz4701y01rbpzy511 78 LCM(9,25)
 226 xp226_y98oyn33y166z8oy732ys33y0ccz01219g8y2gkszwcq2qbyzy18e1eozx121yv8km8y27d11zxooyzy631e8zy3gg33ysdbzy311y133 107 nihonium*
 228 xp228_yog8ka37acz32acyj37aczwsy1sy7sb4zy0222zyackgossssogkczy83552y42553 73 LCM(6,76)
