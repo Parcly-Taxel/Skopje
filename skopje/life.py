@@ -51,7 +51,7 @@ fixeds = """1 xs4_33 4 block
 45 xp45_vtvy2j9e0o4cz757y1ojhrhla23zy666 48 LCM(9,15)
 46 xp46_033y133zzzckgsxsgkczz0cc 28 twin bees shuttle
 47 xp47_w32acyeca23zy37y2ccy27z252xeaey8eaex252zg8gxsksy8sksxg8gz01y1oy2ccy2oy11zwggkc01ya10ckggzw1yk1 84 PPS
-48 xp48_s22t3wg8gzo55txdl8z12256zy566w7bcczya66 52 LCM(6,16)
+48 xp48_0681hh4xv3w2czswg0nx88923033z252gv046 51 LCM(3,16)
 49 xp49_yzylc69h1hm4k8zyzyb8gy34b8q3034odzyzy972qngy61111g0s82u08k8zyzwsg8y4ggy488oxcc011w11zyzy76221y51zyqgzyo132yf532zyqgzy7ooxca8y46511y284sz8k80u28s26ya4kc0gzy011woci222c88gy37913zy38mgk7079grzy6122221 188 p7 22hd reflector loop
 50 xp50_y132aczy5ooj64zwg08oy64cp33z320i9802i908oy46a8ozy33201 58 LCM(10,25)
 51 xp51_g08o0u15gis89f0s48cz11wdbaik68jd0ddy1ca23zy232011y1sr7zy6o8a6y16a8o 90 LCM(3,17)
