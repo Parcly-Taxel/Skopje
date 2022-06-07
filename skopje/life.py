@@ -179,6 +179,7 @@ fixeds = """1 xs4_33 4 block
 836 xp836_ydog8oy1o8ehe8zcieg8oye46ll21z0suvy5sg2a4y465zg9jfgoz123zy7s0111zy9222x31e8 90 LCM(11,76)
 874 xp874_y1ca23yi32aczsy48kie4y84eik8y4szx771yo177zyacczzy9ca2exe2aczzzyaggy1ggzya11y111 72 LCM(38,46)
 920 xp920_33zxs48g69gvzx3021yje9byb66zy833y3ooy3s4kyboozyr11 54 LCM(40,46)
+924 xp924_8oymca23z0123ya4a75zy9ksa4yao8gzxo8a6ym32zykg88ggy24y1oge2zyfo4cw332h1y1669b7zye11 78 LCM(22,84)
 960 xp960_x4evy2ve4zyacczcczx226wosr73wc88zyf66zy166 46 LCM(15,64)
 966 xp966_033y133zo4maxam4oz1ppy1pp1y5gggzyg3047zy6sii6yagggzyn6443zydeigs 70 LCM(14,138)
 992 xp992_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zyeggy2gggzwg8keey711xsss333zw1221y022525zy3o8a6 93 LCM(31,32)
@@ -207,19 +208,18 @@ def rectifier_loop(p):
         pat = (pat+grect)[p]
     return (pat, mpop, f"{n_gliders}G rectifier loop")
 
-p4b1 = lt.pattern("""14b2o$6bo7bo9bo$6b3o3bobo7b3o$9bob3o7bo$8bob2o9b2o$8bo2bo$17bo$16bobo$
-9bo2bo2bo2bo$10b2o4b2o$b2o$2bo15b2o$2bobo13bobo$3b2o13bo3$7b2o$6bo2bo$
-7bobo$o7bo$3o$3bo$2bo$2bo2bo2b2o$5bo2b2o$3bobo$2bobo$2bo$b2o""")
-p4b2 = lt.pattern("""22b2o$22bo$20bobo$18b2obo$15b6o$15b3o$21b2o$21bo$22b3o$16bo7bo$15bobo$
-15bo2bo$16b2o3$20b2o$20bobo$22bo$22b2o$7b2o4b2o$6bo2bo3b2o$6bobo$7bo6b
-o$14b2o$2b2o12bo$3bo7b2o2bo$3o7bobo3b3o$o9bo7bo$9b2o""")(10,6)
+p4b1 = lt.pattern("""9bo$8bobo$9bo2$7b5o$o6bo3bo$2o7bo$2o6b3o$bo2b3o4bo$10b2o$2b2o$2b2o3bo$
+3bo2bo$3b3o$2bo2bo6b3o$5bo$bo3b2o4bo2bo$2o10b2o$2o$o4$11bo$10bobo$10bo
+bo$11bo$15b2o$15bobo$17bo$17b2o""")
+p4b2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo4$18bo$17b2o$5b2o10b2o$4bo2bo4b2o3b
+o$13bo$4b3o6bo2bo$13b3o$12bo2bo$11bo3b2o$15b2o$7b2o$7bo4b3o2bo$8b3o6b
+2o$9bo7b2o$7bo3bo6bo$7b5o2$9bo$8bobo$9bo""")(17,32)
 
-# works down to p36 but fixed oscillators beat it (and it requires more gliders) below p140
-def p4_bumper_loop(p):
-    if p%8 != 4 or p < 140:
+def p4_22hd_loop(p):
+    if p%8 != 4 or p < 124:
         return None
-    exts = (p-140) // 8
-    return (p4b1 + p4b2(exts,exts), 141, "p4 bumper loop")
+    exts = (p-124) // 4
+    return (p4b1 + p4b2(exts,exts), 136, "p4 22hd reflector loop")
 
 mold = lt.pattern("3b3o$bob3o$obobo$o2bo$b2o")(-1,15)
 
@@ -426,5 +426,5 @@ def twinbees_shuttle(p):
         return None
     return res + (f"type-{r} twin bees shuttle",)
 
-cfuncs = (rectifier_loop, mold_rectifier_loop, p4_bumper_loop, p8_loop, snark_loop,
+cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_loop, snark_loop,
           pd_shuttle, p6thumb_shuttle, p6_loop, p14_shuttle, twinbees_shuttle)
