@@ -158,7 +158,7 @@ fixeds = """1 xs4_33 4 block
 325 xp325_0gs2ibaa4y5o8zlm0mlluy2sse321y3ca23z25s16a98gy846joozx11311y233pc4zy6o8a6 96 LCM(13,25)
 336 xp336_x32acymo8zy979b4ya321z0g8oya4qisz23ym6a8ozx4ac0ca4z69ig4s0s4gi96zy01x1 76 LCM(16,84)
 342 xp342_s0111zwi3y031e8zw1246zzzwg84czw9oy0oge2xggz70gggy46653w33zy269cey033zy5ci22ak8gzy94887 87 LCM(18,38)
-360 xp360_xn7zw1bscy4os8zybgn2zoo0u240s4ogkcw33zx342sj2ac 62 LCM(9,40)
+360 xp360_9f9zbrby4a996z232y233y833zw66wd52666y666wba4666 59 LCM(15,72)
 368 xp368_y2gy432aczy12251zzggyp62sgz56yc65134w16zyn4o68zy8o8go 48 capgun + boat-bit
 380 xp380_ye3pmwmp3zcieg8oyb11z0suvy5sg2a4zg9jfgoz123zy7s0111zy9222x31e8 75 LCM(5,76)
 385 xp385_xgbb88g0tb0gzca2t597432wh98cy34a6zx12y311y168c8xoozy033x1316y18ozy2652y3311 85 LCM(11,35)
@@ -183,6 +183,7 @@ fixeds = """1 xs4_33 4 block
 682 xp682_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy7g88ggy24y1oge2zy2o4cw332h1y1669b7zy111 84 LCM(22,31)
 690 xp690_0ooy9vtvzyc757zok4sxs4kozzzz033y133 40 LCM(15,46)
 704 xp704_y2ca23zws21q4zx11zxgc22szw8o121y8ccz311wccy447zy977asszyas4y466zy666 72 LCM(22,64)
+720 xp720_33y18kk8yb33zy8equyesksssskszy9757wggzccyb1221y1cc 54 LCM(15,144)
 760 xp760_c88gyn33zw11ybgyas48g69gvz01110s0111y325dya3021zyaggy4ggyd33zy8ckla291hh192alkc 83 LCM(40,76)
 770 xp770_y3352y364kozgy0ccx4r7y4gcgxooz1156y5ckggy033wgz08w7rp6y41y3123zzwcjrsw2zy2ckggzy51 80 LCM(22,35)
 792 xp792_yf66w3b8896y666wcd1196zymccy4ggz4s0gy9gggyb66opo5zw1104ahiicy13448520o8gzyl32 83 LCM(22,72)
@@ -194,6 +195,7 @@ fixeds = """1 xs4_33 4 block
 966 xp966_033y133zo4maxam4oz1ppy1pp1y5gggzyg3047zy6sii6yagggzyn6443zydeigs 70 LCM(14,138)
 988 xp988_yr33gzoggyi66w8653g80676211zw23ym4uezw70ggg07y44rry63zzy8o8bl46777764lb8ozy911y611 91 LCM(13,76)
 992 xp992_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zyeggy2gggzwg8keey711xsss333zw1221y022525zy3o8a6 93 LCM(31,32)
+1008 xp1008_0ooy1ooy033y18kk8yb33zwggxggydequze9d2x2d9eyc757wggz066y166y0ccyb1221y1cc 76 LCM(14,144)
 1178 xp1178_ygsgh11zw66y366y533y031e8zgcogy3gocgy33356ziuy7uiz2c62y326c2zwooy3ooy5ookczyiooy0oge2zyg71hgg 92 LCM(31,38)"""
 
 rect1 = lt.pattern("""8bo$7bobo$8bo2$6b5o$5bo4bo$4bo2bo$bo2bob2o$obobo5bo$bo2bo4bobo$4b2o2bo
