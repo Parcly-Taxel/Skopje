@@ -226,10 +226,11 @@ def rectifier_loop(p):
         pat = (pat+grect)[p]
     return (pat, mpop, f"{n_gliders}G rectifier loop")
 
-p4b1 = lt.pattern("""9bo$8bobo$9bo2$7b5o$o6bo3bo$2o7bo$2o6b3o$bo2b3o4bo$10b2o$2b2o$2b2o3bo$
+# 124+8n: 22hd reflector with p4 sparkers
+p4l1 = lt.pattern("""9bo$8bobo$9bo2$7b5o$o6bo3bo$2o7bo$2o6b3o$bo2b3o4bo$10b2o$2b2o$2b2o3bo$
 3bo2bo$3b3o$2bo2bo6b3o$5bo$bo3b2o4bo2bo$2o10b2o$2o$o4$11bo$10bobo$10bo
 bo$11bo$15b2o$15bobo$17bo$17b2o""")
-p4b2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo4$18bo$17b2o$5b2o10b2o$4bo2bo4b2o3b
+p4l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo4$18bo$17b2o$5b2o10b2o$4bo2bo4b2o3b
 o$13bo$4b3o6bo2bo$13b3o$12bo2bo$11bo3b2o$15b2o$7b2o$7bo4b3o2bo$8b3o6b
 2o$9bo7b2o$7bo3bo6bo$7b5o2$9bo$8bobo$9bo""")(17,32)
 
@@ -237,7 +238,7 @@ def p4_22hd_loop(p):
     if p%8 != 4 or p < 124:
         return None
     exts = (p-124) // 4
-    return (p4b1 + p4b2(exts,exts), 136, "p4 22hd reflector loop")
+    return (p4l1 + p4l2(exts,exts), 136, "p4 22hd reflector loop")
 
 mold = lt.pattern("3b3o$bob3o$obobo$o2bo$b2o")(-1,15)
 
@@ -247,13 +248,14 @@ def mold_rectifier_loop(p):
     pat, mpop, source = rectifier_loop(p//2)
     return (pat+mold, mpop+12 if mpop != None else None, source + " + mold")
 
-# 128+8n: p8 glider duplicator reflector with Coe's p8 and blocker
+# 128+8n: 22hd reflector with Coe's p8 and blocker
 p8l1 = lt.pattern("""11b2o$11b2o3$11bo$9bobo$7bo2b2o$b2o5b2o$b2o5bo2$bo5b2o$obo4b2o$o2bo$bo
 2bo5b2o$10b2o$bo2bo$b2o9$8bo$7bobo$7bobo$8bo$12b2o$12bobo$14bo$14b2o!""")
 p8l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo9$13b2o$13b2o$4b2o$4b2o7bo$12bobo$
 7b2o3bo2bo$7b2o4bo2bo2$13bo2bo$7bo5b2o$5bobo$3bo2b2o$4b2o$4bo2$3b2o$3b2o!""")(14,34)
 gp8l = lt.pattern("bo$2o$obo!")(9,16)
-def p8_loop(p):
+
+def p8_22hd_loop(p):
     if p%8 or p < 128:
         return None
     n_gliders, mpop = (2, 108) if p < 248 else (1, 103)
@@ -261,7 +263,7 @@ def p8_loop(p):
     pat = p8l1 + p8l2(exts,exts)[4*exts]
     for _ in range(n_gliders):
         pat = (pat+gp8l)[p]
-    return (pat, mpop, f"{n_gliders}G p8 loop")
+    return (pat, mpop, f"{n_gliders}G p8 22hd reflector loop")
 
 snark1 = lt.pattern("""9b2o$8bobo$2b2o4bo$o2bo2b2ob4o$2obobobobo2bo$3bobobobo$3bobob2o$4bo2$
 17b2o$8b2o7bo$8b2o5bobo$15b2o7$5b2o$6bo$3b3o$3bo""")
@@ -366,7 +368,7 @@ p6l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo9$13b2o$13b2o$4b2o$4b2o7
 7b2o3bo2bo2b2o$7bo8bob2o$8b3o3b2o$10bo!""")(20,28)
 gp6l = lt.pattern("bo$2o$obo!")(13,8)
 
-def p6_loop(p):
+def p6_22hd_loop(p):
     if p%6 or p < 66:
         return None
     elif p%12 or p < 132:
@@ -379,25 +381,7 @@ def p6_loop(p):
     pat = p6l1 + p6l2(exts,exts)
     for _ in range(n_gliders):
         pat = (pat+gp6l)[p]
-    return (pat, mpop, f"{n_gliders}G unix loop")
-
-'''# 128+8n: p3 glider duplicator reflector
-p3l1 = lt.pattern("""14bo$14b3o$17bo$16b2o2$19b2o$11b2o6b2o$4bo2bo3b2o$4bo2bo2b3o$bob2o2b2o
-2bo$obo7b2o$bo3bo2bobo$5bo2bobo$5bo2b2o4$17bo$16bobo$16bobo$17bo$21b2o
-$21bobo$23bo$23b2o!""")
-p3l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo4$15b2o2bo$14bobo2bo$14bobo2bo3bo$
-13b2o7bobo$13bo2b2o2b2obo$12b3o2bo2bo$12b2o3bo2bo$4b2o6b2o$4b2o2$7b2o$
-7bo$8b3o$10bo!""")(43,46)
-gp3l = lt.pattern("bo$2o$obo!")(18,8)
-def p3_loop(p):
-    if p%3 or not p%6 or p < 51:
-        return None
-    n_gliders, mpop = (8, None)
-    exts = (p*n_gliders - 408) // 8
-    pat = p3l1 + p3l2(exts,exts)
-    for _ in range(8):
-        pat = (pat+gp3l)[p]
-    return (pat, mpop, f"8G p3 loop")'''
+    return (pat, mpop, f"{n_gliders}G p6 22hd reflector loop")
 
 # 98+56n: Elkies–Simkin 1hd reflector with 34P14 shuttles (p98 version is Gallus)
 p14_1 = lt.pattern("""12b2o4bo$12b2o3bobo$18bo3$5b2o2b2o2b2o$5b2o2b2ob2o$14bo3$9bo$8b3o$2o4b
@@ -444,5 +428,5 @@ def twinbees_shuttle(p):
         return None
     return res + (f"type-{r} twin bees shuttle",)
 
-cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_loop, snark_loop,
-          pd_shuttle, p6thumb_shuttle, p6_loop, p14_shuttle, twinbees_shuttle)
+cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_22hd_loop, snark_loop,
+          pd_shuttle, p6thumb_shuttle, p6_22hd_loop, p14_shuttle, twinbees_shuttle)
