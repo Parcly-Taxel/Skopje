@@ -40,6 +40,7 @@ fixeds = """1 xs4_33 4 block
 31 xp31_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066 48 Merzenich
 32 xp32_wosq596zy3oy0c871zy2525z66zgggeeez333 45 H(HF)
 33 xp33_8ehe8oy1o8a6zw12ll64x88c04c6ezy056y313 46 LCM(3,11)
+34 xp34_x4s0gy1ca23z4s0g011zw11y0ca2acy6oge2zgs26y6ckgkczyj31e8zy7ggkcy131e8zy71 74 H(pi)
 35 xp35_y4ok46y3253zooxgcgy47r4xcczxgw33y0ggkczw321y31 44 H(HF)
 36 xp36_32aczy08c8y0131zya354c 22 22P36
 37 xp37_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354c 58 H(R)
@@ -111,7 +112,7 @@ fixeds = """1 xs4_33 4 block
 130 xp130_og8o0u1eozy0mlgrzx1qa2my2meiz62460v0t60gg037fa60ggzy21x11y236fe5267zyc33 89 LCM(10,13)
 132 xp132_252w253zy0gxggg0ooozy13w3488a61oml1hiswcgzw695qsoy3111zyica4w4a4 72 LCM(4,33)
 135 xp135_y9330gzyb1789azy08q987yfooz33yfs2ib2zy6ai2sgzy910ooy2uquzyjfbf 68 LCM(15,27)
-136 xp136_y732acy1g0s4zyg110g0s4z2egoy6ca2acy011zy4ckgkcy662sgz8e13yakg110iozx8e13y1ckggw11xkkzyb1y31581qo 99 LCM(8, 34)
+136 xp136_y732acy1g0s4zyg110g0s4z2egoy6ca2acy011zy4ckgkcy662sgz8e13yakg110iozx8e13y1ckggw11xkkzyb1y31581qo 99 LCM(8,34)
 138 xp138_w8gw259r84z79431y1go4iszx42rik8w12 36 Gabriel
 140 xp140_033y133zo4maxam4oy1gy1gs26z1ppy1pp1y0121ggcaaq552zy8ok46o7o7421zyd1 82 LCM(14,20)
 141 xp141_y64a4y14a4w178cx8e1e8gzy2sy0cscxcscy0sx33159d11z8e13yj31e8z8oy133y933y1o8z0123wsy0osoxosoy0sw321zy6g8gy1g8gzy71y31 114 PS(7*20+1,47)
@@ -138,7 +139,7 @@ fixeds = """1 xs4_33 4 block
 196 xp196_yfccy28e1e88gzyeks8y2330311zyqoozwggzw11y6ggzg88c0ccy2132z0117871y233 66 H(pi)
 200 xp200_32aczy0ooj64zy74cp33zyc6a8ozy2gggeeezy2333 42 LCM(8,25)
 204 xp204_ybo8a6y1695qsozyigggy5g8k8ooozy1ggy7eehig421y31utzggwg9g89z14w61yfgzyi6511 79 LCM(4,102)
-210 xp210_033y133y3gcgzo4maxam4oy2gfgz1ppy1pp1y33 46 LCM(14, 15)
+210 xp210_033y133y3gcgzo4maxam4oy2gfgz1ppy1pp1y33 46 LCM(14,15)
 216 xp216_sssybg033zx777y5a9871zy1ooyf789q8zy52bi2syf33zyggs2iazyeoo01 68 LCM(8,27)
 217 xp217_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy0a9mweim4kozy06a8rjs11q4kzy91 86 LCM(7,31)
 225 xp225_y432aczy8ooj64zy5ggy44cp33z4s0gy0grqjy86a8ozwhhweh040hz4701y01rbpzy511 78 LCM(9,25)
