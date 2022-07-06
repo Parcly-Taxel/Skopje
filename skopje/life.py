@@ -40,6 +40,7 @@ fixeds = """1 xs4_33 4 block
 31 xp31_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066 48 Merzenich
 32 xp32_wosq596zy3oy0c871zy2525z66zgggeeez333 45 H(HF)
 33 xp33_8ehe8oy1o8a6zw12ll64x88c04c6ezy056y313 46 LCM(3,11)
+34 xp34_x4s0gy1ca23z4s0g011zw11y0ca2acy6oge2zgs26y6ckgkczyj31e8zy7ggkcy131e8zy71 74 H(pi)
 35 xp35_y4ok46y3253zooxgcgy47r4xcczxgw33y0ggkczw321y31 44 H(HF)
 36 xp36_32aczy08c8y0131zya354c 22 22P36
 37 xp37_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354c 58 H(R)
@@ -120,6 +121,7 @@ fixeds = """1 xs4_33 4 block
 152 xp152_32acywca23zwsy48kie4y84eik8y4szy1771yo177zybgggeeezyb333 60 LCM(8,38)
 154 xp154_gjjy1jjgz34daxad43z0ooy1ooy2ok4ooy22gggwc871zy6gs26w1118y233453 70 LCM(7,22)
 155 xp155_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy2idiidizy31w1 64 LCM(5,31)
+160 xp160_0db0gy0ooy3gokaicz651230sw224oy1111wgy0oge2zggy0s03wgfy5a5az1qa17y0ddy1ccz023ycssszyc777 101 LCM(5,32)
 160 xp160_yaggy2osq596zya11y7oy0c871zoo79ey4eis33y4525zwggyc66zw11ycgggeeezyg333 101 LCM(32,40)
 165 xp165_y0dbzggci5ld3xog8oz0343zy275777757 45 LCM(11,15)
 168 xp168_0g8gw3jzw1xqpwsszy211wc2w8k8zgggeeey066z333 44 LCM(8,21)
@@ -158,6 +160,7 @@ fixeds = """1 xs4_33 4 block
 280 xp280_x352y364koz0ccx4r7y4gcgxoozy5ckggy033wgzgk2gb3y21y3123z11 56 LCM(8,35)
 296 xp296_y632acy7oge2zwggy84bb6zx346yf62sgz0ccx66x6dd2z6om2y9354cz033 66 LCM(8,37)
 297 xp297_y2o4cyag033z660u13grpd3y5a9871zc84c5h23wooyf789q8zy011y42bi2syf33zylgs2iazyjoo01 97 LCM(11,27)
+304 xp304_gkkwptez330365sylca23zy94bsy7sy1szyp222zy6ckgossssogkczy43552y42553 78 LCM(16,76)
 304 xp304_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7zyc25202vjq7zyf2e841 78 LCM(16,38)
 310 xp310_og8o0u1eoy5ooy3oozy0mlgrzx1qa2my2ov324sy3s423voz62460v0t6y13vo847y3748ov3zy21zye33y333 103 LCM(10,31)
 312 xp312_yg33zy1g8gy6ieyag8gzy1121ym121zy2ogg8z33yq844cy033zzy1696yao4y6696zyi11zyg33 60 capgun + boat-bit
