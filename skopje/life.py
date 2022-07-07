@@ -138,7 +138,7 @@ fixeds = """1 xs4_33 4 block
 190 xp190_y1ca23yi32aczsy48kie4y84eik8y4szx771yo177zy9i6vwv6izy911y011 62 LCM(5,38)
 192 xp192_y1j3zy031d8ey6330gggg2u066zggy6s4c0gy0kg6w1z11y8hj1y1203vr2zya11 65 LCM(3,64)
 196 xp196_yfccy28e1e88gzyeks8y2330311zyqoozwggzw11y6ggzg88c0ccy2132z0117871y233 66 H(pi)
-199 xp199_yc33x4aicwcia4x33zccyzy5cczye6kkgy4gkk6zy4ggysggzy4hhyshhzy411ys11zyec551y4155cz66yzy566zycoox4a96w69a4xoo 104 H(R)
+199 xp199_yc33y366y333zccyzy5cczye6kkgy4gkk6zy4ggysggzy4hhyshhzy411ys11zyec551y4155cz66yzy566zycooy3ccy3oo 84 H(LOM)
 200 xp200_32aczy0ooj64zy74cp33zyc6a8ozy2gggeeezy2333 42 LCM(8,25)
 204 xp204_ybo8a6y1695qsozyigggy5g8k8ooozy1ggy7eehig421y31utzggwg9g89z14w61yfgzyi6511 79 LCM(4,102)
 210 xp210_033y133y3gcgzo4maxam4oy2gfgz1ppy1pp1y33 46 LCM(14,15)
@@ -202,6 +202,7 @@ fixeds = """1 xs4_33 4 block
 584 xp584_y14s0gy1ca23zwoox11z0ok8y14ahhrycsssz8oogyj777zgoo8zyc62sg 65 LCM(8,146)
 592 xp592_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354czx33x77304a4zy36m048zy51033 86 LCM(16,37)
 594 xp594_yi330gzyk1789azy98q987yfooz64koy133yfs2ib2zx8k24oy7ai2sgzy01221ya10oozwo44ozw1242hgzy21226 92 LCM(22,27)
+597 xp597_yc33x4aicwcia4x33zccyzy5cczye6kkgy4gkk6ye44mg2637zy4ggysggy71zy4hhyshhzy411ys11zyec551y4155cz66yzy566zycoox4a96w69a4xoo 116 LCM(3,199)
 616 xp616_y066w3b8896zy9oieew66zzoggy1oozw23g8gy4oowccw4ozx16887y81111zxggzw78gb4zy26a8o 81 LCM(22,56)
 635 xp635_y2g0k413y6ok46zwo0a0208k8y1ggocsy5ccz32yahpo164cz066ya1zyxoozydc8o0672zy4ccy5ed633y14a4zyao8a6 89 LCM(5,127)
 638 xp638_y166y5si1iszym31e8zx32acyc6a8oz2egozy579g97y5cczygggozycg8g32zyb78861zyeggzyc4bg87zy9o8a6 92 LCM(22,58)
@@ -226,7 +227,7 @@ fixeds = """1 xs4_33 4 block
 966 xp966_033y133zo4maxam4oz1ppy1pp1y5gggzyg3047zy6sii6yagggzyn6443zydeigs 70 LCM(14,138)
 988 xp988_yr33gzoggyi66w8653g80676211zw23ym4uezw70ggg07y44rry63zzy8o8bl46777764lb8ozy911y611 91 LCM(13,76)
 992 xp992_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zyeggy2gggzwg8keey711xsss333zw1221y022525zy3o8a6 93 LCM(31,32)
-995 xp995_yc33x4aicwcia4x33zccyzy5cczye6kkgy4gkk6zy4ggysggzy4hhyshhzy411ys11zyec551y4155cz66yzy566zycoox4a96w69a4xoozy3ck22kczy2321w123 122 LCM(5,199)
+995 xp995_ggyl33x4aicwcia4x33z1034o0gy0ccyzy5cczy222488gyd6kkgy4gkk6zy611y3ggysggzyfhhyshhzyf11ys11zypc551y4155czy766yzy566zynoox4a96w69a4xoo 119 LCM(5,199)
 1008 xp1008_0ooy1ooy033y18kk8yb33zwggxggydequze9d2x2d9eyc757wggz066y166y0ccyb1221y1cc 76 LCM(14,144)
 1016 xp1016_ggykca23z1581qoy24a4y1oocmey566zyg8sc0326zy133zymgyacczyh64cg3jhzy866y576311y1252zyec453 86 LCM(8,127)
 1178 xp1178_ygsgh11zw66y366y533y031e8zgcogy3gocgy33356ziuy7uiz2c62y326c2zwooy3ooy5ookczyiooy0oge2zyg71hgg 92 LCM(31,38)
@@ -234,7 +235,7 @@ fixeds = """1 xs4_33 4 block
 1905 xp1905_y932aczy366y4sccy44a4zyd44c5ko8zyh1ya33zccy9gozya112a32iz0gcgx252y4333y466z0gfgyd354czw3 86 LCM(15,127)
 1932 xp1932_8oymca23z0123ya4a75zy9ksa4yao8gzxo8a6ym32zy8oozzy7ok4sxs4kozzzzy833y133 72 LCM(46,84)
 2794 xp2794_y932acya178cwggg2y2oo4kozy366y4sccy44a4y235433y28111w62sgzyd44c5ko8zyh1ya33zccy9gozya112a32izy3252y4333y466zyh354c 110 LCM(22,127)
-2985 xp2985_yc33x4aicwcia4x33zccyzy5cczye6kkgy4gkk6zy4ggysggzy4hhyshhzy411ys11zyec551y4155cz66yzy566zycoox4a96w69a4xoozy0gosy2sogzy113y231 116 LCM(15,199)
+2985 xp2985_y333yn33zyfooxooyi4r4zyzy54r4z66y5os8gybg8soy566zy913yb31z033yz33zggy5csa7yb7ascy5ggz11yzw11zyfccxcczzy333yn33 96 LCM(15,199)
 3358 xp3358_ggybo8gy3ggy37exe7x6a4wccz11yb223y311yfgy2ca23z66ybd97yme909ey2ggzyro8a6yi1074 80 LCM(46,146)
 4526 xp4526_woox8sipbieeibpis8xoozzwccx8s4c84oo48c4s8xcczy51231111321zypgz2egoyi6511zy679g97zwc453zy433w256xe7x7e 100 LCM(31,146)"""
 
@@ -257,7 +258,7 @@ def rectifier_loop(p):
         n_gliders, mpop = (3, 123 if p >= 206 else None)
     exts = (p*n_gliders - 266) // 8
     pat = rect1 + rect2(exts,exts)
-    for _ in range(n_gliders):
+    for _ in range(n_gliders): 
         pat = (pat+grect)[p]
     return (pat, mpop, f"{n_gliders}G rectifier loop")
 
