@@ -202,7 +202,7 @@ fixeds = """1 xs4_33 4 block
 584 xp584_y14s0gy1ca23zwoox11z0ok8y14ahhrycsssz8oogyj777zgoo8zyc62sg 65 LCM(8,146)
 592 xp592_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354czx33x77304a4zy36m048zy51033 86 LCM(16,37)
 594 xp594_yi330gzyk1789azy98q987yfooz64koy133yfs2ib2zx8k24oy7ai2sgzy01221ya10oozwo44ozw1242hgzy21226 92 LCM(22,27)
-597 xp597_yc33x4aicwcia4x33zccyzy5cczye6kkgy4gkk6ye44mg2637zy4ggysggy71zy4hhyshhzy411ys11zyec551y4155cz66yzy566zycoox4a96w69a4xoo 116 LCM(3,199)
+597 xp597_yc33y366y333zccyzy5cczye6kkgy4gkk6ye44mg2637zy4ggysggy71zy4hhyshhzy411ys11zyec551y4155cz66yzy566zycooy3ccy3oo 96 LCM(3,199)
 616 xp616_y066w3b8896zy9oieew66zzoggy1oozw23g8gy4oowccw4ozx16887y81111zxggzw78gb4zy26a8o 81 LCM(22,56)
 635 xp635_y2g0k413y6ok46zwo0a0208k8y1ggocsy5ccz32yahpo164cz066ya1zyxoozydc8o0672zy4ccy5ed633y14a4zyao8a6 89 LCM(5,127)
 638 xp638_y166y5si1iszym31e8zx32acyc6a8oz2egozy579g97y5cczygggozycg8g32zyb78861zyeggzyc4bg87zy9o8a6 92 LCM(22,58)
@@ -227,7 +227,7 @@ fixeds = """1 xs4_33 4 block
 966 xp966_033y133zo4maxam4oz1ppy1pp1y5gggzyg3047zy6sii6yagggzyn6443zydeigs 70 LCM(14,138)
 988 xp988_yr33gzoggyi66w8653g80676211zw23ym4uezw70ggg07y44rry63zzy8o8bl46777764lb8ozy911y611 91 LCM(13,76)
 992 xp992_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zyeggy2gggzwg8keey711xsss333zw1221y022525zy3o8a6 93 LCM(31,32)
-995 xp995_ggyl33x4aicwcia4x33z1034o0gy0ccyzy5cczy222488gyd6kkgy4gkk6zy611y3ggysggzyfhhyshhzyf11ys11zypc551y4155czy766yzy566zynoox4a96w69a4xoo 119 LCM(5,199)
+995 xp995_y333yn33zyfooxoozz66y5os8gybg8soy566zy913yb31z033yz33zggy5csa7yb7ascy5ggz11yzw11zyfccxcczzy333xgc26yg33zy3g8a03zy0651 99 LCM(5,199)
 1008 xp1008_0ooy1ooy033y18kk8yb33zwggxggydequze9d2x2d9eyc757wggz066y166y0ccyb1221y1cc 76 LCM(14,144)
 1016 xp1016_ggykca23z1581qoy24a4y1oocmey566zyg8sc0326zy133zymgyacczyh64cg3jhzy866y576311y1252zyec453 86 LCM(8,127)
 1178 xp1178_ygsgh11zw66y366y533y031e8zgcogy3gocgy33356ziuy7uiz2c62y326c2zwooy3ooy5ookczyiooy0oge2zyg71hgg 92 LCM(31,38)
@@ -258,7 +258,7 @@ def rectifier_loop(p):
         n_gliders, mpop = (3, 123 if p >= 206 else None)
     exts = (p*n_gliders - 266) // 8
     pat = rect1 + rect2(exts,exts)
-    for _ in range(n_gliders): 
+    for _ in range(n_gliders):
         pat = (pat+grect)[p]
     return (pat, mpop, f"{n_gliders}G rectifier loop")
 
