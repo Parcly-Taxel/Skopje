@@ -293,17 +293,17 @@ def mold_rectifier_loop(p):
     pat, mpop, source = rectifier_loop(p//2)
     return (pat+mold, mpop+12 if mpop != None else None, source + " + mold")
 
-# 72+8n: 6hd reflector with Coe's p8
+# 64+8n: 6hd reflector with Coe's p8
 # https://conwaylife.com/forums/viewtopic.php?f=2&t=5338&start=75#p148210
 p8l1 = lt.pattern("""4b2o8b2o$4b2o8bo$15bo$14b2o$3bo9bo$4b2o3b2o2b3o$4bo4b2o5bo$4o11b2o$b2o
-$2o7b2o$2o6b2o$2o3b2o3bo$5b2o4$4b2o$3bobo$3bo$2b2o!""")
+$2o7b2o$2o6b2o$2o3b2o3bo$5b2o4$4b2o$3bobo$3bo$2b2o""")
 p8l2 = lt.pattern("""13b2o$13bo$11bobo$11b2o4$10b2o$10b2o3b2o$15b2o$15b2o$14b2o$2o11b4o$o5b
-2o4bo$b3o2b2o3b2o$3bo9bo$b2o$bo$2bo8b2o$b2o8b2o!""")(5,9)
+2o4bo$b3o2b2o3b2o$3bo9bo$b2o$bo$2bo8b2o$b2o8b2o""")(4,8)
 
 def p8_loop(p):
-    if p%8 or p < 72:
+    if p%8 or p < 64:
         return None
-    exts = (p - 72) // 8
+    exts = (p - 64) // 8
     pat = p8l1 + p8l2(exts,exts)
     return (pat, 92, f"p8 6hd reflector loop")
 
