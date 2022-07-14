@@ -98,6 +98,7 @@ fixeds = """1 xs4_33 4 block
 105 xp105_0oggxooy1vtvzc88m5o0ccy1757zw1qm0f952 49 LCM(7,15)
 108 xp108_wc4o0oy6g033zougdb158cy1a9871zy0ooyf789q8zy42bi2syf33zyfgs2iazydoo01 78 LCM(4,27)
 110 xp110_c4oy1178cwggg2y2oo4kozx160kgy235433y28111w62sgzy412ac 51 LCM(5,22)
+111 xp111_xc930ggz2dh9j4mo3ci6zc89c0misl21y5ok46zwbd11y4cmm8zy2o4cyfc871zy111y84qqczy9o8a6y731e8 112 LCM(3,37)
 112 xp112_om999e0e999mozx8kc0ck8zzw8if505fi8 50 LCM(14,16)
 113 xp113_y98oyn33y166z8oy732ys33y0ccz01219g8y2gkszwcq2qbyzy18e1eozx121ywsk4y2b591zxooyzy5221e8zy3gg33ysdbzy311y133 106 nihonium
 114 xp114_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7zye4hh186zyf7 57 LCM(3,38)
@@ -107,18 +108,17 @@ fixeds = """1 xs4_33 4 block
 124 xp124_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy337bkic 60 LCM(4,31)
 126 xp126_0ccy1ccx32acxca23zcmkgxgkmcy24r4zy0202y64r4z033y133xo8a6x6a8o 74 LCM(9,14)
 127 xp127_y932aczy366y4sccy44a4zyd44c5ko8zyh1ya33zccy9gozya112a32izy3252y4333y466zyh354c 74 H(C)
-128 xp128_y3ca73oswcczyqg88gzy1ggyh6bbcxca4z8ko010onmcy04eewuscy26dt30g0352z4a6x6qqcyh11zy01221zyh66w73osa6 108 H(wing)
 129 xp129_yzyzyzy7ca23zyzyzyzy4jjy2eu80gswsg0gzyzyzyzy3103y3178ewew121zyzyzyzy6o4ozyzyzyzy0gs26x1zzzzyzyzya86cyg265zzzzzzyzyhgggygokgzyzyi21zzzzzzyoa64yg361zzzyjggzycg8gw643zyc121z8k8gg70gn1eoy3sg8zy03w3w177y2cczyac453 146 p3 22hd reflector loop
 130 xp130_og8o0u1eozy0mlgrzx1qa2my2meiz62460v0t60gg037fa60ggzy21x11y236fe5267zyc33 89 LCM(10,13)
 132 xp132_252w253zy0gxggg0ooozy13w3488a61oml1hiswcgzw695qsoy3111zyica4w4a4 72 LCM(4,33)
 135 xp135_y9330gzyb1789azy08q987yfooz33yfs2ib2zy6ai2sgzy910ooy2uquzyjfbf 68 LCM(15,27)
-136 xp136_y732acy1g0s4zyg110g0s4z2egoy6ca2acy011zy4ckgkcy662sgz8e13yakg110iozx8e13y1ckggw11xkkzyb1y31581qo 99 LCM(8,34)
 138 xp138_w8gw259r84z79431y1go4iszx42rik8w12 36 Gabriel
 140 xp140_033y133zo4maxam4oy1gy1gs26z1ppy1pp1y0121ggcaaq552zy8ok46o7o7421zyd1 82 LCM(14,20)
 141 xp141_y64a4y14a4w178cx8e1e8gzy2sy0cscxcscy0sx33159d11z8e13yj31e8z8oy133y933y1o8z0123wsy0osoxosoy0sw321zy6g8gy1g8gzy71y31 114 PS(7*20+1,47)
 143 xp143_0gs2ibaa4y5o8zlm0mlluy2sse321wbdz25s16a98gxo8gox13tlicggzx11311yb343 99 LCM(11,13)
 144 xp144_33y18kk8yb33zy8equzy9757wggzccyb1221y1cc 42 Achim
 146 xp146_4s0gyica23zw11y2ei0iezwo8a6y21zy466w4acxsexes 52 H(pi)
+148 xp148_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701x888gy0354czxca2ro8g2i0sz031132y11 89 LCM(4,37)
 150 xp150_w178cxg8zy417gukzy75f1sgzccb7w66y121x62sgz066 46 LCM(6,25)
 152 xp152_32acywca23zwsy48kie4y84eik8y4szy1771yo177zybgggeeezyb333 60 LCM(8,38)
 154 xp154_gjjy1jjgz34daxad43z0ooy1ooy2ok4ooy22gggwc871zy6gs26w1118y233453 70 LCM(7,22)
@@ -132,6 +132,7 @@ fixeds = """1 xs4_33 4 block
 176 xp176_y2ca23zws21q4zx11zxgc22szw8o121z311y125202vjq7zy72e841 59 LCM(16,22)
 177 xp177_y3343x6bacy6cab6x343zkk8yy8kkzgo8gywg8ogz0123yw321zzgo4syws4ogzgh1yy1hgz221yy122zy3c2cx6d53y635d6xc2c 104 Karel
 184 xp184_33y7cccd72ycssszccy7333be4y4ccy5777 40 LCM(8,46)
+185 xp185_ya3pmwmp3zy432acy111y0oge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354c 76 LCM(5,37)
 186 xp186_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy0ccb7w66zy166 64 LCM(6,31)
 188 xp188_x696o8b9czy065x33xc871wbdzoozwgg04ahhha4y5c871z4701yfoozxggy0ggzx56w4701xmmggo5jzya146w343 108 capgun + boat-bit
 189 xp189_y9g033zy6a9871zooyf789q8zy02bi2syf330oozybgs2iay24a4zy9oo01y96995a996zyvggw252zyv11 88 LCM(21,27)
@@ -144,6 +145,7 @@ fixeds = """1 xs4_33 4 block
 210 xp210_033y133y3gcgzo4maxam4oy2gfgz1ppy1pp1y33 46 LCM(14,15)
 216 xp216_y332acy266zw178cy6sk4y1c871z0ccygogz6om2yf13z033 52 LCM(8,54)
 217 xp217_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy0a9mweim4kozy06a8rjs11q4kzy91 86 LCM(7,31)
+222 xp222_2egoy7ca23zy56bb4y8ggzgs26yf643zya2dd6x66xcczy4c453y966qswcc 67 LCM(6,37)
 225 xp225_y432aczy8ooj64zy5ggy44cp33z4s0gy0grqjy86a8ozwhhweh040hz4701y01rbpzy511 78 LCM(9,25)
 226 xp226_y98oyn33y166z8oy732ys33y0ccz01219g8y2gkszwcq2qbyzy18e1eozx121yv8km8y27d11zxooyzy631e8zy3gg33ysdbzy311y133 107 nihonium*
 228 xp228_yog8ka37acz32acyj37aczwsy1sy7sb4zy0222zyackgossssogkczy83552y42553 73 LCM(6,76)
@@ -156,6 +158,7 @@ fixeds = """1 xs4_33 4 block
 248 xp248_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zssszx777 60 LCM(8,31)
 250 xp250_y1ooy2o4a9jwggzy1ccy0elh4wrwhhz33x6a2y134aipw11z252zzzzykggy94a4zygoowp452sgy6cczygoowtw2oa7y0jjzykc9521y211 119 p5 shuttle
 252 xp252_8oymca23z0123ya4995zy9kii4yao8gzxo8a6ym32zyecc0v1e0u2c8a6zyh121e9156 78 LCM(9,84)
+259 xp259_ckgoxc871zcimikswccy0g88czxmqy066x11zy4aiicy7c871zy0o4cy7ciikzx11zy8c453y2354c 87 LCM(7,37)
 266 xp266_yeey0c871zya111cczyd4cgozgjjy1jjgz34daxad43z0ooy1ooy5ggzyd2301zya88833zye7y031e8 78 LCM(14,38)
 275 xp275_y132aczy0ggxooj64z6246kh88y44cp33zcc0fip6sgnsy66a8ozy2346 71 LCM(11,25)
 276 xp276_02hqzw37133zy9ei204oy766zy9sig086y7oozz6517x7156zzz0ooy1oo 62 LCM(3,92)
@@ -170,15 +173,18 @@ fixeds = """1 xs4_33 4 block
 320 xp320_y13pmwmp3zy411y0cczcczx226wosr73wc88zyf66zy166 52 LCM(5,64)
 325 xp325_0gs2ibaa4y5o8zlm0mlluy2sse321y3ca23z25s16a98gy846joozx11311y233pc4zy6o8a6 96 LCM(13,25)
 330 xp330_oggy2ccx8s2tuy6oozw23g8gy5121zx16887zxggzw78gb4zy26a8o 56 LCM(22,30)
+333 xp333_2egoy7ca23zy56bb4y8ggzgs26yf643wg88gzya2dd6x66x62adhhzy4c453y66a88bbahe21zyj33w32 94 LCM(9,37)
 336 xp336_8oymca23z0123ya4b97zy9siq4yao8gzxo8a6ym32zyd4a404u6kezyg4sh93 65 LCM(16,84)
 342 xp342_s0111zwi3y031e8zw1246zzzwg84czw9oy0oge2xggz70gggy46653w33zy269cey033zy5ci22ak8gzy94887 87 LCM(18,38)
 360 xp360_9f9zbrby4a996z232y233y833zw66wd52666y666wba4666 59 LCM(15,72)
 368 xp368_y2gy432aczy12251zzggyp62sgz56yc65134w16zyn4o68zy8o8go 48 capgun + boat-bit
+370 xp370_2egoy7ca23zy56bb4y8ggzgs26yf643y04ka8zya2dd6x66xccc4ak8g086o4zy4c453y44ka8w6acwefzyl86o4 97 LCM(10,37)
 378 xp378_g8e1qiga64oyfgoz78ok2im0s43yf31zy310gs26y6754y162sgzyao8a6y2cc 75 LCM(7,54)
 380 xp380_ye3pmwmp3zcieg8oyb11z0suvy5sg2a4zg9jfgoz123zy7s0111zy9222x31e8 75 LCM(5,76)
 381 xp381_xguydca23z618882w4a4y1oocmey566zyc8sc0326z033zyigyacczyd64cg3jhzy466y576311y1252zyac453 86 LCM(3,127)
 385 xp385_xgbb88g0tb0gzca2t597432wh98cy34a6zx12y311y168c8xoozy033x1316y18ozy2652y3311 85 LCM(11,35)
 392 xp392_y58cq7k8gzy8125sb62y5g8gzyf33y2qr0raa4zzyke2ex66zwccxe8ezz4aar0rby2oozx121 78 LCM(8,196)
+407 xp407_yc32acy7oge2zy4ggy84bb6zgg0g4cx346yf62sgz101p542mgx66x6dd2z330347o6l56y8354czy311 92 LCM(11,37)
 408 xp408_y33bg2kgy5ckggzgggg8gy111y81z11101qt2y3259142sszy111y7111y7ig1jzyu12dw93zyb32ac 79 LCM(8,102)
 415 xp415_ye178cy3oge2zy8354czxg8gy5gg0ogx4c244y54a4zxghy81y5oggzojdwdjoxo4cy3o8gy123zy611y732 80 LCM(5,83)
 418 xp418_y1ca23yi32aczsy48kie4y84eik8y4szx771yo177zygg88ggy24y1oge2zybo4cw332h1y1669b7zya11 82 LCM(22,38)
@@ -191,9 +197,10 @@ fixeds = """1 xs4_33 4 block
 460 xp460_033y133zzzckgsxsgkczzy979102cy733zy9e98043y7ccz31c08zy01050kgzy623 65 LCM(5,92)
 465 xp465_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy3skssssks 60 LCM(15,31)
 480 xp480_y5osq596z4r4y7oy0c871z4r4y6525zy366zy3gggeeezy3333 57 LCM(15,32)
+481 xp481_2egoy7ca23zy56bb4y8ggzgs26yf643zya2dd6x66wcczy4c453y3ooy2cime0ks4zyjed96zyk723 85 LCM(13,37)
 496 xp496_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy2oo0o8i22zy368wov 69 LCM(16,31)
 508 xp508_y2osq596xoozzy2252yi33zy8gcogyfoge2zwggxee810f2y5gg4v08177z4701yg13zy2ccyi4a4zyiggzyi11 86 LCM(4,127)
-512 xp512_yr33y166z0ggy033y16426ye33y0ccz011w66yuggz66yz56zzzy2mqyz66zygckgk2a21ya66woozy133y0ccye6426y1cczy566y1cc 100 capgun + boat-bit
+518 xp518_2egoy7ca23zy56bb4y8ggzgs26yf6430ooy1oozya2dd6x66y3808zy4c453ya6d51x15d6zyn66y166 85 LCM(14,37)
 528 xp528_252y2gy9cgwgz652y2o99gy61e6rargzy4stgc87y57zy6s261n7zy71ii3y28kczya1y28k8 81 LCM(16,33)
 552 xp552_x48r952wg8zsi4ogy113497zw21w8kir24zyjssszym777 48 LCM(8,138)
 532 xp532_033y133zo4maxam4oylg88cz1ppy1pp1yggy01hzyf557y53088803zyaggy4ggzy8ckla26eeee62alkc 91 LCM(14,76)
@@ -213,7 +220,6 @@ fixeds = """1 xs4_33 4 block
 690 xp690_0ooy9vtvzyc757zok4sxs4kozzzz033y133 40 LCM(15,46)
 704 xp704_y2ca23zws21q4zx11zxgc22szw8o121y8ccz311wccy447zy977asszyas4y466zy666 72 LCM(22,64)
 720 xp720_33y18kk8yb33zy8equyesksssskszy9757wggzccyb1221y1cc 54 LCM(15,144)
-728 xp728_ggy533y1ca230ggz0346yd643y0g0s4zy94rghey611zzwgggeeezw333y2ggy6eh1r4zy54701y0o4cydc4ozyc110o8a6y1ooy511 96 LCM(8,91)
 730 xp730_4q44q4x7exe7x6a4wccz121121ybgy2ca23zyfe909ey2ggzy0o8a6yi1074 68 LCM(5,146)
 760 xp760_c88gyn33zw11ybgyas48g69gvz01110s0111y325dya3021zyaggy4ggyd33zy8ckla291hh192alkc 83 LCM(40,76)
 762 xp762_066yica23z33dew66x4a4y1oocmey566zyf8sc0326zy033zylgyacczyg64cg3jhzy766y576311y1252zydc453 90 LCM(6,127)
@@ -228,7 +234,6 @@ fixeds = """1 xs4_33 4 block
 960 xp960_x4evy2ve4zyacczcczx226wosr73wc88zyf66zy166 46 LCM(15,64)
 966 xp966_033y133zo4maxam4oz1ppy1pp1y5gggzyg3047zy6sii6yagggzyn6443zydeigs 70 LCM(14,138)
 988 xp988_yr33gzoggyi66w8653g80676211zw23ym4uezw70ggg07y44rry63zzy8o8bl46777764lb8ozy911y611 91 LCM(13,76)
-992 xp992_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zyeggy2gggzwg8keey711xsss333zw1221y022525zy3o8a6 93 LCM(31,32)
 995 xp995_y333yn33zyfooxoozz66y5os8gybg8soy566zy913yb31z033yz33zggy5csa7yb7ascy5ggz11yzw11zyfccxcczzy333xgc26yg33zy3g8a03zy0651 99 LCM(5,199)
 1008 xp1008_0ooy1ooy033y18kk8yb33zwggxggydequze9d2x2d9eyc757wggz066y166y0ccyb1221y1cc 76 LCM(14,144)
 1016 xp1016_ggykca23z1581qoy24a4y1oocmey566zyg8sc0326zy133zymgyacczyh64cg3jhzy866y576311y1252zyec453 86 LCM(8,127)
@@ -292,22 +297,19 @@ def mold_rectifier_loop(p):
     pat, mpop, source = rectifier_loop(p//2)
     return (pat+mold, mpop+12 if mpop != None else None, source + " + mold")
 
-# 128+8n: 22hd reflector with Coe's p8 and blocker
-p8l1 = lt.pattern("""11b2o$11b2o3$11bo$9bobo$7bo2b2o$b2o5b2o$b2o5bo2$bo5b2o$obo4b2o$o2bo$bo
-2bo5b2o$10b2o$bo2bo$b2o9$8bo$7bobo$7bobo$8bo$12b2o$12bobo$14bo$14b2o!""")
-p8l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo9$13b2o$13b2o$4b2o$4b2o7bo$12bobo$
-7b2o3bo2bo$7b2o4bo2bo2$13bo2bo$7bo5b2o$5bobo$3bo2b2o$4b2o$4bo2$3b2o$3b2o!""")(14,34)
-gp8l = lt.pattern("bo$2o$obo!")(9,16)
+# 64+8n: 6hd reflector with Coe's p8
+# https://conwaylife.com/forums/viewtopic.php?f=2&t=5338&start=75#p148210
+p8l1 = lt.pattern("""4b2o8b2o$4b2o8bo$15bo$14b2o$3bo9bo$4b2o3b2o2b3o$4bo4b2o5bo$4o11b2o$b2o
+$2o7b2o$2o6b2o$2o3b2o3bo$5b2o4$4b2o$3bobo$3bo$2b2o""")
+p8l2 = lt.pattern("""13b2o$13bo$11bobo$11b2o4$10b2o$10b2o3b2o$15b2o$15b2o$14b2o$2o11b4o$o5b
+2o4bo$b3o2b2o3b2o$3bo9bo$b2o$bo$2bo8b2o$b2o8b2o""")(4,8)
 
-def p8_22hd_loop(p):
-    if p%8 or p < 128:
+def p8_loop(p):
+    if p%8 or p < 64:
         return None
-    n_gliders, mpop = (2, 108) if p < 248 else (1, 103)
-    exts = (p*n_gliders - 248) // 8
-    pat = p8l1 + p8l2(exts,exts)[4*exts]
-    for _ in range(n_gliders):
-        pat = (pat+gp8l)[p]
-    return (pat, mpop, f"{n_gliders}G p8 22hd reflector loop")
+    exts = (p - 64) // 8
+    pat = p8l1 + p8l2(exts,exts)
+    return (pat, 92, f"p8 6hd reflector loop")
 
 snark1 = lt.pattern("""9b2o$8bobo$2b2o4bo$o2bo2b2ob4o$2obobobobo2bo$3bobobobo$3bobob2o$4bo2$
 17b2o$8b2o7bo$8b2o5bobo$15b2o7$5b2o$6bo$3b3o$3bo""")
@@ -472,5 +474,5 @@ def twinbees_shuttle(p):
         return None
     return res + (f"type-{r} twin bees shuttle",)
 
-cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_22hd_loop, snark_loop,
+cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_loop, snark_loop,
           pd_shuttle, p6thumb_shuttle, p6_22hd_loop, p14_shuttle, twinbees_shuttle)
