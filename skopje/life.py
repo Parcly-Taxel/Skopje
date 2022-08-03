@@ -99,7 +99,7 @@ fixeds = """1 xs4_33 4 block
 105 xp105_o08cbb2408fvy2skszff1024dd3101y2vnv 46 LCM(7,15)
 108 xp108_wc4o0oy6g033zougdb158cy1a9871zy0ooyf789q8zy42bi2syf33zyfgs2iazydoo01 78 LCM(4,27)
 110 xp110_c4oy1178cwggg2y2oo4kozx160kgy235433y28111w62sgzy412ac 51 LCM(5,22)
-111 xp111_xc930ggz2dh9j4mo3ci6zc89c0misl21y5ok46zwbd11y4cmm8zy2o4cyfc871zy111y84qqczy9o8a6y731e8 112 LCM(3,37)
+111 xp111_y42509akowo84a4zy8ok72676ggkczy432acx11331xoge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354c 99 LCM(3,37)
 112 xp112_om999e0e999mozx8kc0ck8zzw8if505fi8 50 LCM(14,16)
 113 xp113_y98oyn33y166z8oy732ys33y0ccz01219g8y2gkszwcq2qbyzy18e1eozx121ywsk4y2b591zxooyzy5221e8zy3gg33ysdbzy311y133 106 nihonium
 114 xp114_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7zye4hh186zyf7 57 LCM(3,38)
