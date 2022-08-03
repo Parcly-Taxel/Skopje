@@ -79,7 +79,7 @@ fixeds = """1 xs4_33 4 block
 78 xp78_y45rc31zwmkac48g012640cczw1wgw1rozmkgino3s4z1w6221 61 LCM(6,13)
 80 xp80_35426ox22i8o0ooz65123y1vow86 39 LCM(5,16)
 81 xp81_yzyzwca23zyzyy33y2eu80gswsg0gzyzyw2a6y4178ewew121zyzyz0o4ozyzyugs26x1zyzyzxco4zyzyca64zzzyzyisg8zyu42ezzzyz08okzya86czyhoge2zyc696z0gxsws4oy5okgz1212ewe205vsy2ggzyaggkc011zya1 146 p3 22hd reflector loop
-82 xp82_y3ggdby5ggozy2560797y3320g0s4z08ggy7ae4y011z112yh66wggozyn32zy8c4530ggzyd11y2go8y745a2zydgs26y111xg8g0ggzygc453y33ar452zys32 114 H(pi,G)
+82 xp82_y3ggdby5ggozy2560797y3320g0s4z08ggy7ae4y011z112yh66wggozyn32zy8c4530ggzyd11y2go8y745a2zydgs26y111xg8g0ggzygc453y33ar452zys32 114 H(pi)
 83 xp83_y22egoy3c871zyjc453z33y5442c4xgo0ggzy5ggoy51y733zy432y1g8oy3c4ozya23y711 62 H(R)
 84 xp84_8oymca23z0123ya4995zy9kii4yao8gzxo8a6ym32 42 H(HF)
 85 xp85_w32acy1ca23zy2sr7zo8a6y1mm0mp3c48cggzy5122m031fhd221zy811 74 LCM(5,17)
@@ -96,10 +96,10 @@ fixeds = """1 xs4_33 4 block
 100 xp100_32aczy0ooj64zg88gy34cp33z125eey76a8o 42 LCM(4,25)
 102 xp102_ybc453zyeg8w4kk8y2gg8kbw9czy1ooy678c48by5408czooog8lb4zy01yeggozyi32 67 Raucci
 104 xp104_gk2gb3y013cr5z11y0cc046210g84cakmzy8or1y11 46 LCM(8,13)
-105 xp105_0oggxooy1vtvzc88m5o0ccy1757zw1qm0f952 49 LCM(7,15)
+105 xp105_o08cbb2408fvy2skszff1024dd3101y2vnv 46 LCM(7,15)
 108 xp108_wc4o0oy6g033zougdb158cy1a9871zy0ooyf789q8zy42bi2syf33zyfgs2iazydoo01 78 LCM(4,27)
 110 xp110_c4oy1178cwggg2y2oo4kozx160kgy235433y28111w62sgzy412ac 51 LCM(5,22)
-111 xp111_y42509akowo84a4zy8ok72676ggkczy432acx11331xoge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354c 99 LCM(3,37)
+111 xp111_xc930ggz2dh9j4mo3ci6zc89c0misl21y5ok46zwbd11y4cmm8zy2o4cyfc871zy111y84qqczy9o8a6y731e8 112 LCM(3,37)
 112 xp112_om999e0e999mozx8kc0ck8zzw8if505fi8 50 LCM(14,16)
 113 xp113_y98oyn33y166z8oy732ys33y0ccz01219g8y2gkszwcq2qbyzy18e1eozx121ywsk4y2b591zxooyzy5221e8zy3gg33ysdbzy311y133 106 nihonium
 114 xp114_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7zye4hh186zyf7 57 LCM(3,38)
@@ -125,9 +125,9 @@ fixeds = """1 xs4_33 4 block
 150 xp150_w178cxg8zy417gukzy75f1sgzccb7w66y121x62sgz066 46 LCM(6,25)
 152 xp152_32acywca23zwsy48kie4y84eik8y4szy1771yo177zybgggeeezyb333 60 LCM(8,38)
 154 xp154_gjjy1jjgz34daxad43z0ooy1ooy2ok4ooy22gggwc871zy6gs26w1118y233453 70 LCM(7,22)
+154 xp154_o08cbb2408fvzff1024dd3101y1ok4ooy22gggwc871zy7gs26w1118y233453 70 LCM(14,22)
 155 xp155_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy2idiidizy31w1 64 LCM(5,31)
 160 xp160_yaggy2osq596zya11y7oy0c871zoo79ey4eis33y4525zwggyc66zw11ycgggeeezyg333 73 LCM(32,40)
-164 xp164_y5ggdby5ggozy4560797y3320g0s4zx8ggy7ae4y011z0gh12yh66wggoz34a9gayj32zyac4530ggzyf11y2go8y745a2zyfgs26y111xg8g0ggzyic453y33ar452zyu32 126 LCM(4,82)
 165 xp165_y0dbzggci5ld3xog8oz0343zy275777757 45 LCM(11,15)
 168 xp168_0g8gw3jzw1xqpwsszy211wc2w8k8zgggeeey066z333 44 LCM(8,21)
 170 xp170_y6438g0ia4zx66w66xac4zxggo4c4oggyh66x66zca16888188861acya358mhh181hhm853zy066x66yj12321zyv66w66zym252x66 119 p5 shuttle
@@ -190,7 +190,6 @@ fixeds = """1 xs4_33 4 block
 392 xp392_y58cq7k8gzy8125sb62y5g8gzyf33y2qr0raa4zzyke2ex66zwccxe8ezz4aar0rby2oozx121 78 LCM(8,196)
 407 xp407_yc32acy7oge2zy4ggy84bb6zgg0g4cx346yf62sgz101p542mgx66x6dd2z330347o6l56y8354czy311 92 LCM(11,37)
 408 xp408_y33bg2kgy5ckggzgggg8gy111y81z11101qt2y3259142sszy111y7111y7ig1jzyu12dw93zyb32ac 79 LCM(8,102)
-414 xp414_w6a897o4oz6511a0338f033zy0ooybc4ozyhhhhzy033yb643y333 64 LCM(9,46)
 415 xp415_ye178cy3oge2zy8354czxg8gy5gg0ogx4c244y54a4zxghy81y5oggzojdwdjoxo4cy3o8gy123zy611y732 80 LCM(5,83)
 418 xp418_y1ca23yi32aczsy48kie4y84eik8y4szx771yo177zygg88ggy24y1oge2zybo4cw332h1y1669b7zya11 82 LCM(22,38)
 432 xp432_xogyamqxdv9ae2gkozx13yf4a4x1zgs26y1457y662sgzy5ccy26a8o 64 LCM(16,54)
@@ -354,20 +353,6 @@ def snark_loop(p):
         pat = (pat+gsnark)[p]
     return (pat, mpop, f"{n_gliders}G snark loop")
 
-hd0_1 = lt.pattern("""17b2o$17bo$18bo$5bo11b2o$5b3o11b2o$8bo8b2o2bo$7b2o9bobo$2b2o7bo4bobob
-2o$3bo6bobo3b2o$3bobo4bo2bo$4b2o5b2o2$13bo$12b2o$12bobo2$2b2o$2bo2b2o$
-3bob2o$bobo$obo2b4o$o2b2o3bo5b2o$b2o2bo8bo$4b2o9b3o$17bo""")
-hd0_2 = lt.pattern("""4bo$4b3o9b2o$7bo8bo2b2o$6b2o5bo3b2o2bo$13b4o2bobo$18bobo$15b2obo$15b2o
-2bo$18b2o6$9b2o5b2o$8bo2bo4bobo$4b2o3bobo6bo$2obobo4bo7b2o$bobo9b2o$o
-2b2o8bo$b2o11b3o$3b2o11bo$3bo$4bo$3b2o""")(13,11)
-
-def p1_0hd_shuttle(p):
-    if p%8 != 6 or p < 118:
-        return None
-    exts = (p - 118) // 8
-    pat = hd0_1 + hd0_2(exts,exts)
-    return (pat, 144, f"p1 0hd reflector shuttle")
-
 pd0_1 = lt.pattern("""16b3o$15bo3bo$15bo3bo$16b3o5$16b3o$15bo3bo$15bo3bo$16b3o4$2o3bo2bo3b2o
 $5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
 pd0_2 = lt.pattern("""6b2o3bo2bo3b2o$6b5o4b5o$6b2o3bo2bo3b2o4$b3o$o3bo$o3bo$b3o5$b3o$o3bo$o
@@ -502,5 +487,5 @@ def twinbees_shuttle(p):
         return None
     return res + (f"type-{r} twin bees shuttle",)
 
-cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_loop, snark_loop, p1_0hd_shuttle,
+cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_loop, snark_loop,
           pd_shuttle, p6thumb_shuttle, p6_22hd_loop, p14_shuttle, twinbees_shuttle)
