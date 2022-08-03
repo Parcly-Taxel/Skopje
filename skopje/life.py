@@ -351,6 +351,20 @@ def snark_loop(p):
         pat = (pat+gsnark)[p]
     return (pat, mpop, f"{n_gliders}G snark loop")
 
+hd0_1 = lt.pattern("""17b2o$17bo$18bo$5bo11b2o$5b3o11b2o$8bo8b2o2bo$7b2o9bobo$2b2o7bo4bobob
+2o$3bo6bobo3b2o$3bobo4bo2bo$4b2o5b2o2$13bo$12b2o$12bobo2$2b2o$2bo2b2o$
+3bob2o$bobo$obo2b4o$o2b2o3bo5b2o$b2o2bo8bo$4b2o9b3o$17bo""")
+hd0_2 = lt.pattern("""4bo$4b3o9b2o$7bo8bo2b2o$6b2o5bo3b2o2bo$13b4o2bobo$18bobo$15b2obo$15b2o
+2bo$18b2o6$9b2o5b2o$8bo2bo4bobo$4b2o3bobo6bo$2obobo4bo7b2o$bobo9b2o$o
+2b2o8bo$b2o11b3o$3b2o11bo$3bo$4bo$3b2o""")(13,11)
+
+def p1_0hd_shuttle(p):
+    if p%8 != 6 or p < 118:
+        return None
+    exts = (p - 118) // 8
+    pat = hd0_1 + hd0_2(exts,exts)
+    return (pat, 144, f"p1 0hd reflector shuttle")
+
 pd0_1 = lt.pattern("""16b3o$15bo3bo$15bo3bo$16b3o5$16b3o$15bo3bo$15bo3bo$16b3o4$2o3bo2bo3b2o
 $5o4b5o$2o3bo2bo3b2ob3o$15bo$16bo""")
 pd0_2 = lt.pattern("""6b2o3bo2bo3b2o$6b5o4b5o$6b2o3bo2bo3b2o4$b3o$o3bo$o3bo$b3o5$b3o$o3bo$o
@@ -485,5 +499,5 @@ def twinbees_shuttle(p):
         return None
     return res + (f"type-{r} twin bees shuttle",)
 
-cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_loop, snark_loop,
+cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_loop, snark_loop, p1_0hd_shuttle,
           pd_shuttle, p6thumb_shuttle, p6_22hd_loop, p14_shuttle, twinbees_shuttle)
