@@ -49,7 +49,7 @@ fixeds = """1 xs4_33 4 block
 40 xp40_33zxs48g69gvzx3021zy833 26 Beluchenko
 42 xp42_033y133zo4maxam4oz1ppy1pp1xgfnzyb1252333 50 LCM(6,14)
 44 xp44_0oql96xmqzgh1gxeqaa4oz1011y217871 45 LCM(4,11)
-45 xp45_vtvy2j9e0o4cz757y1ojhrhla23zy666 48 LCM(9,15)
+45 xp45_4ahhhhhha4zy94a6zx35c53zy166 29 H(pi)
 46 xp46_033y133zzzckgsxsgkczz0cc 28 twin bees shuttle
 47 xp47_w32acyeca23zy37y2ccy27z252xeaey8eaex252zg8gxsksy8sksxg8gz01y1oy2ccy2oy11zwggkc01ya10ckggzw1yk1 84 PPS
 48 xp48_660259gcy1g8gzy166y1sspxgk2gb3zy8ooy011 44 LCM(6,16)
