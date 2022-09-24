@@ -32,7 +32,7 @@ fixeds = """1 xs4_33 4 block
 23 xp23_0ggw32acxca23wckzgg346xoo8ggy065loz1qa6y2111x62sgz023wc453x354c 76 H(HF)
 24 xp24_xsssx4hh186z777y37 24 LCM(3,8)
 25 xp25_32aczy0ooj64zy74cp33zyc6a8o 30 30P25
-26 xp26_0c4o796kcimkk8goz4aajkm0fomi87kggzca245l4870122c543zy111 87 LCM(2,13)
+26 xp26_x32acz31e88g0653zy01pgz66w1023z66w8gkczy08pzc8711w6aczxc453 70 H(pi)
 27 xp27_y9330gzyb1789azy08q987yfooz33yfs2ib2zy6ai2sgzy910oo 56 56P27
 28 xp28_033y133zo4maxam4oy1ggz1ppy1pp1xsta43 46 LCM(4,14)
 29 xp29_y8ca23z252y24eexcczg8gy28ssy366xg0s4z01y76e6x6e6w11zzy8252y1252 54 PPS
@@ -113,7 +113,7 @@ fixeds = """1 xs4_33 4 block
 126 xp126_0ccy1ccx32acxca23zcmkgxgkmcy24r4zy0202y64r4z033y133xo8a6x6a8o 74 LCM(9,14)
 127 xp127_y932aczy366y4sccy44a4zyd44c5ko8zyh1ya33zccy9gozya112a32izy3252y4333y466zyh354c 74 H(C)
 129 xp129_ggyhca23z0346ycggzyf13zyzy0gs8zyzyi62sgzyyc453 38 H(R)
-130 xp130_og8o0u1eozy0mlgrzx1qa2my2meiz62460v0t60gg037fa60ggzy21x11y236fe5267zyc33 89 LCM(10,13)
+130 xp130_x32acz31e88g0653zy01pgz66w1023y3o8gkcz66w8gkcy23c84kozy08pzc8711w6aczxc453 88 LCM(5,26)
 132 xp132_252w253zy0gxggg0ooozy13w3488a61oml1hiswcgzw695qsoy3111zyica4w4a4 72 LCM(4,33)
 135 xp135_y9330gzyb1789azy08q987yfooz33yfs2ib2zy6ai2sgzy910ooy2uquzyjfbf 68 LCM(15,27)
 138 xp138_w8gw259r84z79431y1go4iszx42rik8w12 36 Gabriel
@@ -172,6 +172,7 @@ fixeds = """1 xs4_33 4 block
 252 xp252_vf8042bbc80oz1013dd4201ffyaca23zyc131y08c8zy8c453 56 LCM(7,36)
 258 xp258_xggyhca23zy0346ycggzyi13zcg952066yygs8z066yzyi62sgzyzwc453 54 LCM(6,129)
 259 xp259_ckgoxc871zcimikswccy0g88czxmqy066x11zy4aiicy7c871zy0o4cy7ciikzx11zy8c453y2354c 87 LCM(7,37)
+260 xp260_x32acz31e88g06530ggwg8gzy01pggx12269ahu248gz66y0231y1ckow3dhlaa4z66xgks8y9346zy08pzc8711w6aczxc453 118 LCM(20,26)
 266 xp266_yeey0c871zya111cczyd4cgozgjjy1jjgz34daxad43z0ooy1ooy5ggzyd2301zya88833zye7y031e8 78 LCM(14,38)
 266 xp266_33j71t8ggz678u0h431zx223333wssgyogsszy47y4259e4y84e952y47zy2o8a6yw6a8o 78 LCM(7,38)
 273 xp273_yjmf0g066zy4o4cy735t0bqczx321f811y766xf6zyio8gwooz6246y2636y61oggzyaggy3sd4pzya11x66x110ciqs0ae8zylcc 111 LCM(7,39)
