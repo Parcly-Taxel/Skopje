@@ -102,6 +102,7 @@ fixeds = """1 xs4_33 4 block
 102 xp102_ybc453zyeg8w4kk8y2gg8kbw9czy1ooy678c48by5408czooog8lb4zy01yeggozyi32 67 Raucci
 104 xp104_gk2gb3y013cr5z11y0cc046210g84cakmzy8or1y11 46 LCM(8,13)
 105 xp105_o08cbb2408fvy2skszff1024dd3101y2vnv 46 LCM(7,15)
+106 xp106_y4696o8b9czy565x33y3szy04s0gy7222x222zy0gg11y12m2y1ggw6a8ozc88g0346y1121y11074zw1hosogy962sgzyeggzy9rb88ci9gzya23w121 115 H(TB)
 108 xp108_y432acy266zx178cy6sk4y1c871zciakgyfogzw133xbdya13 55 LCM(4,54)
 110 xp110_c4oy1178cwggg2y2oo4kozx160kgy235433y28111w62sgzy412ac 51 LCM(5,22)
 111 xp111_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z47010ggo08ocsg0354czy38kcc6249szy832q5k46zyb11 97 LCM(3,37)
