@@ -70,7 +70,7 @@ fixeds = """1 xs4_33 4 block
 64 xp64_y1j3zy031d8ey633zggy6s4c0gz11y8hj1zya11 34 Merzenich
 65 xp65_3pmwmp3zxh1gx21h2zx3c7a5301gk2w96zy5admlk 52 LCM(5,13)
 66 xp66_y2ca23zws21q4zx11zxgc22szw8o121z311y0681hh4zy77 48 LCM(3,22)
-68 xp68_w32acy1ca23zy2sr7zo8a6y1mm0mp2c82u08ozy51qaic0d5521 72 LCM(4,17)
+68 xp68_gg032acy9ok46wggz0346yg643zyc221eeouizx8oyd2ll6o6426zy0123xsksy6101 71 H(pi)
 69 xp69_y4gut2gzy47sc0fozggy06810311z0346xgg8ooy14aa4y3562zy51y76a8ozzykgoyfgkozyk101zzzyzw6a2ye163zzyzyl64kozyzyfgo8y38kk8y166522xo8gzyzyh1ydgw4oy032zyzyw6t1depzyzyx3geu3zyzyz1 146 p3 22hd reflector loop
 70 xp70_033y133y1o62453zo4maxam4oy132156z1ppy1pp1 52 LCM(5,14)
 72 xp72_3bg2kgzy011y7ok46zy268ga4w8k24ozxo8a6 36 LCM(8,36)
