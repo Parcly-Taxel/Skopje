@@ -35,6 +35,7 @@ fixeds = """1 xs2_3 2
 35 xp35_s088882a20vzv0p1hgg0o0vzv01x8890vzf0454111103 65
 36 xp36_883oy1o388zxv0k0k0vz11c3y13c11 38
 37 xp37_11d1d11wszwgzw3w88b8b88 26
+38 xp38_88xggmgnggx88zy3a0az22x11d1t11x22 34
 39 xp39_880mg788gg887gm088zw5x55w55x5z03ya3 38
 40 xp40_v0804080vzv0325230v 29
 41 xp41_vxk88xez3y345011 18
@@ -114,7 +115,7 @@ def phase_shifting_loop(p):
         for _ in range(y):
             pat = (pat+gpsl)[37]
         pat = pat[26*x]
-    return (pat, None)
+    return (pat, None, "phase-shifting loop")
 
 dl1 = lt.pattern("""20bo2bo$13b6obo2bo$11b2o9bo$18b3obob3o3bo$10b3obo7bo4b2obo2bo$7bo6bobo
 b3o2bo6bo2bo$7bob4obobo5bo3b2o2bobo2b2o$7bo10bobobo7bobobo$7bo5b2o3bob
@@ -186,6 +187,6 @@ def drifter_loop(p):
     for _ in range(looplen // p):
         pat[0,0] = 1
         pat = pat[p]
-    return (pat, None)
+    return (pat, None, f"({x+1},{y+1})-drifter loop")
 
 cfuncs = (p26_shuttle, p26_loop, phase_shifting_loop, drifter_loop)
