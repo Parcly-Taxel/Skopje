@@ -19,6 +19,8 @@ def skop(p, rule="b3s23"):
     cands = []
     for line in rmod.fixeds.split("\n"):
         words = line.split(maxsplit=3)
+        if len(words) < 3:
+            continue
         lp, apg, mp = words[:3]
         if int(lp) == p:
             source = words[3] if len(words) > 3 else None
