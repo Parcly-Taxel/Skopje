@@ -67,9 +67,9 @@ def p26_shuttle(p):
     exts, r = divmod(q, 6)
     exts *= 13
     if r == 0:
-        return (p26s1 + p26s2_0(exts,exts), 21)
+        return (p26s1 + p26s2_0(exts,exts), 21, "p26 shuttle")
     elif r == 3:
-        return (p26s1 + p26s2_3(exts,exts), 22)
+        return (p26s1 + p26s2_3(exts,exts), 22, "p26 shuttle")
 
 p26l1 = lt.pattern("5o2$bobo$bobo$2bo")
 p26l2 = lt.pattern("o$o2b3o$o2bo$o2b3o$o")(-6,10)
@@ -92,7 +92,31 @@ def p26_loop(p):
     pat = p26l1 + p26l2(-i,i)[-6*i] + p26l3(slack-2*i,slack) + p26l4(slack-i,slack-i)[-6*i]
     for _ in range(n_gliders):
         pat = (pat+gp26l)[p]
-    return (pat, mpop)
+    return (pat, mpop, f"{n_gliders}G p26 loop")
+
+p34l1 = lt.pattern("""20bo$20bobo$20bobo$18bobobobo$18bobobobo$20bobo$15b4obobob4o2$14b3o9b
+3o2$21bo$19bo3bo$19b5o$19b2ob2o$21bo$21bo$8bo$6bobo$6bobo$6bo$3b2obo$
+11b3o$b6o5b2o$10bobob2o$7o5b2o$11b3o$3b2obo$6bo$6bobo$6bobo$8bo""")
+p34l2 = lt.pattern("""20bo$20bobo$20bobo$22bo$22bob2o$15b3o$15b2o5b7o$13b2obobo$15b2o5b6o$
+15b3o$22bob2o$22bo$20bobo$20bobo$20bo$7bo$7bo$5b2ob2o$5b5o$5bo3bo$7bo
+2$3o9b3o2$b4obobob4o$6bobo$4bobobobo$4bobobobo$6bobo$6bobo$8bo""")(16,14)
+gp34l = lt.pattern("obo$o")(22,17)
+
+def p34_loop(p):
+    if p%34 or not p%102:
+        return None
+    r = p//34%6
+    if r == 4:
+        n_gliders, mpop = (1, 95+(p==136))
+    elif r == 2 or r == 5:
+        n_gliders, mpop = (2, 98+2*(p==68))
+    elif r == 1:
+        n_gliders, mpop = (4, 104+4*(p==34))
+    slack = (p*n_gliders - 136) // 12
+    pat = p34l1 + p34l2(slack,slack)
+    for _ in range(n_gliders):
+        pat = (pat+gp34l)[p]
+    return (pat, mpop, f"{n_gliders}G p34 loop")
 
 psl1 = lt.pattern("12b7o2$15bo2$13bo3bo2$14bobo$o$o4bo$o$ob2o3bo$o$o4bo$o")
 psl2 = lt.pattern("18bo$13bo4bo$12b4o2bo$13bo2bobo$12b4o2bo$13bo4bo$3bo14bo$3bo$b2ob2o$2bobo2$3bo2$7o")(7,12)
@@ -191,4 +215,4 @@ def drifter_loop(p):
         pat = pat[p]
     return (pat, None, f"({x+1},{y+1})-drifter loop")
 
-cfuncs = (p26_shuttle, p26_loop, phase_shifting_loop, drifter_loop)
+cfuncs = (p26_shuttle, p26_loop, phase_shifting_loop, drifter_loop, p34_loop)
