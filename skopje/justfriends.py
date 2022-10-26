@@ -94,6 +94,23 @@ def p26_loop(p):
         pat = (pat+gp26l)[p]
     return (pat, mpop, f"{n_gliders}G p26 loop")
 
+p34s1 = lt.pattern("""8bo$6bobo$6bobo$6bo$3b2obo11b2o$11b3o3bo$7o5b2o$10bobob2o$b6o5b2o$11b
+3o$3b2obo$6bo$6bobo$6bobo$8bo""")
+p34s2_0 = lt.pattern("""7bo$7bobo$7bobo$9bo$9bob2o$2b3o$2b2o5b6o$2obobo$2b2o5b7o$2b3o$9bob2o$
+9bo$7bobo$7bobo$7bo""")(37,11)
+p34s2_3 = lt.pattern("3o9b3o2$b4o5b4o$4bob3obo$4bobobobo$4bobobobo$6bobo$6bobo$8bo")(16,22)
+
+def p34_shuttle(p):
+    if p%102:
+        return None
+    q = p//34
+    exts, r = divmod(q, 6)
+    exts *= 17
+    if r == 0:
+        return (p34s1 + p34s2_0(exts,exts), 49, "p34 shuttle")
+    elif r == 3:
+        return (p34s1 + p34s2_3(exts,exts), 65, "p34 shuttle")
+
 p34l1 = lt.pattern("""20bo$20bobo$20bobo$18bobobobo$18bobobobo$20bobo$15b4obobob4o2$14b3o9b
 3o2$21bo$19bo3bo$19b5o$19b2ob2o$21bo$21bo$8bo$6bobo$6bobo$6bo$3b2obo$
 11b3o$b6o5b2o$10bobob2o$7o5b2o$11b3o$3b2obo$6bo$6bobo$6bobo$8bo""")
@@ -215,4 +232,4 @@ def drifter_loop(p):
         pat = pat[p]
     return (pat, None, f"({x+1},{y+1})-drifter loop")
 
-cfuncs = (p26_shuttle, p26_loop, phase_shifting_loop, drifter_loop, p34_loop)
+cfuncs = (p26_shuttle, p26_loop, p34_shuttle, p34_loop, phase_shifting_loop, drifter_loop)
