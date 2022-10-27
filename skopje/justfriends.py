@@ -82,6 +82,29 @@ def bigglider_loop(p):
         pat = (pat+gbgl)[p]
     return (pat, mpop, f"{n_gliders}BG loop")
 
+bglf8_0 = lt.pattern("2bo$2bo$2bo$2bo$2bo$2bo$3bo$2obo$3bo$2bo$2bo$2bo$2bo$2bo$2bo")(-3,-7)
+bglf8_1 = lt.pattern("16bo$16bo$16bo$16bo$16bo$16bo$15bo$15bob2o$15bo2$3o$3b6o$bo$bo")(-1,1)
+bglf8_2 = lt.pattern("bo$bo$3b6o$3o2$15bo$15bob2o$15bo$16bo$16bo$16bo$16bo$16bo$16bo")(-1,-14)
+gbglf8 = lt.pattern("2obo2$2b2o")(9,2)
+
+def bigglider_loop_8(p):
+    if p%3 or p < 138:
+        return None
+    if p%12 == 0 and p >= 420:
+        n_gliders, i, mpop = (1, 0, 63)
+    elif p%6 == 0 and p >= 252:
+        n_gliders, i, mpop = (2, 0, 65)
+    else:
+        n_gliders, i, mpop = (4, p//6-21, 77 if p%6 else 75)
+    slack = (p*n_gliders - 420) // 12
+    pat = bglf8_0 + bglf8_1(i,i) + bglf8_2(slack-i,i-slack)
+    if p == 420:
+        pat[15,0] = 1
+        mpop += 1
+    for _ in range(n_gliders):
+        pat = (pat+gbglf8(i,i))[p]
+    return (pat, mpop, f"{n_gliders}BG figure-8 loop")
+
 p26s1 = lt.pattern("5o4$bobo$2bo$2bo4$bo$o$o")
 p26s2_0 = lt.pattern("2bo$2bo$bobo4$5o")(-6,13)
 p26s2_3 = lt.pattern("4bo$b2obo$o3bo$b2obo$4bo")(11,11)
@@ -219,7 +242,7 @@ def drifter_loop(p):
     """Construct a drifter loop of period p using Dean Hickerson's
     universal 23-gen and 27-gen components. Requires the PuLP solver
     for finding the optimal loop parameters through integer linear programming."""
-    if p < 13:
+    if p < 13 or p >= 136:
         return None
     # Minimise 71x + 36y subject to x, y >= 1 and q | 50x + 23y
     # where q is a quarter of the "effective period" (p times how many drifters
@@ -258,5 +281,5 @@ def drifter_loop(p):
         pat = pat[p]
     return (pat, None, f"({x+1},{y+1})-drifter loop")
 
-cfuncs = (bigglider_loop, p26_shuttle, p26_loop, p34_shuttle, p34_loop,
+cfuncs = (bigglider_loop, bigglider_loop_8, p26_shuttle, p26_loop, p34_shuttle, p34_loop,
           phase_shifting_loop, drifter_loop)
