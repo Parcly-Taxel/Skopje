@@ -54,7 +54,6 @@ fixeds = """1 xs2_3 2
 76 xp76_2r02222222220r2z0vxa0e0axvz8r08888888880r8 55
 83 xp83_y311111zggybggzy4r0rz11yb11zy3ggggg 26
 97 xp97_22o7x868y7868x7o22 22
-108 xp108_y6gg888888a20vzy2s08aaa0e0s0l5l0r4118822q2gzy1o1060c0k5l7gf098jkk1t0o0b8b03sz2q2i2q2p2aa21c3w3x442k55ll1t0s0f0ozxv01glk5t5t1a99gg0m80e1c2i2xo22222zx160e0uwgl411u0c0f0v5l1ghgj0szy32222w441u05llghgjgaa2w1zyc7022 276
 236 xp236_22xb1b 7"""
 
 bgl1 = lt.pattern("bo$bo$3b6o$3o")
@@ -88,14 +87,16 @@ bglf8_2 = lt.pattern("bo$bo$3b6o$3o2$15bo$15bob2o$15bo$16bo$16bo$16bo$16bo$16bo$
 gbglf8 = lt.pattern("2obo2$2b2o")(9,2)
 
 def bigglider_loop_8(p):
-    if p%3 or p < 138:
+    if p%3 or p < 81:
         return None
     if p%12 == 0 and p >= 420:
         n_gliders, i, mpop = (1, 0, 63)
     elif p%6 == 0 and p >= 252:
         n_gliders, i, mpop = (2, 0, 65)
-    else:
+    elif p >= 138:
         n_gliders, i, mpop = (4, p//6-21, 77 if p%6 else 75)
+    else: # TODO other numbers of gliders (3, 5, 6, 7)
+        n_gliders, i, mpop = (8, p//3-21, None)
     slack = (p*n_gliders - 420) // 12
     pat = bglf8_0 + bglf8_1(i,i) + bglf8_2(slack-i,i-slack)
     if p == 420:
@@ -242,7 +243,7 @@ def drifter_loop(p):
     """Construct a drifter loop of period p using Dean Hickerson's
     universal 23-gen and 27-gen components. Requires the PuLP solver
     for finding the optimal loop parameters through integer linear programming."""
-    if p < 13 or p >= 136:
+    if p < 13 or p >= 76:
         return None
     # Minimise 71x + 36y subject to x, y >= 1 and q | 50x + 23y
     # where q is a quarter of the "effective period" (p times how many drifters
