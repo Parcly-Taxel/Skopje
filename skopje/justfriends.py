@@ -28,7 +28,7 @@ fixeds = """1 xs2_3 2
 24 xp24_vw4ay1a4wv 16
 25 xp25_8g6g30ez03c122xo8zy731 23
 26 xp26_1dhd1 9
-27 xp27_88888q22y1u07z0h1uy3c89aa8z0301y1111 36
+27 xp27_0f0222aa2zcx603 18
 28 xp28_xggx440b8zwow10cz2207 18
 29 xp29_4k0t1t0k4z0jy1jz8b0e0e0b8zx111 36
 31 xp31_4k2e355l4kgz01y26 18
@@ -42,6 +42,7 @@ fixeds = """1 xs2_3 2
 41 xp41_vxk88xez3y345011 18
 42 xp42_4o340ax886zxc 14
 43 xp43_woy170e0ozo0f0fxq0q0fzf0p0hx30fzw103 42
+43 xp43_238cy1gy0gy1c832zy4glk11klgzy1450q2y02q054 42
 44 xp44_238cy1c832zy1cgczz4c13y131c4 25
 46 xp46_y1qx8wvzowg4wo1z7y22 20
 48 xp48_4o3o2z1060c07 16
@@ -55,6 +56,31 @@ fixeds = """1 xs2_3 2
 97 xp97_22o7x868y7868x7o22 22
 108 xp108_y6gg888888a20vzy2s08aaa0e0s0l5l0r4118822q2gzy1o1060c0k5l7gf098jkk1t0o0b8b03sz2q2i2q2p2aa21c3w3x442k55ll1t0s0f0ozxv01glk5t5t1a99gg0m80e1c2i2xo22222zx160e0uwgl411u0c0f0v5l1ghgj0szy32222w441u05llghgjgaa2w1zyc7022 276
 236 xp236_22xb1b 7"""
+
+bgl1 = lt.pattern("bo$bo$3b6o$3o")
+bgl2 = lt.pattern("2bo$2bo$2bo$2bo$2bo$2bo$3bo$2obo$3bo")(-2,7)
+bgl3 = lt.pattern("6b3o$6o$7bo$7bo")(5,14)
+bgl4 = lt.pattern("o$ob2o$o$bo$bo$bo$bo$bo$bo")(12,2)
+gbgl = lt.pattern("obo$o$2bo$2bo")(5,5)
+
+def bigglider_loop(p):
+    if not p%3 or p < 76:
+        return None
+    if p%12 == 8 and p >= 212:
+        n_gliders, i, mpop = (1, 0, 46)
+    elif p%3 == 2:
+        n_gliders, i, mpop = (4, p//6-8, 52 if p%6 == 5 else 56)
+    elif p%6 == 4 and p >= 130:
+        n_gliders, i, mpop = (2, 2, 48)
+    elif p%12 == 4:
+        n_gliders, i, mpop = (5, p//6-8, 70)
+    elif p%3 == 1:
+        n_gliders, i, mpop = (8, p//6-8, 80 if p%6 == 1 else 82)
+    slack = (p*n_gliders - 212) // 12
+    pat = bgl1 + bgl2(-i,i) + bgl3(slack-2*i,slack) + bgl4(slack-i,slack-i)
+    for _ in range(n_gliders):
+        pat = (pat+gbgl)[p]
+    return (pat, mpop, f"{n_gliders}BG loop")
 
 p26s1 = lt.pattern("5o4$bobo$2bo$2bo4$bo$o$o")
 p26s2_0 = lt.pattern("2bo$2bo$bobo4$5o")(-6,13)
@@ -158,7 +184,7 @@ def phase_shifting_loop(p):
         for _ in range(y):
             pat = (pat+gpsl)[37]
         pat = pat[26*x]
-    return (pat, None, "phase-shifting loop")
+    return (pat, None, f"({y},{x})-phase-shifting loop")
 
 dl1 = lt.pattern("""20bo2bo$13b6obo2bo$11b2o9bo$18b3obob3o3bo$10b3obo7bo4b2obo2bo$7bo6bobo
 b3o2bo6bo2bo$7bob4obobo5bo3b2o2bobo2b2o$7bo10bobobo7bobobo$7bo5b2o3bob
@@ -232,4 +258,5 @@ def drifter_loop(p):
         pat = pat[p]
     return (pat, None, f"({x+1},{y+1})-drifter loop")
 
-cfuncs = (p26_shuttle, p26_loop, p34_shuttle, p34_loop, phase_shifting_loop, drifter_loop)
+cfuncs = (bigglider_loop, p26_shuttle, p26_loop, p34_shuttle, p34_loop,
+          phase_shifting_loop, drifter_loop)
