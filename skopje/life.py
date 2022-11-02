@@ -76,6 +76,7 @@ fixeds = """1 xs4_33 4 block
 70 xp70_033y133y1o62453zo4maxam4oy132156z1ppy1pp1 52 LCM(5,14)
 71 xp71_y34s0gy439u0o4cz8oy311y5354t2acz0123y4cck88y111zx8oz0311yeca23zy688koozo80uigyd31e8z0phe0uby562sgzy1123 112 H(HF)
 72 xp72_3bg2kgzy011y7ok46zy268ga4w8k24ozxo8a6 36 LCM(8,36)
+73 xp73_2egoy8o8bdzy8gggy03156zy9243y14a4zzy54a4y1o48zy6ckgoy0111zy9mq23y831e8 68 H(LOM)
 74 xp74_y532acy5ca23zggyrggz0346y5636404636y5643zz0o4cy5coc404cocy5c4oz11yr11zy5o8a6y56a8o 84 Raucci
 75 xp75_32acy9sksssskszy0ooj64zy74cp33zyc6a8o 42 LCM(15,25)
 76 xp76_o4an7y1ca23yi32acz0110888xooxoa6ya6aoxoox888zy47ys7 56 LCM(4,38)
