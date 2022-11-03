@@ -57,7 +57,7 @@ fixeds = """1 xs4_33 4 block
 48 xp48_660259gcy1g8gzy166y1sspxgk2gb3zy8ooy011 44 LCM(6,16)
 49 xp49_y466we91gzy5s2b0d43zy6897w66ybggzyh688c1lh6k0o99gzybn110kw66x1222x1zyb3ia9ozgx888gxccw50ggtz1ii305chlg622cz011ybccwsi2zyfo4m0q87zyf1giewcc 158 H(pi)
 50 xp50_y132aczy5ooj64zwg08oy64cp33z320i9802i908oy46a8ozy33201 58 LCM(10,25)
-51 xp51_g08o0u15gis89f0s48cz11wdbaik68jd0ddy1ca23zy232011y1sr7zy6o8a6y16a8o 90 LCM(3,17)
+51 xp51_y14a4y1ca23zwggy2gyfoge2z470h8ow25d52yfg0s4zw23wggyd4ara4w11oge2zy04701zyhc453y1252 84 capgun
 52 xp52_4s0gy3ca23zw11w4ed3zy08oy362sgzw311 35 H(LOM)
 54 xp54_y566y2ca23z178cy14ksy6c871zxgozx31yadb 43 H(R)
 55 xp55_y0dby06a8gzggci5ld3xogg150cgz0343y523y0346 49 LCM(5,11)
