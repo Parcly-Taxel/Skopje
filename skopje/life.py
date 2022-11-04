@@ -30,7 +30,7 @@ fixeds = """1 xs4_33 4 block
 20 xp20_35426ow37bkicz65123 30 LCM(4,5)
 21 xp21_g8gw3jz01xqpwsszy111wc2w8k8zy566 32 Ø
 22 xp22_178cwggg2y2oo4kozy235433y28111w62sg 36 Jason
-23 xp23_0ggw32acxca23wckzgg346xoo8ggy065loz1qa6y2111x62sgz023wc453x354c 76 H(HF)
+23 xp23_w178cwoozxooy5c871z04s0gx679fuggzx11fuiscx1074zgs26y533zy433w62sg 70 H(pi)
 24 xp24_xsssx4hh186z777y37 24 LCM(3,8)
 25 xp25_32aczy0ooj64zy74cp33zyc6a8o 30 30P25
 26 xp26_x32acz31e88g0653zy01pgz66w1023z66w8gkczy08pzc8711w6aczxc453 70 H(pi)
@@ -97,7 +97,7 @@ fixeds = """1 xs4_33 4 block
 91 xp91_33j71t8ggz678u0h431zx223333xcczy04sk0emicy2oozy869dezy8327 68 LCM(7,13)
 92 xp92_k0il96zghy8o4cybooz11y8hhhzy133y3346yb33 44 LCM(4,46)
 93 xp93_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy44hh186zy57 60 LCM(3,31)
-94 xp94_32acy1ca23zzy4ggy033z0ccx23423zyg66zzy066zybckic4x33zy6cczzy9c453y1354c 68 H(R)
+94 xp94_y933zxggyk66y0o8zx1y359b6y4ggy4321zgs26ye3645y28czy233zyi66 54 H(pi)
 95 xp95_gwg6t1e8gz11dlka211feow8gzy38o0122221zy41230oows48y12552y7g0gzyo354cy431zzzzyz46ayhgkozzzzzyzyk351yhac4zzzzyzyzy5goy464kozyzyzy5101y78kk8y1247w330o8gzyzyzyvg8888g032zyzyzyv12w3eugg8a5lmggzyzyzyzw12egnc1w1 166 p5 22hd reflector loop
 96 xp96_0178cy766zy44koy6m640ooe4a4z0gs26x11xoy1oo022440ezo8go 59 capgun + boat-bit
 97 xp97_ydg88e1u8y533z0kcyb11313kzol56y1ca52y6115137zy4ggyp2552sgzy411y94ocx6a8ozyzxe24zzzzyzy448ezyzyg32acx634y9ggzyzy4178kk8yp11zyzyksogkggy68ka6y1ckl3zyzyp5ogoggyb65zyzyeooy52fge221 164 syringe-rectifier loop
@@ -119,6 +119,7 @@ fixeds = """1 xs4_33 4 block
 116 xp116_y6o4an7zy711zy166y5ok4kozym31e8zx32acyc6a8oz2egozy535453y5cc 68 LCM(4,58)
 117 xp117_x32acxca23zggxg84448gxggy2g88cz14fes72x27sef41y211zyfeehrzyq33zyfo8gy5g33zyfopw11267608g3568w66zyseu4zyu3 112 LCM(9,39)
 120 xp120_4r4y13bg2kgz4r4y511 24 LCM(8,15)
+122 xp122_ym32aczzy1ggy232acypg0s4zg08u1sj426yha9h9ey611y0c871z11yhgymgg0g08oz08e13xg8oy679895yh642sj871zy323yr354czzyn354c 118 H(R)
 124 xp124_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy337bkic 60 LCM(4,31)
 126 xp126_0ccy1ccx32acxca23zcmkgxgkmcy24r4zy0202y64r4z033y133xo8a6x6a8o 74 LCM(9,14)
 127 xp127_y932aczy366y4sccy44a4zyd44c5ko8zyh1ya33zccy9gozya112a32izy3252y4333y466zyh354c 74 H(C)
