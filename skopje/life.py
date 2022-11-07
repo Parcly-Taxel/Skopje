@@ -30,7 +30,7 @@ fixeds = """1 xs4_33 4 block
 20 xp20_35426ow37bkicz65123 30 LCM(4,5)
 21 xp21_g8gw3jz01xqpwsszy111wc2w8k8zy566 32 Ø
 22 xp22_178cwggg2y2oo4kozy235433y28111w62sg 36 Jason
-23 xp23_w178cwoozxooy5c871z04s0gx679fuggzx11fuiscx1074zgs26y533zy433w62sg 70 H(pi)
+23 xp23_02egoy1ca23zy4sgox4acga6zgs26y01y239czy3ccx6a8o 55 H(HF)
 24 xp24_xsssx4hh186z777y37 24 LCM(3,8)
 25 xp25_32aczy0ooj64zy74cp33zyc6a8o 30 30P25
 26 xp26_x32acz31e88g0653zy01pgz66w1023z66w8gkczy08pzc8711w6aczxc453 70 H(pi)
