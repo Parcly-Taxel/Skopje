@@ -149,8 +149,8 @@ def p26_loop(p):
 p34s1 = lt.pattern("""8bo$6bobo$6bobo$6bo$3b2obo11b2o$11b3o3bo$7o5b2o$10bobob2o$b6o5b2o$11b
 3o$3b2obo$6bo$6bobo$6bobo$8bo""")
 p34s2_0 = lt.pattern("""7bo$7bobo$7bobo$9bo$9bob2o$2b3o$2b2o5b6o$2obobo$2b2o5b7o$2b3o$9bob2o$
-9bo$7bobo$7bobo$7bo""")(37,11)
-p34s2_3 = lt.pattern("3o9b3o2$b4o5b4o$4bob3obo$4bobobobo$4bobobobo$6bobo$6bobo$8bo")(16,22)
+9bo$7bobo$7bobo$7bo""")(20,-6)
+p34s2_3 = lt.pattern("3o9b3o2$b4o5b4o$4bob3obo$4bobobobo$4bobobobo$6bobo$6bobo$8bo")(-1,5)
 
 def p34_shuttle(p):
     if p%102:
@@ -187,30 +187,46 @@ def p34_loop(p):
         pat = (pat+gp34l)[p]
     return (pat, mpop, f"{n_gliders}G p34 loop")
 
-psl1 = lt.pattern("12b7o2$15bo2$13bo3bo2$14bobo$o$o4bo$o$ob2o3bo$o$o4bo$o")
-psl2 = lt.pattern("18bo$13bo4bo$12b4o2bo$13bo2bobo$12b4o2bo$13bo4bo$3bo14bo$3bo$b2ob2o$2bobo2$3bo2$7o")(7,12)
-gpsl = lt.pattern("obo$o")(13,9)
+psl1 = lt.pattern("7o2$3bo2$bo3bo2$2bobo")
+psl2 = lt.pattern("o$o4bo$o$ob2o3bo$o$o4bo$o")(-12,7)
+psl3 = lt.pattern("3bo$3bo$b2ob2o$2bobo2$3bo2$7o")(-5,18)
+psl4 = lt.pattern("6bo$bo4bo$4o2bo$bo2bobo$4o2bo$bo4bo$6bo")(7,12)
+gpsl = lt.pattern("obo$o")(1,9)
 
 def phase_shifting_loop(p):
-    # Determine if the period can be represented by the loop;
-    # p must be of the form 26x + 37y with x, y >= 1
-    # Furthermore we take y (the number of glider-containing segments)
-    # to be as small as possible
-    # All periods at least 26*37+1 = 963 can be represented this way
-    # TODO handle different loop shapes and different glider positions in a repetition
     y = 1
     while (p-37*y) % 26:
         y += 1
     if (x := (p-37*y) // 26) < 1:
         return None
     n_reps = [1, 12, 6, 4, 3, 12, 2, 12, 3, 4, 6, 12][p%12]
+    if y*n_reps >= 10: # too many gliders to beat BG loops
+        return None
     slack = p*n_reps//12 - 8
-    pat = psl1 + psl2(slack,slack)[-6*slack]
+    i = 0
+    match (y, n_reps):
+        case (2, 1):
+            minpop, gaps = 50, [1]
+        case (1, 4):
+            minpop, gaps = 56, []
+        case (2, 2):
+            minpop, gaps = 56, [0]
+        case (4, 1): # x = 4 mod 6
+            minpop, gaps = 56, [0, 1, 1]
+        case (6, 1): # x = 3 mod 6
+            minpop, gaps = 62+(x==3), [1, 1, 1, int(x>3), int(x>3)]
+        case (2, 3) if p == 100:
+            i, minpop, gaps = 1, 65, [0]
+        case (4, 2) if p == 174:
+            i, minpop, gaps = 2, 68, [0, 0, 0]
+        case _:
+            return None
+    pat = psl1 + psl2(-i,i)[-6*i] + psl3(slack-2*i,slack)[-6*slack] + psl4(slack-i,slack-i)[-6*(i+slack)]
+    gaps.append(x-sum(gaps))
     for _ in range(n_reps):
-        for _ in range(y):
-            pat = (pat+gpsl)[37]
-        pat = pat[26*x]
-    return (pat, None, f"({y},{x})-phase-shifting loop")
+        for g in gaps:
+            pat = (pat+gpsl)[37+26*g]
+    return (pat, minpop, f"{n_reps}*({y},{x})-phase-shifting loop")
 
 dl1 = lt.pattern("""20bo2bo$13b6obo2bo$11b2o9bo$18b3obob3o3bo$10b3obo7bo4b2obo2bo$7bo6bobo
 b3o2bo6bo2bo$7bob4obobo5bo3b2o2bobo2b2o$7bo10bobobo7bobobo$7bo5b2o3bob
@@ -218,7 +234,7 @@ obo2b2o3bobobo$9bo8bo3bo7bobobo$9bobob3o2bo4b2obobo5bo$6bo4bo6bob2o4bo
 bob3o2bo$bo4bo6bobobo3bo2bobo7bo$bob2o3bo4bobo2bo5bo5b3obo$bo3b3ob4o2b
 o2bo5bo9bo$bo12bo10b6obo2bo$o2b2obobob3obo7b2o8bo2bo$obo3bobo14bo2bobo
 b2o$2bobobobob7o9bobo4b4o$4bo21bo4b2o$b2obo3b2o5bo$4bo8bobo$3obo2b3obo
-bo2bo$4bo6bo4bo$5b3o8bo$2b2o$3bo""")(-34,-11)
+bo2bo$4bo6bo4bo$5b3o8bo$2b2o$3bo""")
 dl2 = lt.pattern("""38bo$38bo4bo3b2o$39b4ob3o$36b2o$37bo2b2obobob2o$20bo2bo19bobo$13b6obo
 2bo10b2ob5obobobo$11b2o9bo13bo10bo$18b3obob3o3bo11b2o3bo$10b3obo7bo4b
 2obo3b3obo8bo$7bo6bobob3o2bo6bob2o4bobob3o2bo$7bob4obobo5bo3b2o2bo4b2o
@@ -240,33 +256,20 @@ $2bo7bobo2bo2bob2o$bo2b3obobo4bo2bo$2bo5bobob2o2bobo2b2o$2bobobo7bobob
 o$2bobobo3b2o2bobobo3b2o$2bobobo7bobobo$2o2bobo2b2o3bo5bobo$3bo2bo6bo
 2b3obobo$3bo2bob2o4bo7bobo$6bo3b3obob3o5bo$14bo9bo$13bo2bob6o$13bo2bo
 8b2o$17b2obobo2bo$12b4o4bobo$16b2o4bo""")(-2,-8)
+dlxy = {32: (1,2), 33: (1,5), 45: (4,5), 47: (1,6), 49: (3,2),
+        50: (1,25), 51: (3,9), 55: (1,5), 57: (5,4), 59: (3,14),
+        61: (7,6), 62: (1,14), 64: (1,2), 65: (12,5), 66: (1,5),
+        67: (8,3), 69: (23,1), 70: (1,10), 71: (1,4), 72: (1,8),
+        73: (1,1), 74: (5,2), 75: (2,25)}
 
 def drifter_loop(p):
     """Construct a drifter loop of period p using Dean Hickerson's
-    universal 23-gen and 27-gen components. Requires the PuLP solver
-    for finding the optimal loop parameters through integer linear programming."""
-    if p < 13 or p >= 76:
+    universal 23-gen and 27-gen components."""
+    if p not in dlxy:
         return None
-    # Minimise 71x + 36y subject to x, y >= 1 and q | 50x + 23y
-    # where q is a quarter of the "effective period" (p times how many drifters
-    # are needed to get a multiple of 4). The actual x and y are then these
-    # variables decremented
-    from pulp import LpProblem, LpVariable, PULP_CBC_CMD
-    q = p if p%2 else p//2 if p%4 else p//4
-    lp = LpProblem()
-    a = LpVariable("a", cat="Integer")
-    b = LpVariable("b", cat="Integer")
-    lp += (6*q*b - 23*a >= 1, "x")
-    lp += (50*a - 13*q*b >= 1, "y")
-    lp += (71*(6*q*b - 23*a) + 36*(50*a - 13*q*b), "population")
-    lp.solve(PULP_CBC_CMD(msg=False))
-    sols = {v.name: int(v.varValue) for v in lp.variables()}
-    a, b = sols["a"], sols["b"]
-    x = 6*q*b - 23*a - 1
-    y = 50*a - 13*q*b - 1
+    x, y = dlxy[p]
     looplen = 200*(x+1) + 92*(y+1)
-
-    pat = dl1(0,0)
+    pat = dl1(-34,-11)
     cx, cy = -20, 15
     for _ in range(x):
         pat += dl2(cx,cy)
@@ -282,7 +285,7 @@ def drifter_loop(p):
     for _ in range(looplen // p):
         pat[0,0] = 1
         pat = pat[p]
-    return (pat, None, f"({x+1},{y+1})-drifter loop")
+    return (pat, None, f"({x},{y})-drifter loop")
 
 cfuncs = (bigglider_loop, bigglider_loop_8, p26_shuttle, p26_loop, p34_shuttle, p34_loop,
           phase_shifting_loop, drifter_loop)
