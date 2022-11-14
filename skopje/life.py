@@ -49,7 +49,7 @@ fixeds = """1 xs4_33 4 block
 39 xp39_xqh2z33173xccz4sk0emicy2oozy469dezy4327 46 LCM(3,13)
 40 xp40_33zxs48g69gvzx3021zy833 26 Beluchenko
 42 xp42_033y133zo4maxam4oz1ppy1pp1xgfnzyb1252333 50 LCM(6,14)
-43 xp43_w2egoy03pm0eik8y18k8z4s0gzw11xcujy8pf6xggzyo1074zy2252y1259e0djoy031e8 80 capgun
+43 xp43_y6c88gy832aczy811yl33y2oge2zy2gy6ccgccy3oo4ooy67z0o4cw3z11y433y5o8ya6a8ozyi113 70 H(pi)
 44 xp44_0oql96xmqzgh1gxeqaa4oz1011y217871 45 LCM(4,11)
 45 xp45_4ahhhhhha4zy94a6zx35c53zy166 29 H(pi)
 46 xp46_033y133zzzckgsxsgkczz0cc 28 twin bees shuttle
@@ -115,7 +115,7 @@ fixeds = """1 xs4_33 4 block
 112 xp112_om999e0e999mozx8kc0ck8zzw8if505fi8 50 LCM(14,16)
 113 xp113_ggy666y0c871z0346zy8gggy7cczy83wbow330oowoozzy9ggwggy1gzy911w110ccw1dggszy933zyx62sgzyf8e13y066 86 capgun
 114 xp114_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7zye4hh186zyf7 57 LCM(3,38)
-115 xp115_y8252zy9gggy264kozy3o4cx3452y4g88oy28k8zy211y3sgi719cow1211zg8gy2skicx1447201y1g0s4z01gwgy2o8y32d9ex11z09m99m9y2113zyj252 108 LCM(5,23)
+115 xp115_y032acx66zw6ioy2gy0c871zca16a4x317zy2o8a6y0gbbgn1e808ozya11mq0v5kk8zye343 93 LCM(5,23)
 116 xp116_y6o4an7zy711zy166y5ok4kozym31e8zx32acyc6a8oz2egozy535453y5cc 68 LCM(4,58)
 117 xp117_x32acxca23zggxg84448gxggy2g88cz14fes72x27sef41y211zyfeehrzyq33zyfo8gy5g33zyfopw11267608g3568w66zyseu4zyu3 112 LCM(9,39)
 120 xp120_4r4y13bg2kgz4r4y511 24 LCM(8,15)
