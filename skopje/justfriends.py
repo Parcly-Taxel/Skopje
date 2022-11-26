@@ -23,7 +23,7 @@ fixeds = """1 xs2_3 2
 19 xp19_xlkl44z3 12
 20 xp20_03z1t1g7zx703 15
 21 xp21_22w98j44 10
-22 xp22_u0gwa0vzvwexf 24
+22 xp22_088b844z883o2ax2aa8 23
 23 xp23_220fxf022zhh1sxs1hhzx1x1 27
 24 xp24_vw4ay1a4wv 16
 25 xp25_8g6g30ez03c122xo8zy731 23
@@ -56,6 +56,7 @@ fixeds = """1 xs2_3 2
 76 xp76_2r02222222220r2z0vxa0e0axvz8r08888888880r8 55
 83 xp83_y311111zggybggzy4r0rz11yb11zy3ggggg 26
 97 xp97_22o7x868y7868x7o22 22
+204 xp204_y38b844zgggy9cgcx888z0222yf111zya442q2 29
 236 xp236_22xb1b 7"""
 
 bgl1 = lt.pattern("bo$bo$3b6o$3o")
