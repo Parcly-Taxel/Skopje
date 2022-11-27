@@ -48,14 +48,13 @@ fixeds = """1 xs2_3 2
 46 xp46_y1qx8wvzowg4wo1z7y22 20
 48 xp48_4o3o2z1060c07 16
 53 xp53_y72q28f82q2zy2gw2245y15422wgz0e0k4416yb6144k0ez1t1b880oybo088b1t1zy23wgg88y188ggw3zy7gng4s4gngzyb1 100
-54 xp54_y6gg888888a20vzy2s08aaa0e0s0l5l0r4118822q2gzy1o1060c0k5l7gf098jkk1t0o0b8b03sz2q2i2o0o0aa21c3w3x442k55ll1t0s0f0ozxv01glk5t5t1a99gg0m80e1c2i2xo22222zx160e0uwgl411u0c0f0v5l1ghgj0szy32222w441u05llghgjgaa2w1zyc7022 276
 56 xp56_gg4881lh88hl1884ggzx307y2703 34
 58 xp58_x802141b1xg08zgx1y7g4hqzbh41y7gx1zx201xgqg4g802 32
 60 xp60_o8888b8888ozwe11d11e 18
 63 xp63_22o3y0kwk88kwky03o22 22
 76 xp76_2r02222222220r2z0vxa0e0axvz8r08888888880r8 55
 83 xp83_y311111zggybggzy4r0rz11yb11zy3ggggg 26
-97 xp97_22o7x868y7868x7o22 22
+97 xp97_1554y2868x7o22 17
 204 xp204_y38b844zgggy9cgcx888z0222yf111zya442q2 29
 236 xp236_22xb1b 7"""
 
@@ -229,64 +228,36 @@ def phase_shifting_loop(p):
             pat = (pat+gpsl)[37+26*g]
     return (pat, minpop, f"{n_reps}*({y},{x})-phase-shifting loop")
 
-dl1 = lt.pattern("""20bo2bo$13b6obo2bo$11b2o9bo$18b3obob3o3bo$10b3obo7bo4b2obo2bo$7bo6bobo
-b3o2bo6bo2bo$7bob4obobo5bo3b2o2bobo2b2o$7bo10bobobo7bobobo$7bo5b2o3bob
-obo2b2o3bobobo$9bo8bo3bo7bobobo$9bobob3o2bo4b2obobo5bo$6bo4bo6bob2o4bo
-bob3o2bo$bo4bo6bobobo3bo2bobo7bo$bob2o3bo4bobo2bo5bo5b3obo$bo3b3ob4o2b
-o2bo5bo9bo$bo12bo10b6obo2bo$o2b2obobob3obo7b2o8bo2bo$obo3bobo14bo2bobo
-b2o$2bobobobob7o9bobo4b4o$4bo21bo4b2o$b2obo3b2o5bo$4bo8bobo$3obo2b3obo
-bo2bo$4bo6bo4bo$5b3o8bo$2b2o$3bo""")
-dl2 = lt.pattern("""38bo$38bo4bo3b2o$39b4ob3o$36b2o$37bo2b2obobob2o$20bo2bo19bobo$13b6obo
-2bo10b2ob5obobobo$11b2o9bo13bo10bo$18b3obob3o3bo11b2o3bo$10b3obo7bo4b
-2obo3b3obo8bo$7bo6bobob3o2bo6bob2o4bobob3o2bo$7bob4obobo5bo3b2o2bo4b2o
-bobo6bo$7bo10bobobo7bobobo7bobobo$7bo5b2o3bobobo2b2o3bobobo2b2o3bobobo
-$9bo8bo3bo7bobobo7bobo$9bobob3o2bo4b2obobo5bo3b2o2bo$6bo4bo6bob2o4bobo
-b3o2bo$bo4bo6bobobo3bo2bobo7bo5b4o$bob2o3bo4bobo2bo5bo5b3obob2o$bo3b3o
-b4o2bo2bo5bo9bo$bo12bo10b6obo2bo$o2b2obobob3obo7b2o8bo2bo$obo3bobo14bo
-2bobob2o$2bobobobob7o9bobo4b4o$4bo21bo4b2o$b2obo3b2o5bo$4bo8bobo$3obo
-2b3obobo2bo$4bo6bo4bo$5b3o8bo$2b2o$3bo""")(-43,-2)
-dl3 = lt.pattern("""6bo11bo$6bo4bo3b2obo$7b4ob3o3bo$4b2o12bo$6b4obobob2o2bo$11bobo3bobo$3b
-7obobobobo$15bo$4bo5b2o3bob2o$4bobo8bo$3bo2bobob3o2bob3o$3bo4bo6bo$3bo
-6bob3o$2o3bo4bo5b2o$2b3ob4o6bo$11b2o$2obobob2o2bo$3bobo$bobobob5ob2o$b
-o10bo$bo3b2o11bo3b3o$bo8bob3o3bob2o$bo2b3obobo4b2obo$bo6bobob2o4bo2b2o
-$2bobobo7bobobo$2bobobo3b2o2bobobo3b2o$4bobo7bobobo$6bo2b2o3bo5bobo$
-13bo2b3obobo$5b4o5bo7bobo$11b2obob3o5bo$14bo9bo$13bo2bob6o$13bo2bo8b2o
-$17b2obobo2bo$12b4o4bobo$16b2o4bo""")(-11,-2)
-dl4 = lt.pattern("""4b2o4bo$4o4bobo$5b2obobo2bo$bo2bo8b2o$bo2bob6o$2bo9bo$2bob3o5bo5bo3b3o
-$2bo7bobo2bo2bob2o$bo2b3obobo4bo2bo$2bo5bobob2o2bobo2b2o$2bobobo7bobob
-o$2bobobo3b2o2bobobo3b2o$2bobobo7bobobo$2o2bobo2b2o3bo5bobo$3bo2bo6bo
-2b3obobo$3bo2bob2o4bo7bobo$6bo3b3obob3o5bo$14bo9bo$13bo2bob6o$13bo2bo
-8b2o$17b2obobo2bo$12b4o4bobo$16b2o4bo""")(-2,-8)
-dlxy = {32: (1,2), 33: (1,5), 45: (4,5), 47: (1,6), 49: (3,2),
-        50: (1,25), 51: (3,9), 55: (1,5), 57: (5,4), 59: (3,14),
-        61: (7,6), 62: (1,14), 64: (1,2), 65: (12,5), 66: (1,5),
-        67: (8,3), 69: (23,1), 70: (1,10), 71: (1,4), 72: (1,8),
-        73: (1,1), 74: (5,2), 75: (2,25)}
+dl2_1 = lt.pattern("4bo$4bo$6bo$6bobo$3bo4bo$3bo6bo$2o3bo4bo$2b3ob3obo2$2obobob2o$3bobo$3bobo")
+dl2_2 = lt.pattern("12bo$7b4obo$12bo$5b2o5bo$10bobo$4b3obobo$8bobo$5obo$6bo$6bo$6bo")(-5,3)
+dl2_3 = lt.pattern("7b3o2$5b2o2bobo$9bobo$4b2o3bo$8bo2b3o$4o5bo$6b2obob3o$9bo$8bo2bo$8bo2bo")(-5,4)
+dl2_4 = lt.pattern("""2bo2bo$2bo2bo$4bo13bo$3obob2o10bo$4bo5b4o4bobo$3o2bo14bobo$4bo3b2o2bo
+3b3obobo$2bobo7bo11bo$2bobo2b2o3bobobo2b2o3bo$12bobobo7bo$4b3obobo5bo
+3b2o2bo$8bobob3o2bo$6bobo7bo5b4o$6bo5b3obob2o$6bo9bo$14bo2bo$14bo2bo""")(5,-9)
+dlyx = {32: (3,2), 33: (1,6), 45: (1,12), 47: (0,7), 49: (1,14), 50: (0,14),
+        51: (0,8), 54: (0,2), 55: (0,9), 57: (1,18), 59: (0,10), 61: (1,20),
+        62: (0,3), 64: (3,2), 65: (1,22), 66: (0,20), 67: (0,12), 69: (1,24),
+        70: (0,4), 71: (0,13), 72: (1,3), 73: (2,2), 74: (1,8), 75: (0,14)}
 
 def drifter_loop(p):
-    """Construct a drifter loop of period p using Dean Hickerson's
-    universal 23-gen and 27-gen components."""
-    if p not in dlxy:
+    if p not in dlyx:
         return None
-    x, y = dlxy[p]
-    looplen = 200*(x+1) + 92*(y+1)
-    pat = dl1(-34,-11)
-    cx, cy = -20, 15
-    for _ in range(x):
-        pat += dl2(cx,cy)
-        cx -= 29
-        cy += 29
-    pat += dl3(cx,cy)
-    cx += 15
-    cy += 20
-    for _ in range(y):
-        pat += dl4(cx,cy)
-        cx += 24
-    pat += pat("rot180", cx, cy)
+    y, x = dlyx[p]
+    looplen = 76 + 16*x + 92*y
+    pat = dl2_1(-5,-7)
+    for i in range(x):
+        pat += dl2_2(5*i,5*i)
+        if i == 0:
+            pat ^= lt.pattern("12bo$11bobo$12bo5$2o")(-5,3)
+    pat += dl2_3(5*x,5*x)
+    for i in range(y):
+        pat += dl2_4(24*i,0)
+    pat += pat("rot180", 13+24*y+5*x, 5+5*x)
     for _ in range(looplen // p):
         pat[0,0] = 1
         pat = pat[p]
-    return (pat, None, f"({x},{y})-drifter loop")
+    assert pat.period == p
+    return (pat, None, f"({y},{x})-drifter loop")
 
 cfuncs = (bigglider_loop, bigglider_loop_8, p26_shuttle, p26_loop, p34_shuttle, p34_loop,
           phase_shifting_loop, drifter_loop)
