@@ -11,6 +11,7 @@ fixeds = """1 xs2_3 2
 7 xp7_k01010kzw202 8
 8 xp8_1d0201d1 10
 9 xp9_a0axa0a0v 13
+9 xp9_0607g6ggz6x1 13
 10 xp10_011k44z444gi 12
 11 xp11_jwa0bz1 9
 12 xp12_5xk 4
@@ -36,7 +37,7 @@ fixeds = """1 xs2_3 2
 34 xp34_440vw434wv044zwo1y31o 22
 35 xp35_s088882a20vzv0p1hgg0o0vzv01x8890vzf0454111103 65
 36 xp36_883oy1o388zxv0k0k0vz11c3y13c11 38
-37 xp37_11d1d11wszwgzw3w88b8b88 26
+37 xp37_oy330gzvw755xe144 19
 38 xp38_gg0o1t1d1hhzw602 21
 39 xp39_880mg788gg887gm088zw5x55w55x5z03ya3 38
 40 xp40_v0804080vzv0325230v 29
@@ -48,7 +49,7 @@ fixeds = """1 xs2_3 2
 46 xp46_y1qx8wvzowg4wo1z7y22 20
 48 xp48_4o3o2z1060c07 16
 53 xp53_y72q28f82q2zy2gw2245y15422wgz0e0k4416yb6144k0ez1t1b880oybo088b1t1zy23wgg88y188ggw3zy7gng4s4gngzyb1 100
-56 xp56_gg4881lh88hl1884ggzx307y2703 34
+56 xp56_44gb88888zx45zgg4cy131c4z01 26
 58 xp58_x802141b1xg08zgx1y7g4hqzbh41y7gx1zx201xgqg4g802 32
 60 xp60_o8888b8888ozwe11d11e 18
 63 xp63_22o3y0kwk88kwky03o22 22
@@ -56,7 +57,8 @@ fixeds = """1 xs2_3 2
 83 xp83_y311111zggybggzy4r0rz11yb11zy3ggggg 26
 97 xp97_1554y2868x7o22 17
 204 xp204_y38b844zgggy9cgcx888z0222yf111zya442q2 29
-236 xp236_22xb1b 7"""
+236 xp236_22xb1b 7
+318 xp318_y3goy1448b8zy523w80kz1554zy7oy94kkgzyeo8zy62q144y131 42"""
 
 bgl1 = lt.pattern("bo$bo$3b6o$3o")
 bgl2 = lt.pattern("2bo$2bo$2bo$2bo$2bo$2bo$3bo$2obo$3bo")(-2,7)
