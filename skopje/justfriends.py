@@ -6,10 +6,12 @@ fixeds = """1 xs2_3 2
 2 xp2_1dwd1 8
 3 xp3_505 4
 4 xp4_2814 4
-5 xp5_1h1g46o 10
+5 xp5_342g184o 8
 6 xp6_105 3
+7 xp7_7daw5be 8
 7 xp7_k01010kzw202 8
 8 xp8_1d0201d1 10
+8 xp8_44wnggzw3 10
 9 xp9_a0axa0a0v 13
 9 xp9_0607g6ggz6x1 13
 10 xp10_011k44z444gi 12

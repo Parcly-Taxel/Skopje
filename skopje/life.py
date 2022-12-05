@@ -346,26 +346,18 @@ def rectifier_loop(p):
     return (pat, mpop, f"{n_gliders}G rectifier loop")
 
 # 124+8n: 22hd reflector with p4 sparkers
-p4l1 = lt.pattern("""9bo$8bobo$9bo2$7b5o$o6bo3bo$2o7bo$2o6b3o$bo2b3o4bo$10b2o$2b2o$2b2o3bo$
-3bo2bo$3b3o$2bo2bo6b3o$5bo$bo3b2o4bo2bo$2o10b2o$2o$o4$11bo$10bobo$10bo
-bo$11bo$15b2o$15bobo$17bo$17b2o""")
-p4l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo4$18bo$17b2o$5b2o10b2o$4bo2bo4b2o3b
-o$13bo$4b3o6bo2bo$13b3o$12bo2bo$11bo3b2o$15b2o$7b2o$7bo4b3o2bo$8b3o6b
-2o$9bo7b2o$7bo3bo6bo$7b5o2$9bo$8bobo$9bo""")(17,32)
+p4l1 = lt.pattern("""2o$bo8bo$bobo6b3o$2b2o2b2o5bo$5bobo4b2o$5bo$5bo2bo2$7b2o$2b2o3bo6b3o$
+2bo2b2o$3b3obo5bo2bo$6bo7b2o$3b3o$3bo4$13bo$12bobo$12bobo$13bo$17b2o$
+17bobo$19bo$19b2o""")
+p4l2 = lt.pattern("""2o$bo$bobo$2b2o$7bo$6bobo$6bobo$7bo4$17bo$15b3o$5b2o7bo$4bo2bo5bob3o$
+14b2o2bo$4b3o6bo3b2o$12b2o2$12bo2bo$15bo$7b2o4bobo$7bo5b2o2b2o$8b3o6bo
+bo$10bo8bo$19b2o""")(19,27)
 
 def p4_22hd_loop(p):
     if p%8 != 4 or p < 124:
         return None
     exts = (p-124) // 4
-    return (p4l1 + p4l2(exts,exts), 136, "p4 22hd reflector loop")
-
-mold = lt.pattern("3b3o$bob3o$obobo$o2bo$b2o")(-1,15)
-
-def mold_rectifier_loop(p):
-    if p%8 != 4 or p < 212:
-        return None
-    pat, mpop, source = rectifier_loop(p//2)
-    return (pat+mold, mpop+12 if mpop != None else None, source + " + mold")
+    return (p4l1 + p4l2(exts,exts), 116, "p4 22hd reflector loop")
 
 # 64+8n: 6hd reflector with Coe's p8
 # https://conwaylife.com/forums/viewtopic.php?f=2&t=5338&start=75#p148210
@@ -558,5 +550,5 @@ def twinbees_shuttle(p):
         return None
     return res + (f"type-{r} twin bees shuttle",)
 
-cfuncs = (rectifier_loop, mold_rectifier_loop, p4_22hd_loop, p8_loop, snark_loop, p1_0hd_shuttle,
+cfuncs = (rectifier_loop, p4_22hd_loop, p8_loop, snark_loop, p1_0hd_shuttle,
           pd_shuttle, p6thumb_shuttle, p6_22hd_loop, p14_shuttle, twinbees_shuttle)
