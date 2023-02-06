@@ -29,7 +29,7 @@ fixeds = """1 xs2_3 2
 22 xp22_440e0f044zx44zxe07 19
 23 xp23_220fxf022zhh1sxs1hhzx1x1 27
 24 xp24_vw4ay1a4wv 16
-25 xp25_8g6g30ez03c122xo8zy731 23
+25 xp25_gg6g30ez02c122xo8zy731 22
 26 xp26_1dhd1 9
 27 xp27_0f0222aa2zcx603 18
 28 xp28_238czxg0k07zy631c4 16
@@ -111,6 +111,18 @@ def bigglider_loop_8(p):
     for _ in range(n_gliders):
         pat = (pat+gbglf8(i,i))[p]
     return (pat, mpop, f"{n_gliders}BG figure-8 loop")
+
+p19s1 = lt.pattern("7bo$7bo$2b3o2$4o2$2b2o$5b2o$4b3o$4bo2$2bo$bo$bo")
+p19s2 = [lt.pattern("3bo$b3o$b2o$4b2o2$4b4o2$3b3o$o$o")(-5,14),
+         lt.pattern("8b2o$b2o$b2o$2o5bo$3bobobo$3bobobo$5bo$5bo")(13,15)]
+
+def p19_shuttle(p):
+    if p%114:
+        return None
+    q = p//114
+    exts, r = divmod(q, 2)
+    exts *= 19
+    return (p19s1 + p19s2[r](exts,exts), 27, "p19 shuttle")
 
 p26s1 = lt.pattern("5o4$bobo$2bo$2bo4$bo$o$o")
 p26s2_0 = lt.pattern("2bo$2bo$bobo4$5o")(-6,13)
@@ -263,5 +275,5 @@ def drifter_loop(p):
     assert pat.period == p
     return (pat, None, f"({y},{x})-drifter loop")
 
-cfuncs = (bigglider_loop, bigglider_loop_8, p26_shuttle, p26_loop, p34_shuttle, p34_loop,
-          phase_shifting_loop, drifter_loop)
+cfuncs = (bigglider_loop, bigglider_loop_8, p19_shuttle, p26_shuttle,
+          p26_loop, p34_shuttle, p34_loop, phase_shifting_loop, drifter_loop)
