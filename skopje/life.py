@@ -45,7 +45,7 @@ fixeds = """1 xs4_33 4 block
 35 xp35_y4ok46y3253zooxgcgy47r4xcczxgw33y0ggkczw321y31 44 H(HF)
 36 xp36_32aczy08c8y0131zya354c 22 22P36
 37 xp37_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354c 58 H(R)
-38 xp38_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7 44 roc
+38 xp38_y2178czy8s4cy1szsoyfesz01sy1ogszy9o8gzyb32 42 H(R)
 39 xp39_xqh2z33173xccz4sk0emicy2oozy469dezy4327 46 LCM(3,13)
 40 xp40_33zxs48g69gvzx3021zy833 26 Beluchenko
 42 xp42_033y133zo4maxam4oz1ppy1pp1xgfnzyb1252333 50 LCM(6,14)
@@ -139,7 +139,7 @@ fixeds = """1 xs4_33 4 block
 146 xp146_4s0gyica23zw11y2ei0iezwo8a6y21zy466w4acxsexes 52 H(pi)
 148 xp148_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701x888gy0354czxca2ro8g2i0sz031132y11 89 LCM(4,37)
 150 xp150_w178cxg8zy417gukzy75f1sgzccb7w66y121x62sgz066 46 LCM(6,25)
-152 xp152_32acywca23zwsy48kie4y84eik8y4szy1771yo177zybgggeeezyb333 60 LCM(8,38)
+152 xp152_c909ik80cczyac871zxsy1c4sz0seyfoszy9sgoy1s1zy4g8ozy323 58 LCM(8,38)
 154 xp154_gjjy1jjgz34daxad43z0ooy1ooy2ok4ooy22gggwc871zy6gs26w1118y233453 70 LCM(14,22)
 154 xp154_o08cbb2408fvzff1024dd3101y1ok4ooy22gggwc871zy7gs26w1118y233453 70 LCM(7,22)
 155 xp155_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy2idiidizy31w1 64 LCM(5,31)
@@ -272,7 +272,7 @@ fixeds = """1 xs4_33 4 block
 550 xp550_32aczy0ooj64zy74cp33zw32acy66a8ozy14q12szy311zy0s22cgzy1121o8zy5113 66 LCM(22,25)
 560 xp560_y4ok46y3253zooxgcgy47r4xcczxgw33y0ggkczw321y3108k84a1a4w66zyfssszyc777 72 LCM(16,35)
 565 xp565_ggy666y0c871z0346zy8gggy7cczw6a84cgy03wbow330oowoozwca2461zy9ggwggy1gzy911w110ccw1dggszy933zyx62sgzyf8e13y066 104 LCM(5,113)
-570 xp570_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7zyfgcgzyfgfgzyg3 58 LCM(15,38)
+570 xp570_y2178czy8s4cy1szsoyfesz01sy1ogszy9o8gzyb32zy5vtvzy5757 54 LCM(15,38)
 584 xp584_y14s0gy1ca23zwoox11z0ok8y14ahhrycsssz8oogyj777zgoo8zyc62sg 65 LCM(8,146)
 592 xp592_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701y7354czx33x77304a4zy36m048zy51033 86 LCM(16,37)
 594 xp594_ya32acy266z64koy1178cy6sk4y1c871zx8k24oyiogzy01221yi13zwo44ozw1242hgzy21226 73 LCM(22,54)
