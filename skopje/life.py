@@ -27,6 +27,7 @@ fixeds = """1 xs4_33 4 block
 17 xp17_32acy1ca23zy27rszwo8a6y16a8o 36 honey thieves
 18 xp18_66625ak8zy177xcc0cczy1g8mwiozx91gp 43 H(bi-block)
 18 xp18_wc93xs112ogggzbdhe96kk801zw1213 43 PS(3*5+3,3)
+19 xp19_08o6he8gy4c88gziu1clld03xoy11108cy2g8gzw343y2c5y47xg0cabc1uizya354cy3125t3o74zyp1 100 H(HF)
 20 xp20_35426ow37bkicz65123 30 LCM(4,5)
 21 xp21_g8gw3jz01xqpwsszy111wc2w8k8zy566 32 Ø
 22 xp22_178cwggg2y2oo4kozy235433y28111w62sg 36 Jason
