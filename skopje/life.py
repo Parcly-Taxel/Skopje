@@ -49,6 +49,7 @@ fixeds = """1 xs4_33 4 block
 38 xp38_y2178czy8s4cy1szsoyfesz01sy1ogszy9o8gzyb32 42 H(R)
 39 xp39_xqh2z33173xccz4sk0emicy2oozy469dezy4327 46 LCM(3,13)
 40 xp40_33zxs48g69gvzx3021zy833 26 Beluchenko
+41 xp41_yf3pajk4ozyb32130321010oge2zyj8ckzxc88gy78s2s8zy111y73mq2rmxggy1s48zy4g8ggy4121x121z0o4cy111y0c4oymocgz11yb11yjggybggzya163ym346y0ggy1643zysg8gxg8gy41121zyk247y111xdr8bdoy7ggzyy27872y71226zyv562zyr8e130g0g8o0og8ozyv345pajo 208 dependent reflector loop
 42 xp42_033y133zo4maxam4oz1ppy1pp1xgfnzyb1252333 50 LCM(6,14)
 43 xp43_y6c88gy832aczy811yl33y2oge2zy2gy6ccgccy3oo4ooy67z0o4cw3z11y433y5o8ya6a8ozyi113 70 H(pi)
 44 xp44_0oql96xmqzgh1gxeqaa4oz1011y217871 45 LCM(4,11)
