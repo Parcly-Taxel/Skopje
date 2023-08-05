@@ -138,7 +138,7 @@ fixeds = """1 xs4_33 4 block
 141 xp141_y64a4y14a4w178cx8e1e8gzy2sy0cscxcscy0sx33159d11z8e13yj31e8z8oy133y933y1o8z0123wsy0osoxosoy0sw321zy6g8gy1g8gzy71y31 114 PS(7*20+1,47)
 143 xp143_0gs2ibaa4y5o8zlm0mlluy2sse321wbdz25s16a98gxo8gox13tlicggzx11311yb343 99 LCM(11,13)
 144 xp144_33y18kk8yb33zy8equzy9757wggzccyb1221y1cc 42 Achim
-146 xp146_4s0gyica23zw11y2ei0iezwo8a6y21zy466w4acxsexes 52 H(pi)
+146 xp146_4s0gyie7zw11y2ei0iezwo8a6y21zy466w4acxsexes 51 H(pi)
 148 xp148_y432acy7oge2zggy84bb6z0346yf62sgzwggy16dd2z4701x888gy0354czxca2ro8g2i0sz031132y11 89 LCM(4,37)
 150 xp150_w178cxg8zy417gukzy75f1sgzccb7w66y121x62sgz066 46 LCM(6,25)
 152 xp152_c909ik80cczyac871zxsy1c4sz0seyfoszy9sgoy1s1zy4g8ozy323 58 LCM(8,38)
