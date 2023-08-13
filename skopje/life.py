@@ -66,7 +66,7 @@ fixeds = """1 xs4_33 4 block
 54 xp54_y566y2ca23z178cy14ksy6c871zxgozx31yadb 43 H(R)
 55 xp55_y0dby06a8gzggci5ld3xogg150cgz0343y523y0346 49 LCM(5,11)
 56 xp56_66625dw66zyb66zzy0oow8s26zy61ooo8kkwoozyc1 45 p56 B-heptomino shuttle
-57 xp57_y0oggqh2xgzy1pib12gc01156xg8y2oge2zyf3441wooowca6zy2s4oyb347zca6w333wg44oz08e13y221xckgg0618gq9jzyf1x8hb113 112 112P57
+57 xp57_y0oggqh2xgzy1pib12gc01156xg8y2oge2zyf3441wooowca6zy2s4oyb347zca6w333wg44oz08e13y221xckgg0618gq9jzyf1x8hb113 112 H(Rt)
 58 xp58_y166y5si1iszym31e8zx32acyc6a8oz2egozy579g97y5cc 54 H(pi)
 58 xp58_y932aczy5ooy3osogzyi76y0cczz33y06eggggy3ggzy5131y311zy9354c 54 54P58
 59 xp59_yhbdy139u0o4czygggy3254t2aczyf78dy511zy6gggz6246y132023zo80gwgz01pl55o7k46zy311 86 H(pi)
