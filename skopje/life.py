@@ -35,9 +35,7 @@ fixeds = """1 xs4_33 4 block
 23 xp23_02egoy1ca23zy4sgox4acga6zgs26y01y239czy3ccx6a8o 55 H(HF)
 24 xp24_xsssx4hh186z777y37 24 LCM(3,8)
 25 xp25_32aczy0ooj64zy74cp33zyc6a8o 30 30P25
-26 xp26_ggy1ooy7ca23z0346xogy5g8gw4ka8z2a54w121y513xc4ozxo8a6y733y111 60 H(HF)
 26 xp26_ggy2ooy6ca23z0346xogy5g8gw4ka8z2a54w121y513xc4ozxo8a6y633y211 60 H(HF)
-26 xp26_ggy1ooy7ca23z0346xogy5g8gw4ka8z2a54w121y513xc4ozxo8a6y633y211 60 H(HF)
 27 xp27_y9330gzyb1789azy08q987yfooz33yfs2ib2zy6ai2sgzy910oo 56 56P27
 28 xp28_033y133zo4maxam4oy1ggz1ppy1pp1xsta43 46 LCM(4,14)
 29 xp29_y8ca23z252y24eexcczg8gy28ssy366xg0s4z01y76e6x6e6w11zzy8252y1252 54 PPS
