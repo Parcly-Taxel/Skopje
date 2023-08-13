@@ -18,8 +18,8 @@ fixeds = """1 xs4_33 4 block
 9 xp9_0c93wmk46z69bo7421 29 29P9
 10 xp10_c846l3wszy03wca6213 24 24P10
 11 xp11_y0dbzggci5ld3xog8oz0343 33 rattlesnake
-12 xp12_032acy0oge2z0g8ow77ggz23y21226 33 dinner table
-12 xp12_xoq93xgz176eix7gg83111zy133 33 LCM(3,4)
+12 xp12_08ean1e8zoga3zwcikb73 31 LCM(3,4)
+12 xp12_0o6gik0a93z1226xcikb73 31 LCM(3,4)
 13 xp13_gy1gr3zd5a64210g8c4066zy2kr6og 34 Beluchenko
 14 xp14_j9d0d9j 16 tumbler
 15 xp15_4r4z4r4 12 pentadecathlon
