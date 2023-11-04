@@ -134,6 +134,7 @@ fixeds = """1 xs4_33 4 block
 129 xp129_ggyhca23z0346ycggzyf13zyzy0gs8zyzyi62sgzyyc453 38 H(R)
 130 xp130_x32acz31e88g0653zy01pgz66w1023y3o8gkcz66w8gkcy23c84kozy08pzc8711w6aczxc453 88 LCM(5,26)
 132 xp132_252w253zy0gxggg0ooozy13w3488a61oml1hiswcgzw695qsoy3111zyica4w4a4 72 LCM(4,33)
+133 xp133_y932acy2oge2zy2syh33z8e13yb63qszyw31e8zyf2egozyw7bocyboge2zypooyh7zys8e13y26a8o 84 H(B)
 135 xp135_y9330gzyb1789azy08q987yfooz33yfs2ib2zy6ai2sgzy910ooy2uquzyjfbf 68 LCM(15,27)
 136 xp136_y6rb8oz0oggyhssszx23y56c53y6777zgs26zyf354c 50 LCM(8,68)
 138 xp138_w8gw259r84z79431y1go4iszx42rik8w12 36 Gabriel
@@ -149,6 +150,7 @@ fixeds = """1 xs4_33 4 block
 154 xp154_o08cbb2408fvzff1024dd3101y1ok4ooy22gggwc871zy7gs26w1118y233453 70 LCM(7,22)
 155 xp155_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy2idiidizy31w1 64 LCM(5,31)
 156 xp156_og8o0e93y266zx32wom5hley266zy312221y466zya6a8o033dew66 66 LCM(6,52)
+158 xp158_ykc871ggzyo11y0oge2zy233y8ra4zysmm0mp3zyt343zz0oe1e8z643033y6goz0g8oy7126y866z23y2ccwggzy64701 96 H(pi)
 160 xp160_y42egoy533z0oggzx23ye8sky3cczz66y3572yeo8zyr113zy8ooy531e8 56 H(pi)
 164 xp164_013320444y033y8oozy94emozyoj5gskkzyned541023zy83de4z33y8ooy044408oog 70 LCM(4,82)
 165 xp165_y0dbzggci5ld3xog8oz0343zy275777757 45 LCM(11,15)
