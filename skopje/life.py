@@ -185,7 +185,7 @@ fixeds = """1 xs4_33 4 block
 203 xp203_y8ca23z252y24eexcczg8gy28ssy366xg0s4z01y76e6x6e6w11wggzyng99o0k6hl1c886zy8252y1252y01x2221x66 88 LCM(7,29)
 204 xp204_y6rb8oz0oggzx23y56c53y2gmugg0gzgs26yh111w21zyf354c 50 LCM(3,68)
 210 xp210_033y133y3gcgzo4maxam4oy2gfgz1ppy1pp1y33 46 LCM(14,15)
-212 xp212_yjca23zyg356yfggkczy78k4oy6cssw66y4643ggwc871zy1ggx7721yp123z0o4c0123g8oy4ooweecz11xca23yfo8gzykggkc011zyk1 106 LCM(4,53)
+212 xp212_gy332acw32acz37gy4gxogy633w2doa080kczwjg8y231w621y5ggy0c9626zx211wggkcwggkcy511zy41y11 82 LCM(4,106)
 215 xp215_g8gg8gx8k8y18kie0mp3y0oge2z4b44b4ylg0s4zy1ggx1ppy8jjgx11zx4701zy18e13y0ojd0e952y1252 96 LCM(5,43)
 216 xp216_y332acy266zw178cy6sk4y1c871z0ccygogz6om2yf13z033 52 LCM(8,54)
 217 xp217_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy2660g0fmzy3cqb0t53zy46fx66 82 LCM(7,31)
@@ -232,6 +232,7 @@ fixeds = """1 xs4_33 4 block
 304 xp304_32acywca23z0888xooxoa6ya6aoxoox888zy17ys7zyc25202vjq7zyf2e841 65 LCM(16,38)
 310 xp310_og8o0u1eoy5ooy3oozy0mlgrzx1qa2my2ov324sy3s423voz62460v0t6y13vo847y3748ov3zy21zye33y333 103 LCM(10,31)
 312 xp312_yg33zy1g8gy6ieyag8gzy1121ym121zy2ogg8z33yq844cy033zzy1696yao4y6696zyi11zyg33 60 capgun + boat-bit
+318 xp318_y0133204440gcg8z8oy91xo8zgh23y1q2qy132hgz0346y1252y1643zyecczy0gg8y661ik80cczy1211w7wc2gc 83 LCM(6,106)
 320 xp320_y13pmwmp3zy411y0cczcczx226wosr73wc88zyf66zy166 52 LCM(5,64)
 321 xp321_y232acysooz06a8oyloge2y9g0s4zccy3sqa4yu11zwggyu4ab7y366z4701y98e13y2gye32aczy333yd7f233y66a8ozyl121 98 LCM(3,107)
 322 xp322_033y133zo4maxam4oy1ooy1ooz1ppy1pp1zzzyb3547x7453zzyj33 62 LCM(14,46)
