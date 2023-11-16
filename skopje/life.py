@@ -77,6 +77,7 @@ fixeds = """1 xs4_33 4 block
 64 xp64_y1j3zy031d8ey633zggy6s4c0gz11y8hj1zya11 34 Merzenich
 65 xp65_3pmwmp3zxh1gx21h2zx3c7a5301gk2w96zy5admlk 52 LCM(5,13)
 66 xp66_y2ca23zws21q4zx11zxgc22szw8o121z311y0681hh4zy77 48 LCM(3,22)
+67 xp67_yxo8bp6o8g0s4gozyrggy31230343zys346y133zyz1530ggzyzy01226y4ko8zzyi86cyzy8ok46zxggyzypgy64s0ggzw64lkk8y7g0s4yzy1g8o0123x33xmlld221zok4raa6xccxs48011yzy223y9122qi6zx32y2ggzy56221yzy8361zysggzyr112y464kozyzy4ca8zyzy4ccy162sgzyzgg0s2s0s4owgzyz1023w1169d11 228 8G snark loop
 68 xp68_y6o8brz0oggzx23y56c53zgs26zyf354c 38 H(C)
 69 xp69_y42egoy1ca23zybsgox4acga6zwgy0gs26y01y239czw1p5ao488ggwccx6a8oz8p78bhc870728cz012521 103 LCM(3,23)
 70 xp70_033y133y1o62453zo4maxam4oy132156z1ppy1pp1 52 LCM(5,14)
@@ -417,35 +418,6 @@ def p8_loop(p):
     pat = p8l1 + p8l2(exts,exts)
     return (pat, 92, f"p8 6hd reflector loop")
 
-snark1 = lt.pattern("""9b2o$8bobo$2b2o4bo$o2bo2b2ob4o$2obobobobo2bo$3bobobobo$3bobob2o$4bo2$
-17b2o$8b2o7bo$8b2o5bobo$15b2o7$5b2o$6bo$3b3o$3bo""")
-snark2 = snark1("rot90",-20,30)
-snark3 = snark1("rot180",10,50)
-snark4 = snark1("rot270",30,20)
-gsnark = lt.pattern("bo$2o$obo")(7,13)
-
-# only potentially SKOP from p43 to p105 inclusive;
-# at periods divisible by 4 is beaten by fixed oscillators
-def snark_loop(p):
-    mpop = None
-    if not (43 <= p < 106 and p%4):
-        return None
-    elif p%2:
-        n_gliders, mpop = (8, 228)
-        i = (p-37) // 4 if p%4 == 1 else (p-29) // 2 if p <= 75 else (p-79) // 4
-    else:
-        if p >= 58:
-            n_gliders, mpop = (4, 208)
-            i = (p-58) // 4
-        else:
-            n_gliders, mpop = (8, 230)
-            i = (2,3,0)[(p-46)//4]
-    slack = p*n_gliders//8 - 29
-    pat = snark1 + snark2(-i,i) + snark3(slack-2*i,slack) + snark4(slack-i,slack-i)
-    for _ in range(n_gliders):
-        pat = (pat+gsnark)[p]
-    return (pat, mpop, f"{n_gliders}G snark loop")
-
 hd0_1 = lt.pattern("""17b2o$17bo$18bo$5bo11b2o$5b3o11b2o$8bo8b2o2bo$7b2o9bobo$2b2o7bo4bobob
 2o$3bo6bobo3b2o$3bobo4bo2bo$4b2o5b2o2$13bo$12b2o$12bobo2$2b2o$2bo2b2o$
 3bob2o$bobo$obo2b4o$o2b2o3bo5b2o$b2o2bo8bo$4b2o9b3o$17bo""")
@@ -594,5 +566,5 @@ def twinbees_shuttle(p):
         return None
     return res + (f"type-{r} twin bees shuttle",)
 
-cfuncs = (rectifier_loop, p4_22hd_loop, p8_loop, snark_loop, p1_0hd_shuttle,
+cfuncs = (rectifier_loop, p4_22hd_loop, p8_loop, p1_0hd_shuttle,
           pd_shuttle, p6thumb_shuttle, p6_22hd_loop, p14_shuttle, twinbees_shuttle)
