@@ -131,7 +131,7 @@ fixeds = """1 xs4_33 4 block
 120 xp120_4r4y13bg2kgz4r4y511 24 LCM(8,15)
 122 xp122_ymca23zyag8gzyb1yjca230ggz178cxooy7e9h9ayg34a4woozwggyogy9ggzw11w252sgyf59897y711x31e8zy8c453yig8gzyz1zylc453 102 H(R)
 124 xp124_ccy04ajaeweaja4y0cczz66y04apaeweapa4y066zzy337bkic 60 LCM(4,31)
-126 xp126_0ccy1ccx32acxca23zcmkgxgkmcy24r4zy0202y64r4z033y133xo8a6x6a8o 74 LCM(9,14)
+126 xp126_ggyhca23y26icgca4z0346yq12303156zyk1rhezyr8ak4 52 H(R)
 127 xp127_y932aczy366y4sccy44a4zyd44c5ko8zyh1ya33zccy9gozya112a32izy3252y4333y466zyh354c 74 H(C)
 128 xp128_064268e13y4ca23zz66x8c2c8zy8gggwcczxvs61zx11y1oge2c84c 62 H(pi+blinker)
 129 xp129_ggyhca23z0346ycggzyf13zyzy0gs8zyzyi62sgzyyc453 38 H(R)
